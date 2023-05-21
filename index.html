@@ -3,144 +3,6 @@
 <head>
   <title>Griffin's Homepage</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Additional CSS for the layout */
-    @font-face {
-      font-family: 'Coolvectica';
-      src: url('fonts/coolvetica-rg.woff') format('woff2');
-    }
-    @font-face {
-      font-family: 'Cocogoose';
-      src: url('fonts/cocogoose.ttf') format('truetype');
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      margin: 0;
-    }
-
-    header {
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-    }
-
-    section {
-      flex: 1;
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-    
-    .horizontal-list {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
-
-    .horizontal-list li {
-      margin-right: 20px;
-      font-family: 'Coolvectica', sans-serif;
-    }
-
-    .horizontal-list li:last-child {
-      margin-right: 0;
-    }
-
-    .horizontal-list li a {
-      font-size: 20px;
-      color: black;
-      text-decoration: none;
-      position: relative;
-    }
-
-    .horizontal-list li a::before,
-    .horizontal-list li a::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      width: 0;
-      height: 3.5px;
-      background-color: black;
-      transition: width 0.3s ease;
-    }
-
-    .horizontal-list li a::before {
-      left: 50%;
-      transform: translateX(-50%, 6px);
-    }
-
-    .horizontal-list li a::after {
-      right: 50%;
-      transform: translateX(50%, 6px);
-    }
-
-    .horizontal-list li a:hover::before,
-    .horizontal-list li a:hover::after {
-      width: 50%;
-    }
-
-    aside {
-      width: 25%;
-      background-color: #eaeaea;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .profile-picture {
-      width: 50%;
-      height: auto;
-      border-radius: 50%;
-      object-fit: contain;
-    }
-
-    .profile-container {
-      text-align: center;
-    }
-
-    .profile-text {
-      margin-top: 10px;
-      font-size: 1vw;
-      font-family: 'Coolvectica', sans-serif;
-    }
-
-    .profile-text-header {
-      font-size: 1.75vw;
-      font-family: 'Coolvectica', sans-serif;
-    }
-
-    h1 {
-      font-family: 'Cocogoose', sans-serif;
-      font-size: 2.0vw;
-    }
-
-    h2 {
-      font-family: 'Cocogoose', sans-serif;
-      font-size: 1.5vw;
-    }
-
-    .section-text{
-      font-family: 'Cocogoose', sans-serif;
-      font-size: 1.0vw;
-    }
-
-    .footer-text {
-      font-family: 'Coolvectica', sans-serif;
-      font-size: 1.0vw;
-    }
-
-  </style>
 </head>
 <body>
   <header>
@@ -161,19 +23,64 @@
     <aside>
       <div class="profile-container">
         <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
-        <p class="profile-text-header">Griffin Newbold</p><p class="profile-text">Third Year Undergraduate at Columbia University <br><br> Located in New York, New York</p>
+        <p class="profile-text-header">Griffin Newbold</p><p class="profile-text">Third Year Undergraduate at Columbia University <br><br> Teaching Assistant for Professor Adam Cannon <br><br>Located in New York, New York</p>
       </div>
     </aside>
     
 
     <section>
       <h1>About Me</h1>
+      <p class = "section-text">Welcome to my Homepage! 
+        I am currently a third year undergraduate student at Columbia University
+        studying Computer Science. This site will serve as my expanded personal portfolio.
+        This will allow me to showcase more about myself than my resume or my github page ever
+        could alone. While my Github profile showcases all my technical projects, my resume only 
+        shows the effective highlights. There is so much more beyond either of those that this page
+        felt necessary. Plus it helps demonstrate the existence of front-end development skills on my part,
+        even though I do not specialize in such areas. <br><br>
+        
+        This upcoming semester, I will continue my Computer Science education at Columbia. Last semester 
+        I finished up the core requirements for my major so all I am left with are electives. While the core of 
+        the major had a good mix of theorectical courses along with applications based ones, I intend to take courses
+        that focus more on applications than the theory. While you can find more information about the courses, I have taken/plan to take 
+        in the "Courses Taken" section I will layout the courses I plan to take in the upcoming term related to my field of study. <br>
+
+        <ul>
+          <li class="course-item">COMS 4156 Advanced Software Engineering</li>
+          <li class="course-item">COMS 3410 Computers and Society</li>
+          <li class="course-item">COMS 3107 Clean Object Oriented Design</li>
+          <li class="course-item">COMS 4170/4995 User Interface Design OR Parallel Functional Programming</li>
+        </ul>
+      </p>
+      <p class = "section-text">
+        The last course is dependent on whether or not I get off the waitlist for 4170, if I do it will be that course
+        otherwise it will be the 4995 course specified. Next I will discuss my coding background and essentially how I got to 
+        this point in my Software Developing Journey.
+      </p>
       <h2>Background</h2>
+      <p class = "section-text">
+        I started my programming journey in my first year of highschool, I took AP Computer Science Principles which was a newly offered course
+        at my highschool. My instructor choose JavaScript for the first half of the course then began teaching us Java in the second half of the course.
+        I continued down the Java rabbit hole and took AP Computer Science A in my second year followed by the two Java courses offered by my local community college
+        through their dual enrollment program. After I completed these courses, I successfully completed my OCA Java 8 SE Programmer I exam offered by Oracle. At this point I took a few other courses through my community college which introduced 
+        me to C++ as well as MySQL and Visual Basic, along with some basic IT trouble shooting skills through their Operating Systems course. I concluded my high school journey by taking a Networking course 
+        which used coursework and a curriculum developed by Cisco. <br><br>
+
+        Once I arrived on Columbia's campus, I began their Computer Science curriculum right away, concurrently taking COMS 1004 and ENGL 1006 in my first semester
+        and finishing the academic year with the completion of their Data Structures and Algorithms course.
+        My second year began with a deeper dive into Columbia's Computer Science curriculum, I took Discrete Mathematics, Advanced Programming, Fundamentals of Computer Systems, and Probability for Engineers* 
+        This past semester I finished up the core of my major by completing Computer Science Theory and Computational Linear Algebra. I also began to explore the high level elective courses through my Introduction to Databases 
+        course. As stated previously more information about these courses can be found in the appropriate section of the site. <br><br>
+        
+        Of course while I took these courses, I also completed many personal projects and contributed to the learning community as well. More information about all of these can 
+        be found in the "Teaching" and "Projects" sections! Thanks for stopping by to read, I hope you take more time to explore my site. If for whatever reason you wish
+        to contact me please see the "Contact Me" section for more information about that, if you wish to connect with me on LinkedIn please see the appropriately named section.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p class = "footer-text">&copy; 2023 Griffin Newbold</p>
+    <p class = "footer-text">&copy; 2023 Griffin Newbold Powered by GitHub</p>
   </footer>
 </body>
 </html>
