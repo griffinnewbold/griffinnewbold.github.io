@@ -5,6 +5,15 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Additional CSS for the layout */
+/* Additional CSS for the layout */
+@font-face {
+      font-family: 'Coolvectica';
+      src: url('fonts/coolvetica-rg.woff') format('woff2');
+    }
+    @font-face {
+      font-family: 'Cocogoose';
+      src: url('fonts/cocogoose.ttf') format('truetype');
+    }
     body {
       display: flex;
       flex-direction: column;
@@ -22,12 +31,6 @@
       display: flex;
     }
 
-    aside {
-      width: 25%;
-      background-color: #eaeaea;
-      padding: 20px;
-    }
-
     section {
       flex: 1;
       padding: 20px;
@@ -40,23 +43,67 @@
     
     .horizontal-list {
       display: flex;
+      justify-content: center;
       list-style: none;
       padding: 0;
     }
 
     .horizontal-list li {
-      margin-right: 10px;
+      margin-right: 20px;
+      font-family: 'Coolvectica', sans-serif;
     }
 
     .horizontal-list li:last-child {
       margin-right: 0;
     }
-    
+
+    .horizontal-list li a {
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .horizontal-list li a::before,
+    .horizontal-list li a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      width: 0;
+      height: 3.5px;
+      background-color: black;
+      transition: width 0.3s ease;
+    }
+
+    .horizontal-list li a::before {
+      left: 50%;
+      transform: translateX(-50%, 6px);
+    }
+
+    .horizontal-list li a::after {
+      right: 50%;
+      transform: translateX(50%, 6px);
+    }
+
+    .horizontal-list li a:hover::before,
+    .horizontal-list li a:hover::after {
+      width: 50%;
+    }
+
+    aside {
+      width: 25%;
+      background-color: #eaeaea;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     .profile-picture {
-      width: 100%;
+      width: 50%;
       height: auto;
       border-radius: 50%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
   </style>
