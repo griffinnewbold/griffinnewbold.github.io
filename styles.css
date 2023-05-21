@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Coolvectica';
+    src: url('/coolvetica-rg.otf') format('otf'),
+         url('/coolvetica-rg.woff') format('woff');
+}
