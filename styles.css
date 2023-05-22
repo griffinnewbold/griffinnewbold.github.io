@@ -88,6 +88,7 @@ aside {
     width: 17.5%;
     background-color: #ffffff;
     padding: 10px;
+    padding-top: 45px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -142,3 +143,46 @@ h2 {
     font-size: 1.2vw;
     color: #141414;
 }
+
+.content {
+    display: none;
+}
+  
+.active {
+    display: block;
+}
+
+.prev-next-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .prev-next-buttons button {
+    background-color: transparent;
+    border: 2px solid #9c9c9c;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: gray;
+    transition: color 0.3s;
+    cursor: pointer;
+    width: 35vw;
+    height: 7vh;
+  }
+
+  .prev-next-buttons button:hover {
+    color: #99ccff; /* Change to your desired hover color */
+  }
+
+  button.previous-btn {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  
+  button.next-btn {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  
+  

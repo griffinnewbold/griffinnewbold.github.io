@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Griffin's Homepage</title>
+  <title>Courses</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header>
@@ -26,56 +27,176 @@
         <p class="profile-text-header">Griffin Newbold</p><p class="profile-text">Third Year Undergraduate at Columbia University <br><br> Teaching Assistant for Professor Adam Cannon <br><br>Located in New York, New York</p>
       </div>
     </aside>
-    
-
+  
     <section>
-      <h1>About Me</h1>
-      <p class = "section-text">Welcome to my Homepage! 
-        I am currently a third year undergraduate student at Columbia University
-        studying Computer Science. This site will serve as my expanded personal portfolio.
-        This will allow me to showcase more about myself than my resume or my github page ever
-        could alone. While my Github profile showcases all my technical projects, my resume only 
-        shows the effective highlights. There is so much more beyond either of those that this page
-        felt necessary. Plus it helps demonstrate the existence of front-end development skills on my part,
-        even though I do not specialize in such areas. <br><br>
-        
-        This upcoming semester, I will continue my Computer Science education at Columbia. Last semester 
-        I finished up the core requirements for my major so all I am left with are electives. While the core of 
-        the major had a good mix of theorectical courses along with applications based ones, I intend to take courses
-        that focus more on applications than the theory. While you can find more information about the courses, I have taken/plan to take 
-        in the "Courses Taken" section I will layout the courses I plan to take in the upcoming term related to my field of study. <br>
+      <p class="section-text">This page will describe the relevant courses I have taken during my time
+        at Columbia. This is will effectively be the course descriptions in my own words, plus some may be unfamiliar
+        with the courses Columbia offers so this makes it better, any course denoted with a single asterisk 
+        represents those I will be taking in the upcoming semester (Fall 2023), any course denoted with two asterisks represent courses
+        for which I am heavily considering taking in future semesters. The selections will be sorted by course-id per academic year.
+      </p>
+      <div id="div1" class="content active">
+        <h1>Freshman Year at Columbia</h1>
+        <h2>COMS 1004, Introduction to Computer Science and Programming in Java</h2>
+        <p class = "section-text">This course taught the basics of programming in Java, starting
+          from the description of elementary searching and sorting algorithms in pseudocode to defining
+          basic variables in Java, then following along the same route as most introductory courses
+          loops, conditionals, file i/o exceptions etc. I had the opportunity to skip this course and jump
+          straight into 3134 but I decided to take this course just in case there was any extra information 
+          that I hadn't been taught previously and to give myself a smooth introduction to how CS@CU was all about.
+        </p>
+  
+        <h2>ENGL 1006, Introduction to Computing for Engineers and Applied Scientists</h2>
+        <p class = "section-text">
+          This course was effectively just the same as 1004 but in Python, a course required for all students of the Engineering school
+          no matter what their major. While doing basically everything described above in COMS 1004, it also introduced students to essential Python libraries
+          such as Numpy and gave us a brief introduction to different applications of computation such as cryptography and machine learning. 
+        </p>
+  
+        <h2>ENGL 1102, The Art of Engineering</h2>
+        <p class = "section-text">
+          This course is described as "gateway lab" connecting the math and science we learned in high school to what we would be doing in college. This was effectively a course designed
+          to teach about the different fields of engineering in a way that provided a nice introduction to each field that allowed undecided students to get exposure and help aid their decision. 
+          This course featured a semester long project in each team of 4-5 people had to design a physical game within a given budget and present it at the end of semester expo. A more in depth description
+          of this project can be found in the projects tab. Along with this course project we did a half semester long engineering-field specific seminar held every other week that explored the field in depth more
+          and built up to another project, I participated in the Computer Engineering group and our project was designing a CPU digitally using Logisim.
+        </p>
+  
+        <h2>COMS 3134, Data Structures and Algorithms in Java</h2>
+        <p class = "section-text">
+          This course is the effective standard for a Computer Science education, every Computer Science student has to take this course at every accredited institution in the country. We started by learning about 
+          generics in Java along with elementary algorithm analysis (Big-O) then quickly progressed to learn about the standard data structures, LinkedLists, Stacks, Queues, Heaps, Trees, and HashMaps. We then ended the 
+          course by describing useful algorithms for completing certain tasks. Like Dijkstra's algorithm, Kruscal's algorithm, Merge Sort, Quick Sort, Topological Sorting, Breadth First Search and Depth First Search.
+        </p>
+      </div>
+      <div id="div2" class="content">
+        <h1>Sophomore Year at Columbia</h1>
+        <h2>COMS 3157, Advanced Programming</h2>
+        <p class = "section-text">
+          This course introduced us to the C programming language and taught the basics of low level 
+          programming. Each assignment effectively built on the previous one and the course culminated with us 
+          creating a multi-process three-tier architecture message lookup service. This course took a deep dive into 
+          File I/O and HTTP protocols along with learning the C programming langugage. 
+        </p>
+  
+        <h2>COMS 3203, Discrete Mathematics</h2>
+        <p class = "section-text">
+          This course was the standard introduction to the math needed to succeed in the CS major at Columbia. Focused 
+          on formal logic along with writing proofs, whether it is proof by contradiction or induction. The course then went
+          into different fields of Discrete Math, Discrete Probability, Combinatorics, Number Theory, Cryptography, Functions and Relations and 
+          ended with an introduction to Graph Theory.
+        </p>
+  
+        <h2>COMS 3251, Computational Linear Algebra</h2>
+        <p class = "section-text">
+          This course was an introductory course into Linear Algebra starting with the definition of a vector and finishing off with
+          SVD and PCA. This course was made interesting by its emphasis on the computation aspect of linear algebra, effectively saying 
+          "yes it is important to know how to do this by hand, but it is more time effective to use these python libraries to help us" A 
+          more in depth discussion of Numpy along with learning Python libraries such as Scipy and Sympy gave an 
+          extra dimension to the course. 
+        </p>
+  
+        <h2>COMS 3261, Computer Science Theory</h2>
+        <p class = "section-text">
+          This course essentially worked from the ground up when it comes to the theoretical aspect of 
+          Computer Science. Starting with Regular Languages and Deterministic and Non-Deterministic finite
+          automata, the pumping lemma etc in the first half of the semester, transitioning to a discussion of Turing Machines
+          and an introduction to complexity theory and NP-Completeness in the second half of the semester. 
+        </p>
 
-        <ul>
-          <li class="course-item">COMS 4156 Advanced Software Engineering</li>
-          <li class="course-item">COMS 3410 Computers and Society</li>
-          <li class="course-item">COMS 3107 Clean Object Oriented Design</li>
-          <li class="course-item">COMS 4170/4995 User Interface Design OR Parallel Functional Programming</li>
-        </ul>
-      </p>
-      <p class = "section-text">
-        The last course is dependent on whether or not I get off the waitlist for 4170, if I do it will be that course
-        otherwise it will be the 4995 course specified. Next I will discuss my coding background and essentially how I got to 
-        this point in my Software Developing Journey.
-      </p>
-      <h2>Background</h2>
-      <p class = "section-text">
-        I started my programming journey in my first year of highschool, I took AP Computer Science Principles which was a newly offered course
-        at my highschool. My instructor choose JavaScript for the first half of the course then began teaching us Java in the second half of the course.
-        I continued down the Java rabbit hole and took AP Computer Science A in my second year followed by the two Java courses offered by my local community college
-        through their dual enrollment program. After I completed these courses, I successfully completed my OCA Java 8 SE Programmer I exam offered by Oracle. At this point I took a few other courses through my community college which introduced 
-        me to C++ as well as MySQL and Visual Basic, along with some basic IT trouble shooting skills through their Operating Systems course. I concluded my high school journey by taking a Networking course 
-        which used coursework and a curriculum developed by Cisco. <br><br>
+        <h2>IEOR 3658, Probability for Engineers</h2>
+        <p class = "section-text">
+          A standard introduction to Probability Theory designed for engineers. Starting with the basic axioms of 
+          probability we worked our way up to Discrete and Continous Random Variables. Along with basic probabiliy 
+          distributions. Finishing off the semester with Moment Generating Functions along with the Central Limit Theorem
+          and the Law of Large Numbers. 
+        </p>
 
-        Once I arrived on Columbia's campus, I began their Computer Science curriculum right away, concurrently taking COMS 1004 and ENGL 1006 in my first semester
-        and finishing the academic year with the completion of their Data Structures and Algorithms course.
-        My second year began with a deeper dive into Columbia's Computer Science curriculum, I took Discrete Mathematics, Advanced Programming, Fundamentals of Computer Systems, and Probability for Engineers* 
-        This past semester I finished up the core of my major by completing Computer Science Theory and Computational Linear Algebra. I also began to explore the high level elective courses through my Introduction to Databases 
-        course. As stated previously more information about these courses can be found in the appropriate section of the site. <br><br>
-        
-        Of course while I took these courses, I also completed many personal projects and contributed to the learning community as well. More information about all of these can 
-        be found in the "Teaching" and "Projects" sections! Thanks for stopping by to read, I hope you take more time to explore my site. If for whatever reason you wish
-        to contact me please see the "Contact Me" section for more information about that, if you wish to connect with me on LinkedIn please see the appropriately named section.
-      </p>
+        <h2>CSEE 3827, Fundamentals of Computer Systems</h2>
+        <p class = "section-text">
+          A quick detour from the theoretical and software heavy courses we are introduced to the basic elements that make computers 
+          possible in the first place. Starting with the elementary logic gates and working our way up to combinational and sequential 
+          circuitry. Along with a brief introduction to MIPS Assembly and then wrapping up the course with a look at how a CPU is constructed
+          along with an introduction to the memory hierarchy and cacheing. 
+        </p>
+
+        <h2>COMS 4111, Introduction to Databases</h2>
+        <p class = "section-text">
+          This course introduced the fundamentals of database design and application development using databases. 
+          While in the past the storing of data was handled for us now we have to construct our own databases and perform 
+          the necessary queries needed to retrieve the proper data. Beginning with Entity-Relationship Diagrams to Transactions
+          and Database Normalization.
+        </p>
+      </div>
+      <div id="div3" class="content">
+        <h1>Junior Year at Columbia</h1>
+        <h2>COMS 3107, Clean Object-Oriented Design*</h2>
+        <p class = "section-text">
+          This course is all about designing, documenting, coding and testing robust computer software 
+          in line with object oriented design patterns and clean coding practices. More emphasis on Java generics
+          along with discussion of topics like Javadocs, Anonymous classes, threads and graphical widgets. 
+        </p>
+  
+        <h2>COMS 3410, Computers and Society*</h2>
+        <p class = "section-text">
+          This course inspects the broader impact of computers. Topics of discussion include: Social Networks and privacy, 
+          employment, intellectual property, the media, science and engineering ethics.
+        </p>
+  
+        <h2>COMS 4112, Database System Implementation**</h2>
+        <p class = "section-text">
+          This course builds off of 4111 by focusing on the fundamental issues involved in building a database 
+          management system. While the course focuses on relational databases, discussions will be had with regards to object-relational 
+          databases as well as NoSQL databases.
+        </p>
+  
+        <h2>COMS 4156, Advanced Software Engineering*</h2>
+        <p class = "section-text">
+          This course focuses on the software lifecycle using frameworks, libraries and other services. There is a major emphasis
+          on software testing to make sure the code we write is free of bugs. 
+        </p>
+
+        <h2>COMS 4160, Computer Graphics**</h2>
+        <p class = "section-text">
+          This course is an introduction into Computer Graphics, topics include: 3D viewing and projections,
+          geometric modeling using spline curves, graphics systems such as OpenGL, lighting, shading, and global illumination.
+        </p>
+
+        <h2>COMS 4170, User Interface Design*</h2>
+        <p class = "section-text">
+          This course serves as an introduction to the theory and practice of computer user interface design.
+          An emphasis is places on the software design of graphical user interfaces. Topics include Basic
+          interaction devices and techniques, human factors, interaction styles, dialogue design and software infrastructure.
+        </p>
+
+      </div>
+      <div id="div4" class="content">
+        <h1>Senior Year at Columbia</h1>
+        <h2>COMS 4115, Programming Languages and Translators**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+  
+        <h2>COMS 4119, Computer Networks**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+  
+        <h2>COMS 4152, Engineering Software-as-a-Service**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+  
+        <h2>COMS 4181, Security I**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+
+        <h2>COMS 4444, Programming and Problem Solving**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+
+        <h2>COMS 4701, Artifical Intelligence**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+
+        <h2>COMS 4995, Parallel Functional Programming**</h2>
+        <p class = "section-text">To be Updated at a Later Date</p>
+      </div>
+      <div class = "prev-next-buttons">
+        <button class="previous-btn" onclick="showPrevDiv()">Previous</button>
+        <button class="next-btn" onclick="showNextDiv()">Next</button>
+      </div>
     </section>
   </main>
 
