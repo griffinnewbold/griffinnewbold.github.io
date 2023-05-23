@@ -2,10 +2,16 @@
     font-family: 'Coolvectica';
     src: url('fonts/coolvetica-rg.woff') format('woff2');
 }
+
 @font-face {
     font-family: 'Cocogoose';
     src: url('fonts/cocogoose.ttf') format('truetype');
 }
+
+.proj_img {
+    border: 2px solid black;
+}
+
 body {
     display: flex;
     flex-direction: column;
