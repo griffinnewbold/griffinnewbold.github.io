@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Pong Online </title>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+        <style>
+            #pong {
+               
+            }
+            #start {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 85px;
+                right: 0px;
+                width: 800px;
+                height: 100px;
+                color: black;
+                background: blue;
+                font-family: 'Luckiest Guy';
+                font-size: 70px;
+                bottom: 100px;
+                text-align: center;
+                
+            }
+            
+             #start:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 85px;
+                right: 0px;
+                width: 800px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 70px;
+                bottom: 100px;
+            }
+            
+            #score {
+                display: block;
+                font-family: 'Luckiest Guy';
+                
+            }
+            
+            .color {
+                display: inline-block;
+                background: silver;
+                margin-left: 10px;
+                margin-right: 5px;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 30px;
+                font-family: 'Luckiest Guy';
+                
+                
+               
+                
+                
+                
+            }
+            .color:hover {
+                display: inline-block;
+                margin-left: 10px;
+                margin-right: 5px;
+                margin-bottom: 20px;
+                padding: 10px;
+                background:black;
+                color:silver;
+                
+            }
+            
+            .classic {
+                background: black;
+                border: 7px solid white;
+                border-radius: 10px;
+                
+            }
+            .neoclassic {
+                background: white;
+                border: 7px solid black;
+                border-radius: 10px;
+            }
+            .hacker {
+                background: black;
+                border: 7px solid green;
+                border-radius: 10px;
+            }
+            .naval {
+                background: white;
+                border: 7px solid blue;
+                border-radius: 10px;
+            }
+            .viking {
+                background: purple;
+                border: 7px solid yellow;
+                border-radius: 10px;
+            }
+            .eagle {
+                background: black;
+                border: 7px solid yellow;
+                border-radius: 10px;
+            }
+            .rainbow {
+                background-image: url("http://www.tripwiremagazine.com/wp-content/uploads/2012/07/chromatic-rainbow-textures-4.jpg");
+                border: 0px;
+                
+            }
+            
+            .rainbowP {
+                background: none;
+                border: 7px solid black;
+                border-radius: 10px;
+            }
+            
+            .classicS {
+                color: white;
+            }
+            .neoclassicS {
+                color: black;
+            }
+            .hackerS {
+                color: lime;
+            }
+            .navalS {
+                color: blue;
+            }
+            .vikingS {
+                color: yellow;
+            }
+            .eagleS {
+                color: yellow;
+            }
+            .rainbowS {
+                color: black;
+            }
+            
+            .seasonS{
+                color: yellow;
+            }
+            .season{
+                background: red ;
+                border: 5px solid yellow;
+                border-radius: 10px;
+            }
+            .dropbtn {
+                background-color:  #C0C0C0;
+                color: black;
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+                float: right;
+                font-family:'Luckiest Guy';
+            }
+            
+            .dropdown {
+                position: absolute;
+                top: 30px;
+                right: 50px;
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                float: right;
+                
+            }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+                float: right;
+                font-size: 15px;
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                float: right;
+            }
+            
+            .dropdown-content a:hover {background-color: #f1f1f1}
+            
+            .dropdown:hover .dropdown-content {
+                display: block;
+                float: right;
+            }
+            
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+                float: right;
+            }
+            
+            ul { 
+                list-style-type: none ;
+                position: absolute;
+                top: 15%;
+                left: 8%;
+            }
+            
+            p {
+                text-align: right;
+            }
+            #score2 {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 285px;
+                right: 0px;
+                width: 800px;
+                height: 100px;
+                color: black;
+                background: yellow;
+                font-family: 'Luckiest Guy';
+                font-size: 70px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            #menu {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 600px;
+                right: 300px;
+                width: 150px;
+                height: 75px;
+                color: black;
+                background: red;
+                font-family: 'Luckiest Guy';
+                font-size: 25px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+             #menu:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 600px;
+                right: 300px;
+                width: 150px;
+                height: 75px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 25px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            #pause {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 185px;
+                right: 0px;
+                width: 800px;
+                height: 100px;
+                color: black;
+                background: green;
+                font-family: 'Luckiest Guy';
+                font-size: 70px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            #pause:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 185px;
+                right: 0px;
+                width: 800px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 70px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            #score2:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 285px;
+                right: 0px;
+                width: 800px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 70px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            
+            img{
+                position:absolute;
+                top: 250px;
+                right:100px;
+                
+            }
+            a{
+                font-family: 'Luckiest Guy';
+                text-align:left;
+            }
+            
+             #popup_bg{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0,0,0.6);
+                width: 100%;
+                height:100%;
+                display: none;
+            }
+            
+            #popup_main_div{
+                position: fixed;
+                width: 800px;
+                height: 500px;
+                border: 3px solid black;
+                border-radius:3px;
+                background-color:#fffcdd;
+                left:50%;
+                margin-left: -400px;
+                top: 50%;
+                margin-top: -250px;
+            }
+            
+            #close_popup_div{
+                position: absolute;
+                background-color: red;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+            #close_popup_divp{
+                margin-top: 3px;
+                margin-right:6px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color:white;
+                cursor: pointer;
+            }
+            
+            #close_popup_div:hover{
+                position: absolute;
+                background-color: black;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+          
+            
+            #javascript_magic{
+                text-align: center;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                border-bottom: 3px solid black;
+                background-color: #f9eb7c;
+                padding-top:10px;
+                padding-bottom: 10px;
+                margin-top: 1px;
+            }
+            
+            #javascript_desc{
+                font-family: sans-serif;
+                text-align: center;
+                margin-top: 80px;
+            }
+            
+            #button{
+                position: absolute;
+                top:85px;
+                left: 35px;
+            }
+            #trophy{
+                width:75px;
+                height:75px;
+                cursor:pointer;
+                position: absolute;
+                top: 415px;
+                right: 650px;
+            }
+            #achieve1main{
+               position: absolute;
+               left: 150px;
+               top: 80px;
+               font-family: 'Luckiest Guy';
+               font-size: 30px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+            }
+            #achieve1icon{
+               position: absolute;
+               left: 40px;
+               height:75px;
+               width:75px;
+               top:100px;
+            }
+            #achieve1desc{
+               font-family: 'Luckiest Guy';
+               font-size: 20px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+               position: absolute;
+               top: 130px;
+               left: 150px;
+            }
+            
+            #achieve2main{
+               position: absolute;
+               left: 150px;
+               top: 180px;
+               font-family: 'Luckiest Guy';
+               font-size: 30px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+            }
+            #achieve2icon{
+               position: absolute;
+               left: 40px;
+               height:75px;
+               width:75px;
+               top:200px;
+            }
+            #achieve2desc{
+               font-family: 'Luckiest Guy';
+               font-size: 20px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+               position: absolute;
+               top: 230px;
+               left: 150px;
+            }
+            
+            #achieve3main{
+               position: absolute;
+               left: 150px;
+               top: 280px;
+               font-family: 'Luckiest Guy';
+               font-size: 30px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+            }
+            #achieve3icon{
+               position: absolute;
+               left: 40px;
+               height:75px;
+               width:75px;
+               top:300px;
+            }
+            #achieve3desc{
+               font-family: 'Luckiest Guy';
+               font-size: 20px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+               position: absolute;
+               top: 330px;
+               left: 150px;
+            }
+            
+            #achieve4main{
+               position: absolute;
+               left: 150px;
+               top: 380px;
+               font-family: 'Luckiest Guy';
+               font-size: 30px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+            }
+            #achieve4icon{
+               position: absolute;
+               left: 40px;
+               height:75px;
+               width:75px;
+               top:400px;
+            }
+            #achieve4desc{
+               font-family: 'Luckiest Guy';
+               font-size: 20px;
+               color:black;
+               text-shadow: 2px 2px #ffbf00;
+               position: absolute;
+               top: 430px;
+               left: 150px;
+            }
+            #lock1{
+                position: absolute;
+                top:100px;
+                right: 40px;
+                height: 75px;
+                width: 75px;
+            }
+            
+            #lock2{
+                position: absolute;
+                top:200px;
+                right: 40px;
+                height: 75px;
+                width: 75px;
+            }
+            #lock3{
+                position: absolute;
+                top:300px;
+                right: 40px;
+                height: 75px;
+                width: 75px;
+            }
+            #lock4{
+                position: absolute;
+                top:400px;
+                right: 40px;
+                height: 75px;
+                width: 75px;
+            }
+            
+            #popup_bg2{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0,0,0.6);
+                width: 100%;
+                height:100%;
+                display: none;
+            }
+            
+            #popup_main_div2{
+                position: fixed;
+                width: 800px;
+                height: 500px;
+                border: 3px solid black;
+                border-radius:3px;
+                background-color:#fffcdd;
+                left:50%;
+                margin-left: -400px;
+                top: 50%;
+                margin-top: -250px;
+            }
+            
+            #close_popup_div2{
+                position: absolute;
+                background-color: red;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+            #close_popup_divp2{
+                margin-top: 3px;
+                margin-right:6px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color:white;
+                cursor: pointer;
+            }
+            
+            #close_popup_div2:hover{
+                position: absolute;
+                background-color: black;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+          
+            
+            #javascript_magic2{
+                color:white;
+                text-align: center;
+                font-family: 'Luckiest Guy';
+                font-weight: bold;
+                font-size: 50px;
+                border-bottom: 3px solid black;
+                background-color: #f9eb7c;
+                padding-top:10px;
+                padding-bottom: 5px;
+                margin-top: 1px;
+                text-shadow: 2px 2px #000000;
+            }
+            
+            #javascript_desc2{
+                font-family: sans-serif;
+                text-align: center;
+                margin-top: 80px;
+            }
+            
+            #button2{
+                position: absolute;
+                top:85px;
+                left: 35px;
+            }
+             #popup_bg3{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0,0,0.6);
+                width: 100%;
+                height:100%;
+                display: none;
+            }
+            
+            #popup_main_div3{
+                position: fixed;
+                width: 800px;
+                height: 500px;
+                border: 3px solid black;
+                border-radius:3px;
+                background-color:#fffcdd;
+                left:50%;
+                margin-left: -400px;
+                top: 50%;
+                margin-top: -250px;
+            }
+            
+            #close_popup_div3{
+                position: absolute;
+                background-color: red;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+            #close_popup_divp3{
+                margin-top: 3px;
+                margin-right:6px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color:white;
+                cursor: pointer;
+            }
+            
+            #close_popup_div3:hover{
+                position: absolute;
+                background-color: black;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+          
+            
+            #javascript_magic3{
+                color:white;
+                text-align: center;
+                font-family: 'Luckiest Guy';
+                font-weight: bold;
+                font-size: 50px;
+                border-bottom: 3px solid black;
+                background-color: #f9eb7c;
+                padding-top:10px;
+                padding-bottom: 5px;
+                margin-top: 1px;
+                text-shadow: 2px 2px #000000;
+            }
+            
+            #javascript_desc3{
+                font-family: sans-serif;
+                text-align: center;
+                margin-top: 80px;
+            }
+            .learn{
+                text-align: center;
+                font-family: 'Luckiest Guy';
+                font-size: 40px;
+                color: black;
+            }
+            #youtube{
+                position:absolute;
+                top:405px;
+                left: 200px;
+                width:120px;
+                height:100px;
+            }
+            
+            #twitter{
+                position:absolute;
+                top:415px;
+                left: 350px;
+                width:80px;
+                height:80px;
+            }
+            
+            #insta{
+                position:absolute;
+                top:425px;
+                left: 470px;
+                width:60px;
+                height:60px;
+            }
+        </style>
+    </head>
+    <body class = "classic" id = "body">
+        <h4 style = "color: #C0C0C0;", class= "color2"> "Created by: Michael/Griffin V.) 3.0.2 "</h4>
+        <center>
+        <canvas id="pong" class="classic" width = "300" height = "600"></canvas>
+        <h1 id="score" class = "classicS">Score: 0</h1>
+        <button id="menu" onclick="openpopmenu2()">Menu</button>
+        </center>
+        <span>
+        <ul>
+            <li>
+                 <div class = "color" id = "classic">Classic</div>
+            </li>
+            <li>
+                 <div class = "color" id = "neoclassic">Neoclassic</div>
+            </li>
+            <li>
+                 <div class = "color" id = "hacker">Hacker</div>
+            </li>
+            <li>
+                 <div class = "color" id = "naval">Naval</div>
+            </li>
+            
+            <li>
+                 <div class = "color" id = "viking">Viking</div>
+            </li>
+            
+            <li>
+                 <div class = "color" id = "eagle">Eagle</div>
+            </li>
+            
+            <li>
+                 <div class = "color" id = "rainbow">Rainbow Mode</div>
+            </li>
+            
+             <li>
+                 <div class = "color" id = "season">Seasonal Colors</div>
+            </li>
+            
+        </ul>
+        <div></div> 
+        </span>
+        <div class="dropdown">
+  <button class="dropbtn"><b>More</b></button>
+  <div class="dropdown-content">
+    <a href=""> More Games</a>
+    <a href="">Report Bugs/Suggestions</a>
+    <a href="/">Go Home!</a>
+  </div>
+</div>
+        <img src= "https://pbs.twimg.com/media/DQeeNOLX4AAFZz2.jpg">
+
+                <div id="popup_bg2">
+            <div id="popup_main_div2">
+            <p id="javascript_magic2">
+                Main Menu
+            </p>
+            <div>
+                <button id="start">NEW GAME</button>
+            </div>
+            <div>
+                <button id="pause" onclick="openpopmenu3()">How to Play </button>
+            </div>
+            <div>
+                <button id="score2">Submit Score</button>
+            </div>
+            <div>
+                  <img id="trophy"src="https://pbs.twimg.com/media/DQuootCVAAEsLH9.png" title="See Achievements"onclick="openpopmenu()">
+                  <img id="youtube"src="http://www.freeiconspng.com/uploads/youtube-logo-play-icon-png-24.png" title="Subscribe To My Youtube Channel" onclick="openytwin()">
+                  <img id="twitter"src="http://www.freeiconspng.com/uploads/twitter-icon-download-18.png" title="Follow Me on Twitter" onclick="opentwwin()">
+                  <img id="insta"src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" title="Follow Me on Instagram" onclick="openigwin()">
+                <div id="close_popup_div2" title="Close Menu" onclick="closepopmenu2()">
+                    <p id= "close_popup_divp2">
+                        X
+                    </p>
+                </div>
+            </div>
+        </div>
+                <div id="popup_bg">
+            <div id="popup_main_div">
+            <p id="javascript_magic">
+                Achievements
+            </p>
+            <div>
+                <h3 id="achieve1main">
+                    Pong Starter!
+                </h3>
+                <img id="achieve1icon" src="https://pbs.twimg.com/media/DQzJ5-3W4AI55Ys.jpg">  
+            <p id="achieve1desc">
+                Get a score of 10 in the game PONG
+            </p>
+            <img id="lock1" src= "https://pbs.twimg.com/media/DQzXX2kXUAA4rTX.png">
+            </div>
+            <div>
+                <h3 id="achieve2main">
+                    Paddle Power!
+                </h3>
+                <img id="achieve2icon" src="https://pbs.twimg.com/media/DQzJ5-2XkAA5kDo.jpg">  
+            <p id="achieve2desc">
+                Get a score of 20 in the game PONG
+            </p>
+            <img id="lock2" src= "https://pbs.twimg.com/media/DQzXX2kXUAA4rTX.png">
+            </div>
+            <div>
+                <h3 id="achieve3main">
+                    Paddle Master!
+                </h3>
+                <img id="achieve3icon" src="https://pbs.twimg.com/media/DQzJ5-9X0AEE0At.jpg">  
+            <p id="achieve3desc">
+                Get a score of 50 in the game PONG
+            </p>
+            <img id="lock3" src= "https://pbs.twimg.com/media/DQzXX2kXUAA4rTX.png">
+            </div>
+            <div>
+                <h3 id="achieve4main">
+                    Pong Master!
+                </h3>
+                <img id="achieve4icon" src="https://pbs.twimg.com/media/DQzJ5--XcAAwdcA.jpg">  
+            <p id="achieve4desc">
+                Get a score of 100 in the game PONG
+            </p>
+            <img id="lock4" src= "https://pbs.twimg.com/media/DQzXX2kXUAA4rTX.png">
+            </div>
+                <div id="close_popup_div" title="Close Menu" onclick="closepopmenu()">
+                    <p id= "close_popup_divp">
+                        X
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+            <div id="popup_bg3">
+            <div id="popup_main_div3">
+            <p id="javascript_magic3">
+                How To play Pong!
+            </p>
+            <div>
+                <p class="learn"> Control the paddle using the arrow keys</p>
+                <p class="learn"> Make sure the ball hits the paddle or it's game over.</p>
+                <p class="learn"> Gain as many points as you can</p>
+            </div>
+            <div>
+                  
+                <div id="close_popup_div3" title="Close Menu" onclick="closepopmenu3()">
+                    <p id= "close_popup_divp3">
+                        X
+                    </p>
+                </div>
+            </div>
+        </div>
+<script typee = "text/javascript">
+            //constants
+            var PADDLE_WIDTH = 30;
+            var PADDLE_HEIGHT = 4;
+            var PADDLE_OFFSET = 2;
+            var PADDLE_MIN = PADDLE_WIDTH/2;
+            var PADDLE_MAX = 300 - PADDLE_WIDTH/2;
+            var BALL_WIDTH = 7;
+            var highscore= 0;
+            var image1= document.getElementById("lock1");
+            var image2= document.getElementById("lock2");
+            var image3= document.getElementById("lock3");
+            var image4= document.getElementById("lock4");
+            var trophy= document.getElementById("trophy");
+            var score= 0;
+            var color= "white";
+            var paused= false;
+            var prevscore;
+            document.getElementById("score2").addEventListener("click", submit);
+            //this function allows the user to submit their score 
+            function submit(){
+                var userscore= score;
+                if(userscore > highscore){
+                    highscore= userscore;
+                    window.alert("You've have set a new highscore!")
+                }else if(userscore == highscore){
+                    window.alert("You're almost there keep it up!")
+                }else{
+                    window.alert("You're a dissapointment!")
+                }
+            }
+            //These function open the social media links
+            function openytwin(){
+                window.open("https://www.youtube.com/themclegend2469")
+            }
+            function opentwwin(){
+                window.open("https://www.twitter.com/gamingwithmc")
+            }
+            function openigwin(){
+                window.open("https://www.instagram.com")
+            }
+            
+            
+            function checkforachievement(){
+                if(score == 10){
+                   trophy.src="https://pbs.twimg.com/media/DQuootAVwAA9zLT.png"; 
+                   image1.src="https://png.icons8.com/metro/540/checkmark.png";
+                }else if(score == 20){
+                    trophy.src="https://pbs.twimg.com/media/DQuootAVwAA9zLT.png";
+                    image2.src="https://png.icons8.com/metro/540/checkmark.png";
+                    
+                }else if(score == 50){
+                    trophy.src="https://pbs.twimg.com/media/DQuootAVwAA9zLT.png";
+                    image3.src="https://png.icons8.com/metro/540/checkmark.png";
+                }else if(score == 100){
+                    trophy.src="https://pbs.twimg.com/media/DQuootAVwAA9zLT.png";
+                    image4.src="https://png.icons8.com/metro/540/checkmark.png";
+                }else{
+                    trophy.src="https://pbs.twimg.com/media/DQuootCVAAEsLH9.png";
+                }
+            }
+            //declaring global variables that are assigned in the game.load() method
+            var canvas, ctx, paddle, ball, timer, keypress;
+            //This controls the color for the paddle and the ball; default is white
+            var color = "white";
+            var game = game || {
+                score: 0,
+                /*
+                 * game.count increases by 1 each time the ball hits the paddle.
+                 * When it reaches a certain number (dictates in game.move()) the momentum
+                 * of the ball on the Y axis increases.
+                 * This makes the game harder over time.
+                 */
+                count: 0,
+                //Starts or resets the game
+                load: function() {
+                    //Reset screen
+                    document.getElementById("score").innerHTML = "Score: 0";
+                    score = 0;
+                    game.count = 0;
+                    if(timer) {
+                        clearInterval(timer);
+                    }
+                    if(paddle) {
+                        paddle.del();
+                    }
+                    if(ball) {
+                        ball.del();
+                    }
+                    //Get the canvas and the context
+                    canvas = document.getElementById('pong');
+                    ctx = canvas.getContext('2d');
+                    //Initialize the color scheme
+                    ctx.fillStyle = color;
+                    ctx.font="100px, Arial";
+                    //Clear the "Game Over" text
+                    ctx.clearRect(canvas.width/2 - 100, canvas.height/2 - 50, 200, 100);
+                    //Handle arrow keys and assign keyCode to variable keypress
+                    document.onkeydown = function(e) {
+                        e.preventDefault();
+                        //Space bar resets the game
+                        if(e.keyCode == 32) {
+                            paused = false;
+                            game.load();
+                            return;
+                        }
+                        if(e.keyCode == 37 || e.keyCode == 39) {
+                            keypress = e.keyCode;
+                        }
+                        if(e.keyCode == 13) {
+                            clearInterval(timer);
+                            timer = setInterval(game.go, 1);
+                        }
+                        if(e.keyCode == 80){
+                            paused= !paused;
+                            if(paused){
+                                ctx.fillText("Paused", 130, canvas.height/2);
+                            }else{
+                            ctx.clearRect(canvas.width/2 - 100, canvas.height/2 - 50, 200, 100);
+                            }
+                            
+                        }
+                    };
+                    document.onkeyup = function(e) {
+                        if(e.keyCode == keypress) {
+                            keypress = null;
+                        }
+                        if(e.keyCode == 13) {
+                            clearInterval(timer);
+                            timer = setInterval(game.go, 10);
+                        }
+                        
+                    };
+                    //Handles paddle attributes, movement, initialization
+                    paddle = paddle || {
+                        width: PADDLE_WIDTH,
+                        height: PADDLE_HEIGHT,
+                        offset: PADDLE_OFFSET,
+                        position: canvas.width/2,
+                        init: function() {
+                            this.del();
+                            this.width = PADDLE_WIDTH;
+                            this.offset = PADDLE_OFFSET;
+                            this.position = canvas.width/2;
+                            this.draw();
+                        },
+                        del: function() {
+                            ctx.clearRect(this.position-this.width/2, canvas.height-this.offset-this.height, this.width, this.height);
+                        },
+                        draw: function() {
+                            ctx.fillRect(this.position-this.width/2, canvas.height-this.offset-this.height, this.width, this.height);
+                        },
+                        moveRight: function() {
+                            if(this.position < PADDLE_MAX) {
+                                this.del();
+                                this.position+=2;
+                                this.draw();
+                            }
+                        },
+                        moveLeft: function() {
+                            if(this.position > PADDLE_MIN) {
+                                this.del();
+                                this.position-=2;
+                                this.draw();
+                            }
+                        }
+                    };
+                    //Handle ball properties, position, momentum, and drawing
+                    ball = ball || {
+                      positionX: canvas.width/2,
+                      positionY: canvas.height - PADDLE_OFFSET - paddle.height - 50,
+                      momentumX: 0,
+                      momentumY: 0,
+                      width: BALL_WIDTH,
+                      init: function() {
+                        this.del();
+                        this.momentumX = 0;
+                        this.momentumY = 0;
+                        //Momentum is not 0 and x^2 + y^2 is between certain values
+                        while(this.momentumX == 0 || this.momentumY == 0 || 
+                        !( ( (this.momentumY * this.momentumY) + (this.momentumX * this.momentumX) <= 12 ) && 
+                        ( (this.momentumY * this.momentumY) + (this.momentumX * this.momentumX) >= 6 ) ) ) {
+                            this.momentumX = Math.floor(10*Math.random())-5;
+                            this.momentumY = -Math.floor(10*Math.random());
+                        }
+                        this.positionX = canvas.width/2;
+                        this.positionY = canvas.height - PADDLE_OFFSET - paddle.height - 50;
+                        this.draw();
+                      },
+                      del: function() {
+                        ctx.clearRect(this.positionX, this.positionY, this.width, this.width);
+                      },
+                      draw: function() {
+                        ctx.fillRect(this.positionX, this.positionY, this.width, this.width);
+                      }
+                    };
+                    paddle.init();
+                    ball.init();
+                    timer = setInterval(game.go, 10);
+                },
+                /*
+                 * This method handles movement of the ball
+                 * for each frame, including collision
+                 * Each game.move() method moves the ball according to its momentum
+                 * and updates the ball's position one time.
+                 * This method is called every frame by the game.go() method.
+                 * This method also handles Game Over
+                 */
+                move: function() {
+                  ball.del();
+                  ball.positionX += ball.momentumX;
+                  ball.positionY += ball.momentumY;
+                  ball.draw();
+                  //Check collision with side wall
+                  if(ball.positionX >= canvas.width - ball.width || ball.positionX <= 1) {
+                    ball.momentumX *= -1;
+                  }
+                  //Check collision with top wall
+                  if(ball.positionY <= 1) {
+                      ball.momentumY *= -1;
+                  }
+                  //Check collision with paddle
+                  if((ball.positionY + ball.width-1 >= canvas.height-paddle.offset - paddle.height) && 
+                      (ball.positionX + ball.width-1 >= paddle.position - paddle.width/2 && 
+                      ball.positionX <= paddle.position + paddle.width/2)
+                  ) {
+                      ball.momentumY *= -1;
+                      //Make momentum greater every 3 hits
+                      if(this.count >= 2) {
+                          this.count = 0;
+                          ball.momentumY --;
+                      }else{
+                          this.count++;
+                      }
+                      //Bouce differently off of edges
+                      if(ball.positionX < paddle.position - paddle.width/2) {
+                          ball.momentumX--;
+                      }
+                      if(ball.positionX + 3 > paddle.position + paddle.width/2) {
+                          ball.momentumX++;
+                      }
+                      //Stop x momentum from being 0
+                      //This stops the game from becoming too easy
+                      //If the x momentum becomes 0, it will not stay that way forever
+                      if(ball.momentumX == 0) {
+                          ball.momentumX = Math.floor(3 * Math.random()) - 2;
+                      }
+                      prevscore = score;
+                      score++;
+                      document.getElementById("score").innerHTML= "Score: " +score;
+                      checkScoreError();
+                      checkforachievement();
+                  }
+                  //Check collision with bottom wall and handle GameOver
+                  if(ball.positionY >= canvas.height && 
+                      !(ball.positionX >= paddle.position - paddle.width/2 && 
+                      ball.positionX + 3 <= paddle.position + paddle.width/2)
+                  ) {
+                      //Game Over    
+                      clearInterval(timer);
+                      ctx.fillText("Game Over", 130, canvas.height/2);
+                      setTimeout(game.load(), 50000);
+                   //   game.load();
+                  }
+                },
+                /*
+                 * This method runs every 10 milliseconds
+                 * It moves the game forward 1 frame, 
+                 * handling paddle movement, ball movement, and score.
+                 * The game.move() method handles the ball movement,
+                 * collisions, and score updating via the game.updateScore() method
+                 */
+                go: function() {
+                    if(paused){
+                        return;
+                    }else{
+                        switch(keypress) {
+                        case 37: 
+                        paddle.moveLeft();
+                        break;
+                        case 39:
+                        paddle.moveRight();
+                        break;
+                    }
+                    game.move();
+                    paddle.draw();
+                    }
+                    
+                }
+            };
+            //Calls load function with the press of the NEW GAME button or space bar
+            document.getElementById("start").addEventListener("click", game.load);
+            document.onkeydown = function(e) {
+                e.preventDefault();
+                if(e.keyCode == 32) {
+                    game.load();
+                }
+            };
+            /*
+             * Activates the div tags that change the color scheme
+             * Alters the color of ball and paddle
+             * And changes the class of the body and the canvas
+             */
+            document.getElementById("classic").addEventListener("click", function() {
+                color = "white";
+                document.getElementById("pong").className = "classic";
+                document.getElementById("body").className = "classic";
+                document.getElementById("score").className = "classicS";
+            });
+            document.getElementById("season").addEventListener("click", function() {
+                color = "black";
+                document.getElementById("pong").className = "season";
+                document.getElementById("body").className = "season";
+                document.getElementById("score").className = "seasonS";
+            });
+            document.getElementById("neoclassic").addEventListener("click", function() {
+                color = "black";
+                document.getElementById("pong").className = "neoclassic";
+                document.getElementById("body").className = "neoclassic";
+                document.getElementById("score").className = "neoclassicS";
+            });
+            document.getElementById("hacker").addEventListener("click", function() {
+                color = "lime";
+                document.getElementById("pong").className = "hacker";
+                document.getElementById("body").className = "hacker";
+                document.getElementById("score").className = "hackerS";
+            });
+            document.getElementById("naval").addEventListener("click", function() {
+                color = "blue";
+                document.getElementById("pong").className = "naval";
+                document.getElementById("body").className = "naval";
+                document.getElementById("score").className = "navalS";
+            });
+            document.getElementById("viking").addEventListener("click", function() {
+                color = "yellow";
+                document.getElementById("pong").className = "viking";
+                document.getElementById("body").className = "viking";
+                document.getElementById("score").className = "vikingS";
+            });
+            document.getElementById("eagle").addEventListener("click", function() {
+                color = "yellow";
+                document.getElementById("pong").className = "eagle";
+                document.getElementById("body").className = "eagle";
+                document.getElementById("score").className = "eagleS";
+            });
+            document.getElementById("rainbow").addEventListener("click", function() {
+                color = "black";
+                document.getElementById("pong").className = "rainbowP";
+                document.getElementById("body").className = "rainbow";
+                document.getElementById("score").className = "rainbowS";
+            });
+        var popupdiv= document.getElementById("popup_bg");
+        var popupdiv2= document.getElementById("popup_bg2");
+        var popupdiv3= document.getElementById("popup_bg3");
+        function openpopmenu(){
+            popupdiv.style.display="block";
+        }
+        
+         function closepopmenu(){
+            popupdiv.style.display="none";
+        }    
+        
+        function openpopmenu2(){
+            popupdiv2.style.display="block";
+            paused =!paused
+        }
+        
+         function closepopmenu2(){
+            popupdiv2.style.display="none";
+            paused =!paused
+        } 
+        function openpopmenu3(){
+            popupdiv3.style.display="block";
+        }
+        
+         function closepopmenu3(){
+            popupdiv3.style.display="none";
+        }  
+        function checkScoreError(){
+            if(score != (prevscore + 1)){
+                document.getElementById("score").innerHTML= "Score: " +(prevscore+1);
+            }
+        }
+        //youtube image link: http://www.freeiconspng.com/uploads/youtube-logo-play-icon-png-24.png
+        //twitter image link: http://www.freeiconspng.com/uploads/twitter-icon-download-18.png
+        //instagram image link: https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png
+        </script>
+    </body>
+</html>

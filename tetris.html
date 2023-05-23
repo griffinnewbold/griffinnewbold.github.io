@@ -1,0 +1,906 @@
+
+<html>
+<head>
+    <title>Tetris</title>
+    <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+    <style>
+    .cheat{
+        color:black;
+        font-family: 'Luckiest Guy';
+    }
+     .cheat2{
+        color:black;
+        font-family: 'Luckiest Guy';
+        border-bottom: 5px solid black;
+        margin-bottom: 20px;
+    }
+      body {
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 2em;
+        text-align: center;
+        height: 690px;
+        background: linear-gradient(purple, black); 
+      }
+      canvas {
+        border: solid .3em #fff;
+        height: 90vh;
+        border-radius: 5px;
+        
+      }
+      
+      #score{
+          display: block;
+          font-family: 'Luckiest Guy';
+      }
+      
+      #score2 {
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 200px;
+                width: 800px;
+                height: 100px;
+                color: black;
+                background: yellow;
+                font-family: 'Luckiest Guy';
+                font-size: 15px;
+                line-height: 15px;
+            }
+            
+    #score2:hover {
+                
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 200px;
+                width: 800px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 15px;
+                line-height: 15px;
+            }
+            
+.dropbtn {
+    background-color:  #C0C0C0;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top:10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    padding: 100px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    float: left;
+    font-size: 15px;
+    top: 18px;
+    right: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    float: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    float: left;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    float: left;
+}
+
+
+#button{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 75px;
+    font-family: 'Luckiest Guy';
+}
+
+h3{
+  color:white;
+  font-weight: bold;
+  font-size: 50px;
+  position: absolute;
+  top: 200px;
+  right:60px;
+  font-family: 'Luckiest Guy';
+  text-shadow: 2px 2px #000000;
+}
+
+ul{
+   font-size: 20px;
+   font-weight: bold;
+   font-family: 'Luckiest Guy';
+   position: absolute;
+   top:320px;
+   right: 10px;
+   text-align:left;
+   line-height:50px;
+   text-shadow: 2px 2px #000000;
+}
+
+#pause {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 300px;
+                width: 800px;
+                height: 100px;
+                color: black;
+                background: green;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            #pause:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 300px;
+                width: 800px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            #popup_bg3{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0,0,0.6);
+                width: 100%;
+                height:100%;
+                display: none;
+            }
+            
+            #popup_main_div3{
+                position: fixed;
+                width: 800px;
+                height: 500px;
+                border: 3px solid black;
+                border-radius:3px;
+                background-color:#fffcdd;
+                left:50%;
+                margin-left: -400px;
+                top: 50%;
+                margin-top: -250px;
+            }
+            
+            #close_popup_div3{
+                position: absolute;
+                background-color: red;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+            #close_popup_divp3{
+                margin-top: 1px;
+                margin-right:0px;
+                font-size: 20px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color:white;
+                cursor: pointer;
+            }
+            
+            #close_popup_div3:hover{
+                position: absolute;
+                background-color: black;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+          
+            
+            #javascript_magic3{
+                color:white;
+                text-align: center;
+                font-family: 'Luckiest Guy';
+                font-weight: bold;
+                font-size: 50px;
+                border-bottom: 3px solid black;
+                background-color: #f9eb7c;
+                padding-top:10px;
+                padding-bottom: 5px;
+                margin-top: 1px;
+                text-shadow: 2px 2px #000000;
+            }
+            
+            #javascript_desc3{
+                font-family: sans-serif;
+                text-align: center;
+                margin-top: 80px;
+            }
+            
+            
+            #popup_bg2{
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0,0,0.6);
+                width: 100%;
+                height:100%;
+                display: none;
+            }
+            
+            #popup_main_div2{
+                position: fixed;
+                width: 800px;
+                height: 500px;
+                border: 3px solid black;
+                border-radius:3px;
+                background-color:#fffcdd;
+                left:50%;
+                margin-left: -400px;
+                top: 50%;
+                margin-top: -250px;
+            }
+            
+            #close_popup_div2{
+                position: absolute;
+                background-color: red;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+            #close_popup_divp2{
+                margin-top: 1px;
+                margin-right:0px;
+                font-size: 20px;
+                font-family: sans-serif;
+                font-weight: bold;
+                color:white;
+                cursor: pointer;
+            }
+            
+            #close_popup_div2:hover{
+                position: absolute;
+                background-color: black;
+                width: 25px;
+                height: 25px;
+                border-radius: 10px;
+                border: 3px solid black;
+                text-align: center;
+                right: 5px;
+                top: 5px;
+            }
+            
+          
+            
+            #javascript_magic2{
+                color:white;
+                text-align: center;
+                font-family: 'Luckiest Guy';
+                font-weight: bold;
+                font-size: 50px;
+                border-bottom: 3px solid black;
+                background-color: #f9eb7c;
+                padding-top:10px;
+                padding-bottom: 5px;
+                margin-top: 1px;
+                text-shadow: 2px 2px #000000;
+            }
+            
+            #javascript_desc2{
+                font-family: sans-serif;
+                text-align: center;
+                margin-top: 80px;
+            }
+            
+            #menu {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 300px;
+                right: 100px;
+                width: 400px;
+                height: 100px;
+                color: black;
+                background: red;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+             #menu:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 300px;
+                right: 100px;
+                width: 400px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            #cheats {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 60px;
+                width: 800px;
+                height: 100px;
+                color: black;
+                background: blue;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            
+            #cheats:hover {
+                margin-top: 20px;
+                padding: 2px;
+                display: block;
+                position:absolute;
+                top: 60px;
+                width: 800px;
+                height: 100px;
+                color: white;
+                background: black;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                bottom: 100px;
+                line-height: 15px;
+                
+            }
+            #cheatScore{
+                color:black;
+                background-color: orange;
+                float:left;
+                width: 400px;
+                height: 90px;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+            }
+             #cheatScore:hover{
+                color:white;
+                background-color: black;
+                float:left;
+                width: 400px;
+                height: 90px;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+            }
+            #cheatToggleDrop{
+                color:black;
+                background-color: green;
+                float:left;
+                width: 400px;
+                height: 90px;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+            }
+             #cheatToggleDrop:hover{
+                color:white;
+                background-color: lightgreen;
+                float:left;
+                width: 400px;
+                height: 90px;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+            }
+            #cheatPiece{
+                color:black;
+                background-color: purple;
+                float:right;
+                width: 400px;
+                height: 90px;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                line-height: 1px;
+            }
+            #cheatPiece:hover{
+                color:white;
+                background-color: black;
+                float:right;
+                width: 400px;
+                height: 90px;
+                font-family: 'Luckiest Guy';
+                font-size: 50px;
+                line-height: 1px;
+            }
+     
+    </style>
+</head>
+<body>
+<button id="menu" onclick="openpopmenu3()">Main Menu</button>
+
+<div class="dropdown">
+  <button class="dropbtn"><b>More</b></button>
+  <div class="dropdown-content">
+    <a href="">More Games</a>
+    <a href="">Report Bugs/Suggestions</a>
+    <a href="/">Go Home!</a>
+  </div>
+</div>
+    <div id="score"></div>
+    <canvas id="tetris" width="240" height="400" ></canvas>
+    <div id="popup_bg3">
+            <div id="popup_main_div3">
+            <p id="javascript_magic3">
+                Main Menu
+            </p>
+            <div>
+                <button id="cheats" onclick="openpopmenu2()">Game Cheats ;)</button>
+                <button id="score2"><p id="button">Submit Score</p></button>
+                <button id="pause" onclick="pause()">PAUSE </button>
+            </div>
+            <div>
+                  
+                <div id="close_popup_div3" title="Close Menu" onclick="closepopmenu3()">
+                    <p id= "close_popup_divp3">
+                        X
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    <div id="popup_bg2">
+            <div id="popup_main_div2">
+            <p id="javascript_magic2">
+                Cheats Menu
+            </p>
+            <div>
+                <p class="cheat">This is the Cheat Menu! Click different buttons for </p>
+                <p class="cheat2">different effects as soon as you click one all integrity is lost :(</p>
+            </div>
+            <div>
+                <button id="cheatScore" onclick="setScore()">Boost Score</button>
+                <button id="cheatPiece" onclick="playerReset()"><p id="button">Change Piece</p></button>
+                <button id="cheatToggleDrop" onclick="toggleInstadrop()">Insta-drop: <span id="droptoggled">off</span></button>
+            </div>
+            <div>
+                  
+                <div id="close_popup_div2" title="Close Menu" onclick="closepopmenu2()">
+                    <p id= "close_popup_divp2">
+                        X
+                    </p>
+                </div>
+            </div>
+        </div>
+    <script>
+var highscore= 0;
+const canvas = document.getElementById('tetris');
+const context = canvas.getContext('2d');
+var keys = [];
+var key1Frame = [];
+var instaDrop = false;
+
+context.scale(20, 20);
+
+
+//This function lets the user pause the game
+function pause(){
+    window.alert("Game Is paused, press OK to resume");
+}
+//This makes the main menu pop up
+var popupdiv3= document.getElementById("popup_bg3");
+function openpopmenu3(){
+        popupdiv3.style.display="block";
+}
+        
+function closepopmenu3(){
+        popupdiv3.style.display="none";
+}
+var popupdiv2= document.getElementById("popup_bg2");
+function openpopmenu2(){
+        popupdiv2.style.display="block";
+}
+        
+function closepopmenu2(){
+        popupdiv2.style.display="none";
+}
+//This function allows user to set score
+function setScore(){
+    var cheatS= window.prompt("What do you want your score to be? ")
+    player.score= cheatS;
+    document.getElementById('score').innerText = player.score;
+}
+
+function toggleInstadrop() {
+    if(instaDrop) {
+        instaDrop = false;
+        document.getElementById("droptoggled").innerText = "off";
+    } else {
+        instaDrop = true;
+        document.getElementById("droptoggled").innerText = "on";
+    }
+}
+
+
+
+
+document.getElementById("score2").addEventListener("click", submit);
+//this function allows the user to submit their score 
+function submit(){
+    var userscore= player.score;
+    if(userscore > highscore){
+        highscore= userscore;
+        window.alert("You've have set a new highscore!")
+    }else if(userscore == highscore){
+        window.alert("You're almost there keep it up!")
+    }else{
+        window.alert("You're a dissapointment!")
+    }
+}
+function arenaSweep() {
+    let rowCount = 1;
+    outer: for (let y = arena.length -1; y > 0; --y) {
+        for (let x = 0; x < arena[y].length; ++x) {
+            if (arena[y][x] === 0) {
+                continue outer;
+            }
+        }
+
+        const row = arena.splice(y, 1)[0].fill(0);
+        arena.unshift(row);
+        ++y;
+
+        player.score += rowCount * 100;
+        rowCount *= 2;
+    }
+}
+
+function collide(arena, player) {
+    const m = player.matrix;
+    const o = player.pos;
+    for (let y = 0; y < m.length; ++y) {
+        for (let x = 0; x < m[y].length; ++x) {
+            if (m[y][x] !== 0 &&
+               (arena[y + o.y] &&
+                arena[y + o.y][x + o.x]) !== 0) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function createMatrix(w, h) {
+    const matrix = [];
+    while (h--) {
+        matrix.push(new Array(w).fill(0));
+    }
+    return matrix;
+}
+
+function createPiece(type)
+{
+    if (type === 'I') {
+        return [
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+            [0, 1, 0, 0],
+        ];
+    } else if (type === 'L') {
+        return [
+            [0, 2, 0],
+            [0, 2, 0],
+            [0, 2, 2],
+        ];
+    } else if (type === 'J') {
+        return [
+            [0, 3, 0],
+            [0, 3, 0],
+            [3, 3, 0],
+        ];
+    } else if (type === 'O') {
+        return [
+            [4, 4],
+            [4, 4],
+        ];
+    } else if (type === 'Z') {
+        return [
+            [5, 5, 0],
+            [0, 5, 5],
+            [0, 0, 0],
+        ];
+    } else if (type === 'S') {
+        return [
+            [0, 6, 6],
+            [6, 6, 0],
+            [0, 0, 0],
+        ];
+    } else if (type === 'T') {
+        return [
+            [0, 7, 0],
+            [7, 7, 7],
+            [0, 0, 0],
+        ];
+    } else if (type === 'G') {
+        return [
+            [8, 0, 8],
+            [8, 8, 8],
+            [0, 0, 0],
+        ];
+    } else if (type === 'K') {
+        return [
+            [0, 9, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+        ];
+    } else if (type === 'B') {
+        return [
+            [10, 0, 0],
+            [10, 10, 0],
+            [0, 0, 0],
+        ];
+    } else if (type === 'A') {
+        return [
+            [11, 0, 11],
+            [11, 0, 11],
+            [0, 0, 0],
+        ];
+    }else if (type === 'R') {
+        return [
+            [12, 0, 0],
+            [0, 12, 0],
+            [0, 0, 12],
+        ];
+    }else if (type === 'U'){
+        return [
+            [13, 13, 13],
+            [13, 0, 13],
+            [13, 13, 13],
+        ];
+    }
+    console.log(type);
+}
+
+function drawMatrix(matrix, offset) {
+    matrix.forEach((row, y) => {
+        row.forEach((value, x) => {
+            if (value !== 0) {
+                context.fillStyle = colors[value];
+                context.fillRect(x + offset.x,
+                                 y + offset.y,
+                                 1, 1);
+            }
+        });
+    });
+}
+
+function draw() {
+    context.fillStyle = '#000';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    drawMatrix(arena, {x: 0, y: 0});
+    drawMatrix(player.matrix, player.pos);
+}
+
+function merge(arena, player) {
+    player.matrix.forEach((row, y) => {
+        row.forEach((value, x) => {
+            if (value !== 0) {
+                arena[y + player.pos.y][x + player.pos.x] = value;
+            }
+        });
+    });
+}
+
+function rotate(matrix, dir) {
+    for (let y = 0; y < matrix.length; ++y) {
+        for (let x = 0; x < y; ++x) {
+            [
+                matrix[x][y],
+                matrix[y][x],
+            ] = [
+                matrix[y][x],
+                matrix[x][y],
+            ];
+        }
+    }
+
+    if (dir > 0) {
+        matrix.forEach(row => row.reverse());
+    } else {
+        matrix.reverse();
+    }
+}
+
+function playerDrop() {
+    player.pos.y++;
+    if (collide(arena, player)) {
+        player.pos.y--;
+        merge(arena, player);
+        playerReset();
+        arenaSweep();
+        updateScore();
+        return true;
+    }
+    dropCounter = 0;
+    return false;
+}
+
+function playerMove(offset) {
+    player.pos.x += offset;
+    if (collide(arena, player)) {
+        player.pos.x -= offset;
+    }
+}
+
+function playerReset() {
+    const pieces = 'TJLOSZIGKBAU';
+    player.matrix = createPiece(pieces[(pieces.length-1) * Math.random() | 0]);
+    player.pos.y = 0;
+    player.pos.x = (arena[0].length / 2 | 0) - (player.matrix[0].length / 2 | 0);
+    if (collide(arena, player)) {
+        arena.forEach(row => row.fill(0));
+        player.score = 0;
+        updateScore();
+        dropInterval = 1000;
+    }
+}
+
+function playerRotate(dir) {
+    const pos = player.pos.x;
+    let offset = 1;
+    rotate(player.matrix, dir);
+    while (collide(arena, player)) {
+        player.pos.x += offset;
+        offset = -(offset + (offset > 0 ? 1 : -1));
+        if (offset > player.matrix[0].length) {
+            rotate(player.matrix, -dir);
+            player.pos.x = pos;
+            return;
+        }
+    }
+}
+
+let dropCounter = 0;
+var dropInterval = 1200;
+
+
+let lastTime = 0;
+function update(time = 0) {
+    const deltaTime = time - lastTime;
+
+    dropCounter += deltaTime;
+    if (dropCounter > dropInterval) {
+        playerDrop();
+        if (keys[40]) {
+            dropInterval = 100;
+        } else {
+            dropInterval = 1200;
+        }
+    }
+    if (key1Frame[37]) {
+        playerMove(-1);
+    }
+    if (key1Frame[39]) {
+        playerMove(1);
+    }
+    if (key1Frame[38]) {
+        playerRotate(-1);
+    }
+    if (key1Frame[17]) {
+        playerRotate(1);
+    }
+    if (key1Frame[32]) {
+        if(instaDrop) {
+            var temp = true;
+            while(temp)
+            temp = !playerDrop();
+        } else {
+            playerRotate(-1);
+        }
+    }
+    
+    key1Frame = [];
+    lastTime = time;
+    draw();
+    requestAnimationFrame(update);
+}
+
+function updateScore() {
+    document.getElementById('score').innerText = player.score;
+    dropInterval -= 15;
+}
+
+document.addEventListener('keydown', (event) => {
+    keys[event.keyCode] = true;
+    key1Frame[event.keyCode] = true;
+});
+
+document.addEventListener('keyup', event => {
+    keys[event.keyCode] = false;
+});
+
+const colors = [
+    null,
+    '#ff1000',
+    '#ff8300',
+    '#ffe100',
+    '#21ff00',
+    '#00ffff',
+    '#1900ff',
+    '#ff00ee',
+    '#ffaaf9',
+    '#844209',
+    '#225647',
+    "#ffffff",
+    "#000001",
+    '#ee87ee',
+    
+];
+
+const arena = createMatrix(12, 20);
+
+const player = {
+    pos: {x: 0, y: 0},
+    matrix: null,
+    score: 0,
+    
+};
+
+
+playerReset();
+updateScore();
+update();
+</script>
+</body>
+</html>
