@@ -242,6 +242,6 @@ function showPrevDivProject(){
     }else{
         currentDivElem.classList.remove('active');
         currentProjectDiv = totalProjectDivs;
-        document.getElementById('div9').classList.add('active');
+        document.getElementById('div10').classList.add('active');
     }
 }
