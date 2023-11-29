@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 let currentDiv = 1;
 let currentTeachingDiv = 1;
 let currentProjectDiv = 1;
-const totalProjectDivs = 9;
+const totalProjectDivs = 10;
 const totalTeachingDivs = 2;
 const totalDivs = 4;
 
