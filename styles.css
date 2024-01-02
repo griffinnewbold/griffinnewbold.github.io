@@ -195,3 +195,45 @@ h2 {
     text-decoration: none;
     color: #141414;
   }
+
+  .section1, .section2 {
+    display: block;
+    clear: both;
+  }
+
+ .even {
+    background-color: #f2f2f2; 
+ } 
+
+ .odd {
+    background-color: #ffffff; 
+ }
+ 
+ .holiday {
+    background-color: #ff0000; 
+    color: #ffffff;
+    font-weight: bold; 
+ }
+
+ .sections-container {
+    clear: both;
+    margin-top: 20px; 
+  }
+
+  .schedule {
+    width: 95%; 
+    border-collapse: collapse; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+  }
+  
+  .schedule th {
+    background-color: #333; 
+    color: #fff; 
+    padding: 8px; 
+  }
+  
+  .schedule td {
+    padding: 8px; 
+    border: 1px solid #ddd;
+  }
