@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Coolvectica';
-    src: url('fonts/coolvetica-rg.woff') format('woff2');
+    src: url('./fonts/coolvetica-rg.woff') format('woff2');
 }
 
 @font-face {
-    font-family: 'Cocogoose';
-    src: url('fonts/cocogoose.ttf') format('truetype');
+    font-family: 'Montserrat', sans-serif;
+    src: url('./fonts/Montserrat-Regular.ttf') format('TrueType');
 }
 
 .proj_img {
@@ -123,17 +123,17 @@ aside {
 }
 
 h1 {
-    font-family: Calibri;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.2vw;
 }
 
 h2 {
-    font-family: Calibri;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.7vw;
 }
 
 .section-text{
-    font-family: Calibri;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2vw;
     color: #141414;
 }
@@ -145,7 +145,7 @@ h2 {
 }
 
 .course-item{
-    font-family: Calibri;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2vw;
     color: #141414;
 }
@@ -178,7 +178,7 @@ h2 {
   }
 
   .prev-next-buttons button:hover {
-    color: #99ccff; /* Change to your desired hover color */
+    color: #99ccff; 
   }
 
   button.previous-btn {
@@ -236,4 +236,8 @@ h2 {
   .schedule td {
     padding: 8px; 
     border: 1px solid #ddd;
+  }
+
+  .schedule tr {
+    font-family: 'Montserrat', sans-serif;
   }

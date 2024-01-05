@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="shortcut icon" href="favicon.ico" type="image/ico">
+  <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <script src="/scripts/courses_script.js"></script>
 </head>
 <body>
   <header>
@@ -20,7 +20,7 @@
         <li><a href="/extracurricular.html">Extracurriculars</a></li>
         <li><a href="/contact.html">Contact Me</a></li>
         <li><a href="https://www.linkedin.com/in/griffinnewbold">LinkedIn</a></li>
-        <li><a href="griffinnewboldresume.pdf">Resume</a></li>
+        <li><a href="/resources/griffinnewbold_resume.pdf">Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -28,7 +28,7 @@
   <main>
     <aside>
       <div class="profile-container">
-        <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+        <img src="/resources/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
         <p class="profile-text-header">Griffin Newbold</p><p class="profile-text">Third Year Undergraduate at Columbia University <br><br> Teaching Assistant for Professor Adam Cannon <br><br>Incoming Software Engineering Intern @ Capital One <br><br> Located in New York, New York</p>
       </div>
     </aside>
@@ -37,7 +37,7 @@
       <p class="section-text">This page will describe the relevant courses I have taken during my time
         at Columbia. This is will effectively be the course descriptions in my own words, plus some may be unfamiliar
         with the courses Columbia offers so this makes it better, any course denoted with a single asterisk 
-        represents those I will be taking in the upcoming semester (Fall 2023), any course denoted with two asterisks represent courses
+        represents those I will be taking in the upcoming semester (Spring 2024), any course denoted with two asterisks represent courses
         for which I am heavily considering taking in future semesters. The selections will be sorted by course-id per academic year.
       </p>
       <div id="div1" class="content active">
@@ -148,7 +148,7 @@
           on software testing to make sure the code we write is free of bugs. 
         </p>
 
-        <h2>COMS 4170, User Interface Design</h2>
+        <h2>COMS 4170, User Interface Design*</h2>
         <p class = "section-text">
           This course serves as an introduction to the theory and practice of computer user interface design.
           An emphasis is places on the software design of graphical user interfaces. Topics include Basic
@@ -191,8 +191,8 @@
 
       </div>
       <div class = "prev-next-buttons">
-        <button class="previous-btn" onclick="showPrevDiv()">Previous</button>
-        <button class="next-btn" onclick="showNextDiv()">Next</button>
+        <button class="previous-btn" onclick="showPrevDivCourse()">Previous</button>
+        <button class="next-btn" onclick="showNextDivCourse()">Next</button>
       </div>
     </section>
   </main>
