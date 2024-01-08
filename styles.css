@@ -245,3 +245,91 @@ h3 {
   .schedule tr {
     font-family: 'Montserrat', sans-serif;
   }
+
+  #github-files-list {
+    list-style: none; 
+    padding: 0; 
+    margin-left: 4%;
+  }
+  
+  #github-files-list li {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px;
+  }
+  
+  #github-files-list button {
+    display: inline-block; 
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 10px; 
+    text-align: left;
+    background-color: #3498db; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    margin-right: 5px; 
+  }
+  
+  #github-files-list a {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 10px; 
+    text-align: left;
+    background-color: #ddd; 
+    color: #000; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    margin-right: 5px; 
+  }
+  
+  #github-files-list button:hover {
+    background-color: #2980b9; 
+  }
+  
+  #github-files-list a:hover {
+    background-color: #aaa; 
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+  }
+  
+  .top {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin-bottom: 10px; 
+  }
+  
+  .left,
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .left {
+    margin-left: 3%;
+  }
+  
+  .right {
+    margin-left: 20px; 
+  }
+  
+  .bottom {
+    margin-top: auto; 
+    margin-left: 2%;
+    margin-bottom: 1%;
+  }
+
+  #code-display {
+    margin-left: 25px;
+  }
