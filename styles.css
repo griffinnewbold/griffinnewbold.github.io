@@ -145,7 +145,7 @@ h3 {
 .footer-text {
     font-family: 'Coolvectica', sans-serif;
     font-size: 1.0vw;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .course-item{
@@ -333,3 +333,21 @@ h3 {
   #code-display {
     margin-left: 25px;
   }
+
+  .home-icon {
+    font-family: 'Coolvectica', sans-serif;
+    font-size: 1.0vw;
+    margin-right: 10px;
+  }
+
+  .footer-left, .footer-right {
+    padding: 5px; 
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
