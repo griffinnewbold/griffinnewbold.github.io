@@ -136,7 +136,7 @@ h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
-h5 {
+h4 {
   font-family: 'Montserrat', sans-serif;
   margin-top: 0;
   margin-bottom: 0;
@@ -146,6 +146,12 @@ h5 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2vw;
     color: #141414;
+}
+
+.section-text2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8vw;
+  color: #141414;
 }
 
 .footer-text {
