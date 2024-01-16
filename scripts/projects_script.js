@@ -1,5 +1,5 @@
 let currentProjectDiv = 1;
-const totalProjectDivs = 10;
+const totalProjectDivs = 11;
 const lastDiv = `div${totalProjectDivs}`;
 
 function showNextDivProject(){
