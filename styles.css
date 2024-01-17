@@ -226,9 +226,21 @@ h4 {
  }
  
  .holiday {
-    background-color: #ff0000; 
+    background-color: #cc2936; 
     color: #ffffff;
     font-weight: bold; 
+ }
+
+ .homework {
+  background-color: #6667ab; 
+  color: #ffffff;
+  font-weight: bold; 
+ }
+
+ .exam {
+  background-color: #ce9e00; 
+  color: #ffffff;
+  font-weight: bold; 
  }
 
  .sections-container {
