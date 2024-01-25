@@ -356,6 +356,8 @@ h4 {
 
   #code-display {
     margin-left: 25px;
+    overflow: hidden;
+    height: 500px;
   }
 
   .home-icon {
