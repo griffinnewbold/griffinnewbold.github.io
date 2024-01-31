@@ -1,87 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Griffin's Homepage</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="/scripts/maintanence_script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
+  <title>Home</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="horizontal-list">
-        <li><a href="/">Griffin Newbold</a></li>
-        <li><a href="/teaching.html">Teaching</a></li>
-        <li><a href="/projects.html">Projects</a></li>
-        <li><a href="/courses.html">Courses Taken</a></li>
-        <li><a href="/extracurricular.html">Extracurriculars</a></li>
-        <li><a href="/contact.html">Contact Me</a></li>
-        <li><a href="https://www.linkedin.com/in/griffinnewbold">LinkedIn</a></li>
-        <li><a href="/resources/griffinnewbold_resume.pdf">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="container-fluid">
+        <div class="navigation row justify-content-center">
+            <div class="col-4 col-sm-6 col-md-1">
+                <a class="nav-item" href="/">Home</a>
+            </div>
+            <div class="col-4 col-sm-6 col-md-1">
+                <a class="nav-item" href="/projects.html">Projects</a>
+            </div>
+            <div class="col-4 col-sm-6 col-md-1">
+                <a class="nav-item" href="/teaching.html">Teaching</a>
+            </div>
+            <div class="col-4 col-sm-6 col-md-1">
+                <a class="nav-item" href="/courses.html">Courses</a>
+            </div>
+            <div class="col-4 col-sm-6 col-md-1">
+                <a class="nav-item" href="/contact.html">Contact</a>
+            </div>
+            <div class="col-4 col-sm-6 col-md-1">
+                <a class="nav-item" href="/resources/griffinnewbold_resume.pdf">Resume</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row page-content">
+            <div class="col-md-2 profile-container">
+                <img src="../resources/profile-picture.jpg" alt="Profile Picture" class="profile-picture img-fluid">
+                <p class="profile-text-header">Griffin Newbold</p>
+                <p class="profile-text">Third Year Undergraduate at Columbia University <br><br>
+                Teaching Assistant for Professor Adam Cannon <br><br>
+                Projects Student for Professor Gail Kaiser<br><br>
+                Incoming Software Engineering Intern @ Capital One <br><br>
+                Located in New York, New York
+                </p>
+            </div>
+            <div class="col-md-10">
+                <h2>About Me</h2>
+                <p class = "section-text">Welcome to my Homepage! 
+                    I am currently a third year undergraduate student at Columbia University
+                    studying Computer Science. This site will serve as my expanded personal portfolio.
+                    This will allow me to showcase more about myself than my resume or my github page ever
+                    could alone. While my Github profile showcases all my technical projects, my resume only 
+                    shows the effective highlights. There is so much more beyond either of those that this page
+                    felt necessary. Plus it helps demonstrate the existence of front-end development skills on my part,
+                    even though I do not specialize in such areas. <br><br>
+                    
+                    This upcoming semester, I will continue my Computer Science education at Columbia. Two semesters ago 
+                    I finished up the core requirements for my major so all I am left with are electives. While the core of 
+                    the major had a good mix of theorectical courses along with applications based ones, I intend to take courses
+                    that focus more on applications than the theory. While you can find more information about the courses, I have taken/plan to take 
+                    in the "Courses Taken" section I will layout the courses I plan to take in the upcoming term related to my field of study. <br>
 
-  <main>
-    <aside>
-      <div class="profile-container">
-        <img src="/resources/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
-        <p class="profile-text-header">Griffin Newbold</p><p class="profile-text">Third Year Undergraduate at Columbia University <br><br> Teaching Assistant for Professor Adam Cannon <br><br> Projects Student for Professor Gail Kaiser<br><br> Incoming Software Engineering Intern @ Capital One <br><br> Located in New York, New York</p>
-      </div>
-    </aside>
-    
+                    <ul>
+                    <li class="course-item">COMS 4170 User Interface Design</li>
+                    <li class="course-item">COMS 4901 Projects in Computer Science</li>
+                    </ul>
+                </p>
+                <p class = "section-text">
+                    As of the beginning of the Spring Semester the above is the planned selection of Computer Science courses I plan to take.
+                </p>
+                <h4>Background</h4>
+                <p class = "section-text">
+                    I started my programming journey in my first year of highschool, I took AP Computer Science Principles which was a newly offered course
+                    at my highschool. My instructor choose JavaScript for the first half of the course then began teaching us Java in the second half of the course.
+                    I continued down the Java rabbit hole and took AP Computer Science A in my second year followed by the two Java courses offered by my local community college
+                    through their dual enrollment program. After I completed these courses, I successfully completed my OCA Java 8 SE Programmer I exam offered by Oracle. At this point I took a few other courses through my community college which introduced 
+                    me to C++ as well as MySQL and Visual Basic, along with some basic IT trouble shooting skills through their Operating Systems course. I concluded my high school journey by taking a Networking course 
+                    which used coursework and a curriculum developed by Cisco. <br><br>
 
-    <section>
-      <h1>About Me</h1>
-      <p class = "section-text">Welcome to my Homepage! 
-        I am currently a third year undergraduate student at Columbia University
-        studying Computer Science. This site will serve as my expanded personal portfolio.
-        This will allow me to showcase more about myself than my resume or my github page ever
-        could alone. While my Github profile showcases all my technical projects, my resume only 
-        shows the effective highlights. There is so much more beyond either of those that this page
-        felt necessary. Plus it helps demonstrate the existence of front-end development skills on my part,
-        even though I do not specialize in such areas. <br><br>
-        
-        This upcoming semester, I will continue my Computer Science education at Columbia. Two semesters ago 
-        I finished up the core requirements for my major so all I am left with are electives. While the core of 
-        the major had a good mix of theorectical courses along with applications based ones, I intend to take courses
-        that focus more on applications than the theory. While you can find more information about the courses, I have taken/plan to take 
-        in the "Courses Taken" section I will layout the courses I plan to take in the upcoming term related to my field of study. <br>
-
-        <ul>
-          <li class="course-item">COMS 4170 User Interface Design</li>
-          <li class="course-item">COMS 4901 Projects in Computer Science</li>
-        </ul>
-      </p>
-      <p class = "section-text">
-        As of the beginning of the Spring Semester the above is the planned selection of Computer Science courses I plan to take.
-      </p>
-      <h2>Background</h2>
-      <p class = "section-text">
-        I started my programming journey in my first year of highschool, I took AP Computer Science Principles which was a newly offered course
-        at my highschool. My instructor choose JavaScript for the first half of the course then began teaching us Java in the second half of the course.
-        I continued down the Java rabbit hole and took AP Computer Science A in my second year followed by the two Java courses offered by my local community college
-        through their dual enrollment program. After I completed these courses, I successfully completed my OCA Java 8 SE Programmer I exam offered by Oracle. At this point I took a few other courses through my community college which introduced 
-        me to C++ as well as MySQL and Visual Basic, along with some basic IT trouble shooting skills through their Operating Systems course. I concluded my high school journey by taking a Networking course 
-        which used coursework and a curriculum developed by Cisco. <br><br>
-
-        Once I arrived on Columbia's campus, I began their Computer Science curriculum right away, concurrently taking COMS 1004 and ENGL 1006 in my first semester
-        and finishing the academic year with the completion of their Data Structures and Algorithms course. My second year saw me take a deeper dive into the Computer 
-        Science curriculum that Columbia had to offer taking classes like Discrete Mathematics and Advanced Programming. My last two years at Columbia have allowed me 
-        to take elective courses that I found interesting and involved skills that I wanted to learn. <br><br>
-        
-        Of course while I took these courses, I also completed many personal projects and contributed to the learning community as well. More information about all of these can 
-        be found in the "Teaching" and "Projects" sections! Thanks for stopping by to read, I hope you take more time to explore my site. If for whatever reason you wish
-        to contact me please see the "Contact Me" section for more information about that, if you wish to connect with me on LinkedIn please see the appropriately named section.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p class = "footer-text">&copy; 2024 Griffin Newbold Powered by GitHub</p>
-  </footer>
+                    Once I arrived on Columbia's campus, I began their Computer Science curriculum right away, concurrently taking COMS 1004 and ENGL 1006 in my first semester
+                    and finishing the academic year with the completion of their Data Structures and Algorithms course. My second year saw me take a deeper dive into the Computer 
+                    Science curriculum that Columbia had to offer taking classes like Discrete Mathematics and Advanced Programming. My last two years at Columbia have allowed me 
+                    to take elective courses that I found interesting and involved skills that I wanted to learn. <br><br>
+                    
+                    Of course while I took these courses, I also completed many personal projects and contributed to the learning community as well. More information about all of these can 
+                    be found in the "Teaching" and "Projects" sections! Thanks for stopping by to read, I hope you take more time to explore my site. If for whatever reason you wish
+                    to contact me please see the "Contact Me" section for more information about that, if you wish to connect with me on LinkedIn please see the appropriately named section.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
