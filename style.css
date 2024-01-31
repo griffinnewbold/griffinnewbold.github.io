@@ -11,6 +11,8 @@
     font-weight: bold;
 }
 
+
+
 .nav-item:hover,
 .nav-item:focus, 
 .nav-item:active {
@@ -69,6 +71,10 @@
 
     .proj_img {
         display: none;
+    }
+
+    .nav-item-div {
+        margin-right: 50px;
     }
 }
 
