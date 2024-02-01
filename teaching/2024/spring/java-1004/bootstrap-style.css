@@ -265,6 +265,7 @@ color: #000;
   padding: 0; 
   margin-left: 4%;
   margin-top: 20px;
+  overflow-y: scroll;
 }
 
 #github-files-list li {
@@ -277,7 +278,7 @@ color: #000;
   display: inline-block; 
   font-family: 'Montserrat', sans-serif;
   padding: 5px 10px; 
-  text-align: left;
+  text-align: center;
   background-color: #3498db; 
   color: #fff; 
   border: none;
@@ -285,13 +286,14 @@ color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease; 
   margin-right: 5px; 
+  width: 100%;
 }
 
 #github-files-list a {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   padding: 5px 10px; 
-  text-align: left;
+  text-align: center;
   background-color: #ddd; 
   color: #000; 
   border: none;
@@ -299,6 +301,7 @@ color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease; 
   margin-right: 5px; 
+  width: 100%;
 }
 
 #github-files-list button:hover {
@@ -347,5 +350,13 @@ color: #000;
 
   .page-header {
     padding-top: 20px;
+  }
+
+  #github-files-list button {
+    font-size: small;
+  }
+  
+  #github-files-list a {
+    font-size: small;
   }
 }

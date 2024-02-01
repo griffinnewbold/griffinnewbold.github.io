@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
             button.className = 'button';
             button.addEventListener('click', () => toggleCodeDisplay(file.download_url));
 
-            downloadButton.textContent = 'Download ' + file.name; 
+            downloadButton.textContent = 'Download File'; 
             downloadButton.href = file.download_url; 
             downloadButton.download = file.name; 
             downloadButton.className = 'button';
 
             listItem.appendChild(button);
             listItem.appendChild(downloadButton);
+            listItem.className = "list-item";
             githubFilesList.appendChild(listItem);
           }
         });
