@@ -260,6 +260,61 @@ color: #000;
   padding-left: 18px;
 }
 
+#github-files-list {
+  list-style: none; 
+  padding: 0; 
+  margin-left: 4%;
+  margin-top: 20px;
+}
+
+#github-files-list li {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 10px;
+}
+
+#github-files-list button {
+  display: inline-block; 
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px; 
+  text-align: left;
+  background-color: #3498db; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  margin-right: 5px; 
+}
+
+#github-files-list a {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px; 
+  text-align: left;
+  background-color: #ddd; 
+  color: #000; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  margin-right: 5px; 
+}
+
+#github-files-list button:hover {
+  background-color: #2980b9; 
+}
+
+#github-files-list a:hover {
+  background-color: #aaa; 
+}
+
+#code-display {
+  margin-left: 25px;
+  overflow-y:scroll;
+  height: 500px;
+}
+
 @media only screen and (max-width: 1026px) { 
   .schedule {
     width: 95%;
