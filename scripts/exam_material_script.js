@@ -56,3 +56,15 @@ function editButtonText() {
         nextButton.textContent = "Midterm 1";
     }
 }
+
+function checkPassword() {
+    var password = document.getElementById('password').value;
+    if (password === 'coms1004exam2024') { 
+        document.getElementById('passwordDiv').style.display = 'none'; 
+        document.getElementById('hiddenDiv').style.display = 'block';
+    }
+}
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+})
