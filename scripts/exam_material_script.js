@@ -59,7 +59,7 @@ function editButtonText() {
 
 function checkPassword() {
     var password = document.getElementById('password').value;
-    if (password === 'coms1004exam2024') { 
+    if (password === 'coms1004aprilmidterm') { 
         document.getElementById('passwordDiv').style.display = 'none'; 
         document.getElementById('hiddenDiv').style.display = 'block';
     }
