@@ -167,8 +167,39 @@
                     free response section where you'll be expected to write code, as a reminder this will all be done via pencil and paper. I have made a full 
                     length practice final exam which students have found extremely helpful and accurate in the past. <br><br>
       
-                    <a href="https://github.com/griffinnewbold/Teaching/blob/main/COMSW%201004/Spring%202023/Supplementary%20Resources/1004%20Practice%20Final%20(4).pdf">1.) Griffin's Practice Final Exam</a><br>
+                    <a href="https://github.com/griffinnewbold/Teaching/blob/main/COMSW%201004/Spring%202023/Supplementary%20Resources/1004%20Practice%20Final%20(4).pdf">1.) Griffin's Practice Final Exam from 2024</a><br>
                   </p>
+                  <script>
+                    window.onload = function(e) {
+                        const examReveal = new Date('May 5, 2024 00:00:01 GMT-04:00');
+                        if (Date.now() >= examReveal) {
+                            document.getElementById("passwordDiv").style.display = "none";
+                            document.getElementById("hiddenDiv").style.display = "block";
+                        }
+                    }
+                  </script>
+                  <div id="passwordDiv" style="display: block;">
+                    <label for="password">Enter Password To Display Practice Answers:</label>
+                    <input type="password" id="password" name="password">
+                    <button onclick="checkPassword()">Submit</button>
+                   </div>
+              
+                <div id="hiddenDiv" style="display: none;">
+                    <hr>
+                    <p class="section-text">
+                        <h4>Solutions to Griffin's Practice Final</h4><br>
+                        <a href="https://github.com/griffinnewbold/Teaching/blob/main/COMSW%201004/Spring%202023/Supplementary%20Resources/1004%20Practice%20Final%20(4).pdf">2024 Practice Final Solutions</a><br>
+                    </p>
+                    <hr>
+                    <h4>Video Walkthrough: 2024 Practice Exam</h4>
+                    
+                    <iframe width="960" height="540"
+                        src="https://www.youtube.com/embed/D8vArhPGH6E">
+                    </iframe>
+                    
+                    
+                </div>
+
               </div>
         </div>
     </div>
