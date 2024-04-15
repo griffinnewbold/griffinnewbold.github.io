@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let tag = document.getElementById(tagId);
     if (tag && tagId === "h-text") {
       const obj = returnObjectFromURI(uri, false, true, false);
-      console.log(obj)
       tag.innerHTML = `<div class="card">
                           <div class="card-body">
                             <h5 class="card-title">${obj.title}</h5>
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
       tag.innerHTML = `<div class="card">
                           <div class="card-body">
                             <h5 class="card-title">${obj.name}</h5>
-                            <img src="${obj.image}">
+                            <img class="img-fluid"src="${obj.image}">
                           </div>
                           <a href="${uri}" class="ref-link btn btn-primary">Learn More About ${obj.surname}</a>
                         </div>`;

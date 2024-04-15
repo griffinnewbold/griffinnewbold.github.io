@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
-  <title>Arendt</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
+    <title>Search Results</title>
+  </head>
 <body style="background-color:#fdfdfd;">
+  <script src="scripts/search.js"></script>
   <script src="scripts/search-query.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
@@ -81,5 +82,13 @@
       </form>
     </div>
   </nav>
-  
+  <div class="container">
+    <div class="row">
+      <h1 class="mt-5">Search Results</h1>
+    </div>
+    <div class="row">
+      <div id="searchResults"></div>
+    </div>
+  </div>
 </body>
+</html>
