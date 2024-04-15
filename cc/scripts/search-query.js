@@ -3,7 +3,7 @@ function searchFiles(event) {
   const searchTerm = document.getElementById('searchInput').value.trim();
   if (searchTerm !== '') {
     let encodedSearchTerm = encodeURIComponent(searchTerm);
-    let searchURL = '/cc/search.html?term=' + encodedSearchTerm;
+    let searchURL = '/cc/search.html?q=' + encodedSearchTerm;
     window.location.href = searchURL;
   }
 }
