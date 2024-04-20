@@ -8,12 +8,11 @@ function getUrlParameter(name) {
 }
 
 function displaySearchResults() {
-  let searchTerm = getUrlParameter('term');
-  let searchResultsDiv = document.getElementById('searchResults');
+  let searchTerm = getUrlParameter('q');
+  let searchResultsDiv = document.getElementById("searchResults");
 
   if (searchTerm) {
     searchTerm = decodeURIComponent(searchTerm).replace(/\s/g, "");
-
     let files = {
       '/cc/works/works-by-ambedkar.html': 'Annihilation of Caste',
       '/cc/works/works-by-arendt.html': 'Crises of the Republic',
@@ -74,5 +73,7 @@ function displaySearchResults() {
   }
 }
 
-window.onload = displaySearchResults;
+window.onload = () => {
+  displaySearchResults();
+}
 
