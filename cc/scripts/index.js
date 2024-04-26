@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const opinionMap = new Map();
   opinionMap.set("defenseofmill", {title: "A Defense of Mill", author: "Griffin Newbold", date: "April 1, 2024"});
   opinionMap.set("onthemanwhokilledgod", {title: "On the Man Who Killed God", author: "Griffin Newbold", date: "April 23, 2024"});
-  opinionMap.set("thecycleofcolonialism", {title: "The Cycle of Colonialism", author: "Griffin Newbold", date: "April 16, 2024"});
+  opinionMap.set("thecycleofcolonialism", {title: "The Cycle of Colonialism", author: "Griffin Newbold", date: "April 26, 2024"});
 
   const debateMap = new Map();
-  debateMap.set("smithvmarx", {title: "Smith V. Marx", author: "Griffin Newbold", date: "April 18, 2024"});
-  debateMap.set("womenofideals", {title: "Women of Ideals", author: "Griffin Newbold", date: "April 25, 2024"});
-  debateMap.set("tbd", {title: "TBD", author: "Griffin Newbold", date: "May 2, 2024"});
+  debateMap.set("smithvmarx", {title: "Smith V. Marx", author: "Griffin Newbold", date: "May 2, 2024"});
+  debateMap.set("womenofideals", {title: "Women of Ideals", author: "Griffin Newbold", date: "April 30, 2024"});
+  debateMap.set("foucaultnyc", {title: "Michel Foucault v. The City of New York", author: "Griffin Newbold", date: "April 27, 2024"});
   
   const authorURIs = [
     "/cc/authors/smith.html",
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const debateURIs = [
     "/cc/debates/smithvmarx.html",
     "/cc/debates/womenofideals.html",
-    "/cc/debates/tbd.html"
+    "/cc/debates/foucaultnyc.html"
   ];
 
   const opinionURIs = [
