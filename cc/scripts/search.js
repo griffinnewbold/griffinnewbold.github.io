@@ -41,9 +41,8 @@ function displaySearchResults() {
       '/cc/opinions/defenseofmill.html': 'Defense of Mill',
       '/cc/opinions/onthemanwhokilledgod.html': 'On the Man Who Killed God',
       '/cc/opinions/thecycleofcolonialism.html': 'The Cycle of Colonialism',
-      '/cc/debates/smithvmarx.html': "Smith v. Marx",
-      '/cc/debates/womenofideals.html': "Women of Ideals",
-      '/cc/debates/tbd.html': "TBD"
+      '/cc/debates/smithvkant.html': "Smith v. Kant",
+      '/cc/debates/foucaultnyc.html': "Michel Foucault v. The City of New York",
     };
 
     let matchedFiles = [];
