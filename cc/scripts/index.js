@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   nameMap.set("dubois", {title: "The Souls of Black Folk", name: "W. E. B. Du Bois", surname: "Du Bois", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FmLrruD4MCXoWS_rYKjC7Q0QEFhk%3D%2F144x144%2Fmedia%2Fimg%2Fauthors%2F2022%2F07%2F6_WEB_Du_Bois_514697730_sq_crop-1%2Foriginal.jpg&f=1&nofb=1&ipt=3907acf08cd14d260eb0393447588369d9380613e9b7a0ca496bc26002db1f49&ipo=images"});
   nameMap.set("ambedkar", {title: "Annihilation of Caste", name: "B. R. Ambedkar", surname: "Ambedkar", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fhindi.gktoday.in%2Fwp-content%2Fuploads%2F2019%2F01%2Fambedkar.png%3Fssl%3D1&f=1&nofb=1&ipt=1cf687bf5bb448cc621eaa150e17da5f59a500067bb01fce1d698b86ce8bada9&ipo=images"});
   nameMap.set("fanon", {title: "The Wretched of the Earth", name: "Frantz Fanon", surname: "Fanon", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frepeatingislands.files.wordpress.com%2F2021%2F01%2Ffanon.png%3Fw%3D137&f=1&nofb=1&ipt=3c9ef3ff8e4a7839c5afe9fcadc67b2ae0daf020a88b7164586ffca5ba1377b4&ipo=images"});
-  nameMap.set("arendt", {title: "Crises of the Republic", name: "Hannah Arendt", surname: "Arendt", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thequotes.net%2Fwp-content%2Fuploads%2F2014%2F10%2Fhannah-arendt-150x150.jpg&f=1&nofb=1&ipt=96927fd7543e3687673d62381c470a6a739585cfaf2dcbf616abc458e6a5145f&ipo=images"});
+  nameMap.set("arendt", {title: "On Violence", name: "Hannah Arendt", surname: "Arendt", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thequotes.net%2Fwp-content%2Fuploads%2F2014%2F10%2Fhannah-arendt-150x150.jpg&f=1&nofb=1&ipt=96927fd7543e3687673d62381c470a6a739585cfaf2dcbf616abc458e6a5145f&ipo=images"});
   nameMap.set("foucault", {title: "Discipline & Punish", name: "Michel Foucault", surname: "Foucault", image: "https://www.sigloxxieditores.com/media/sigloxxi/images/thumbs/author-72766-130x175.jpg"});
 
   const opinionMap = new Map();
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const debateMap = new Map();
   debateMap.set("smithvkant", {title: "Smith V. Kant", author: "Griffin Newbold", date: "April 29, 2024"});
   debateMap.set("foucaultnyc", {title: "Michel Foucault v. The City of New York", author: "Griffin Newbold", date: "April 26, 2024"});
+  debateMap.set("arendtandfanon", {title: "Hannah Arendt & Frantz Fanon: On Violence", author: "Griffin Newbold", date: "May 1, 2024"});
   
   const authorURIs = [
     "/cc/authors/smith.html",
@@ -40,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   const debateURIs = [
     "/cc/debates/smithvkant.html",
-    "/cc/debates/foucaultnyc.html"
+    "/cc/debates/foucaultnyc.html",
+    "/cc/debates/arendtandfanon.html"
   ];
 
   const opinionURIs = [

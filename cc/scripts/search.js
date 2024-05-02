@@ -15,7 +15,7 @@ function displaySearchResults() {
     searchTerm = decodeURIComponent(searchTerm).replace(/\s/g, "");
     let files = {
       '/cc/works/works-by-ambedkar.html': 'Annihilation of Caste',
-      '/cc/works/works-by-arendt.html': 'Crises of the Republic',
+      '/cc/works/works-by-arendt.html': 'On Violence',
       '/cc/works/works-by-dubois.html': 'The Souls of Black Folk',
       '/cc/works/works-by-fanon.html': 'The Wretched of the Earth',
       '/cc/works/works-by-foucault.html': 'Discipline & Punish',
@@ -43,6 +43,7 @@ function displaySearchResults() {
       '/cc/opinions/thecycleofcolonialism.html': 'The Cycle of Colonialism',
       '/cc/debates/smithvkant.html': "Smith v. Kant",
       '/cc/debates/foucaultnyc.html': "Michel Foucault v. The City of New York",
+      '/cc/debates/arendtandfanon.html' : "Hannah Arendt & Frantz Fanon: On Violence"
     };
 
     let matchedFiles = [];
