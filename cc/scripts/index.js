@@ -7,22 +7,22 @@ document.addEventListener("DOMContentLoaded", function() {
   nameMap.set("tocqueville", {title: "Democracy in America ", name: "Alexis de Tocqueville", surname: "Tocqueville", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdl6pgk4f88hky.cloudfront.net%2F2023%2F04%2FAlexis_de_Tocqueville_Theodore_Chasseriau_-_Versailles-135x180.jpg&f=1&nofb=1&ipt=7355ce37ebe49e0ca30a9bd080822fad3211e408a91baccb21f822aeda8d52e5&ipo=images"});
   nameMap.set("mill", {title: "On Liberty, Utilitarianism & Other Essays", name: "John Stuart Mill", surname: "Mill", image: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.goodtherapy.org%2Fdbimages%2Fmill.jpg&f=1&nofb=1&ipt=14f62b4930aad7956d5f05b2a687e09d31fdb5ff92ab272420b8a41962da1f3e&ipo=images"});
   nameMap.set("marx", {title: "The Marx-Engels Reader", name: "Karl Marx", surname: "Marx", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F_eDwLxiF6h2I%2FTJp5QKiIm-I%2FAAAAAAAAAs4%2FSUJYrcpJ0uU%2Fs1600%2FMARX.jpg&f=1&nofb=1&ipt=b188cd41854dad598ab993991f31ae8c45923b806842949ad770dc76d3e03ec4&ipo=images"});
-  nameMap.set("nietzche", {title: "On the Genealogy of Morals & Ecce Homo", name: "Friedrich Nietzsche", surname: "Nietzsche", image: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.onelittleangel.com%2Fcommon%2Fimages%2Fauteur%2FNietzsche-238.jpg&f=1&nofb=1&ipt=ac7cc7e45de7b66ac71f8c4ca8dd419edef869651ba00744ebfcb109db230e4e&ipo=images"});
+  nameMap.set("nietzsche", {title: "On the Genealogy of Morals & Ecce Homo", name: "Friedrich Nietzsche", surname: "Nietzsche", image: "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.onelittleangel.com%2Fcommon%2Fimages%2Fauteur%2FNietzsche-238.jpg&f=1&nofb=1&ipt=ac7cc7e45de7b66ac71f8c4ca8dd419edef869651ba00744ebfcb109db230e4e&ipo=images"});
   nameMap.set("dubois", {title: "The Souls of Black Folk", name: "W. E. B. Du Bois", surname: "Du Bois", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.theatlantic.com%2Fthumbor%2FmLrruD4MCXoWS_rYKjC7Q0QEFhk%3D%2F144x144%2Fmedia%2Fimg%2Fauthors%2F2022%2F07%2F6_WEB_Du_Bois_514697730_sq_crop-1%2Foriginal.jpg&f=1&nofb=1&ipt=3907acf08cd14d260eb0393447588369d9380613e9b7a0ca496bc26002db1f49&ipo=images"});
   nameMap.set("ambedkar", {title: "Annihilation of Caste", name: "B. R. Ambedkar", surname: "Ambedkar", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fhindi.gktoday.in%2Fwp-content%2Fuploads%2F2019%2F01%2Fambedkar.png%3Fssl%3D1&f=1&nofb=1&ipt=1cf687bf5bb448cc621eaa150e17da5f59a500067bb01fce1d698b86ce8bada9&ipo=images"});
   nameMap.set("fanon", {title: "The Wretched of the Earth", name: "Frantz Fanon", surname: "Fanon", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frepeatingislands.files.wordpress.com%2F2021%2F01%2Ffanon.png%3Fw%3D137&f=1&nofb=1&ipt=3c9ef3ff8e4a7839c5afe9fcadc67b2ae0daf020a88b7164586ffca5ba1377b4&ipo=images"});
-  nameMap.set("arendt", {title: "Crises of the Republic", name: "Hannah Arendt", surname: "Arendt", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thequotes.net%2Fwp-content%2Fuploads%2F2014%2F10%2Fhannah-arendt-150x150.jpg&f=1&nofb=1&ipt=96927fd7543e3687673d62381c470a6a739585cfaf2dcbf616abc458e6a5145f&ipo=images"});
+  nameMap.set("arendt", {title: "On Violence", name: "Hannah Arendt", surname: "Arendt", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thequotes.net%2Fwp-content%2Fuploads%2F2014%2F10%2Fhannah-arendt-150x150.jpg&f=1&nofb=1&ipt=96927fd7543e3687673d62381c470a6a739585cfaf2dcbf616abc458e6a5145f&ipo=images"});
   nameMap.set("foucault", {title: "Discipline & Punish", name: "Michel Foucault", surname: "Foucault", image: "https://www.sigloxxieditores.com/media/sigloxxi/images/thumbs/author-72766-130x175.jpg"});
 
   const opinionMap = new Map();
   opinionMap.set("defenseofmill", {title: "A Defense of Mill", author: "Griffin Newbold", date: "April 1, 2024"});
   opinionMap.set("onthemanwhokilledgod", {title: "On the Man Who Killed God", author: "Griffin Newbold", date: "April 23, 2024"});
-  opinionMap.set("thecycleofcolonialism", {title: "The Cycle of Colonialism", author: "Griffin Newbold", date: "April 16, 2024"});
+  opinionMap.set("thecycleofcolonialism", {title: "The Cycle of Colonialism", author: "Griffin Newbold", date: "April 25, 2024"});
 
   const debateMap = new Map();
-  debateMap.set("smithvmarx", {title: "Smith V. Marx", author: "Griffin Newbold", date: "April 18, 2024"});
-  debateMap.set("womenofideals", {title: "Women of Ideals", author: "Griffin Newbold", date: "April 25, 2024"});
-  debateMap.set("tbd", {title: "TBD", author: "Griffin Newbold", date: "May 2, 2024"});
+  debateMap.set("smithvkant", {title: "Smith V. Kant", author: "Griffin Newbold", date: "April 29, 2024"});
+  debateMap.set("foucaultnyc", {title: "Michel Foucault v. The City of New York", author: "Griffin Newbold", date: "April 26, 2024"});
+  debateMap.set("arendtandfanon", {title: "Hannah Arendt & Frantz Fanon: On Violence", author: "Griffin Newbold", date: "May 1, 2024"});
   
   const authorURIs = [
     "/cc/authors/smith.html",
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "/cc/authors/tocqueville.html",
     "/cc/authors/mill.html",
     "/cc/authors/marx.html",
-    "/cc/authors/nietzche.html",
+    "/cc/authors/nietzsche.html",
     "/cc/authors/dubois.html",
     "/cc/authors/ambedkar.html",
     "/cc/authors/fanon.html",
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
   ];
   
   const debateURIs = [
-    "/cc/debates/smithvmarx.html",
-    "/cc/debates/womenofideals.html",
-    "/cc/debates/tbd.html"
+    "/cc/debates/smithvkant.html",
+    "/cc/debates/foucaultnyc.html",
+    "/cc/debates/arendtandfanon.html"
   ];
 
   const opinionURIs = [
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "/cc/works/works-by-tocqueville.html",
     "/cc/works/works-by-mill.html",
     "/cc/works/works-by-marx.html",
-    "/cc/works/works-by-nietzche.html",
+    "/cc/works/works-by-nietzsche.html",
     "/cc/works/works-by-dubois.html",
     "/cc/works/works-by-ambedkar.html",
     "/cc/works/works-by-fanon.html",

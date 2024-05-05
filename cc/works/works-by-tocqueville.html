@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,78 +9,124 @@
   <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
   <title>Democracy in America</title>
 </head>
+
 <body style="background-color:#fdfdfd;"></body>
-  <script src="../scripts/search-query.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #99ccff;">
-    <a class="navbar-brand">CC Final Project</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/about.html">About</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/debates.html">Debates</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/opinions.html">Op Eds</a>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Meet the Authors
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/cc/authors/smith.html">Adam Smith</a>
-            <a class="dropdown-item" href="/cc//authors/kant.html">Immanuel Kant</a>
-            <a class="dropdown-item" href="/cc/authors/wollstonecraft.html">Mary Wollstonecraft</a>
-            <a class="dropdown-item" href="/cc/authors/tocqueville.html">Alexis de Tocqueville</a>
-            <a class="dropdown-item" href="/cc/authors/mill.html">John Stuart Mill</a>
-            <a class="dropdown-item" href="/cc/authors/marx.html">Karl Marx</a>
-            <a class="dropdown-item" href="/cc/authors/nietzche.html">Friedrich Nietzsche</a>
-            <a class="dropdown-item" href="/cc/authors/dubois.html">W. E. B. Du Bois</a>
-            <a class="dropdown-item" href="/cc/authors/ambedkar.html">B. R. Ambedkar</a>
-            <a class="dropdown-item" href="/cc/authors/fanon.html">Frantz Fanon</a>
-            <a class="dropdown-item" href="/cc/authors/arendt.html">Hannah Arendt</a>
-            <a class="dropdown-item" href="/cc/authors/foucault.html">Michel Foucault</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/cc/about.html#Authors">Why These Authors?</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Explore the Works
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/cc/works/works-by-smith.html">The Wealth of Nations</a>
-            <a class="dropdown-item" href="/cc/works/works-by-kant.html">Groundwork of the Metaphysics of Morals</a>
-            <a class="dropdown-item" href="/cc/works/works-by-wollstonecraft.html">A Vindication of the Rights of Woman</a>
-            <a class="dropdown-item" href="/cc/works/works-by-tocqueville.html">Democracy in America</a>
-            <a class="dropdown-item" href="/cc/works/works-by-mill.html">On Liberty, Utilitarianism & Other Essays</a>
-            <a class="dropdown-item" href="/cc/works/works-by-marx.html">The Marx-Engels Reader</a>
-            <a class="dropdown-item" href="/cc/works/works-by-nietzsche.html">On the Genealogy of Morals & Ecce Homo</a>
-            <a class="dropdown-item" href="/cc/works/works-by-dubois.html">The Souls of Black Folk</a>
-            <a class="dropdown-item" href="/cc/works/works-by-ambedkar.html">Annihilation of Caste</a>
-            <a class="dropdown-item" href="/cc/works/works-by-fanon.html">The Wretched of the Earth</a>
-            <a class="dropdown-item" href="/cc/works/works-by-arendt.html">Crises of the Republic</a>
-            <a class="dropdown-item" href="/cc/works/works-by-foucault.html">Discipline & Punish</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/cc/about.html#Works">Why These Works?</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0" onsubmit="searchFiles(event)">
-        <input id= "searchInput"class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0">Go</button>
-      </form>
-    </div>
-  </nav>
-  
+<script src="../scripts/search-query.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #99ccff;">
+  <a class="navbar-brand">CC Final Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/cc/index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/cc/about.html">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/cc/debates.html">Debates</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/cc/opinions.html">Op Eds</a>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Meet the Authors
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/cc/authors/smith.html">Adam Smith</a>
+          <a class="dropdown-item" href="/cc//authors/kant.html">Immanuel Kant</a>
+          <a class="dropdown-item" href="/cc/authors/wollstonecraft.html">Mary Wollstonecraft</a>
+          <a class="dropdown-item" href="/cc/authors/tocqueville.html">Alexis de Tocqueville</a>
+          <a class="dropdown-item" href="/cc/authors/mill.html">John Stuart Mill</a>
+          <a class="dropdown-item" href="/cc/authors/marx.html">Karl Marx</a>
+          <a class="dropdown-item" href="/cc/authors/nietzsche.html">Friedrich Nietzsche</a>
+          <a class="dropdown-item" href="/cc/authors/dubois.html">W. E. B. Du Bois</a>
+          <a class="dropdown-item" href="/cc/authors/ambedkar.html">B. R. Ambedkar</a>
+          <a class="dropdown-item" href="/cc/authors/fanon.html">Frantz Fanon</a>
+          <a class="dropdown-item" href="/cc/authors/arendt.html">Hannah Arendt</a>
+          <a class="dropdown-item" href="/cc/authors/foucault.html">Michel Foucault</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/cc/about.html#Authors">Why These Authors?</a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Explore the Works
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/cc/works/works-by-smith.html">The Wealth of Nations</a>
+          <a class="dropdown-item" href="/cc/works/works-by-kant.html">Groundwork of the Metaphysics of Morals</a>
+          <a class="dropdown-item" href="/cc/works/works-by-wollstonecraft.html">A Vindication of the Rights of
+            Woman</a>
+          <a class="dropdown-item" href="/cc/works/works-by-tocqueville.html">Democracy in America</a>
+          <a class="dropdown-item" href="/cc/works/works-by-mill.html">On Liberty, Utilitarianism & Other Essays</a>
+          <a class="dropdown-item" href="/cc/works/works-by-marx.html">The Marx-Engels Reader</a>
+          <a class="dropdown-item" href="/cc/works/works-by-nietzsche.html">On the Genealogy of Morals & Ecce Homo</a>
+          <a class="dropdown-item" href="/cc/works/works-by-dubois.html">The Souls of Black Folk</a>
+          <a class="dropdown-item" href="/cc/works/works-by-ambedkar.html">Annihilation of Caste</a>
+          <a class="dropdown-item" href="/cc/works/works-by-fanon.html">The Wretched of the Earth</a>
+          <a class="dropdown-item" href="/cc/works/works-by-arendt.html">Crises of the Republic</a>
+          <a class="dropdown-item" href="/cc/works/works-by-foucault.html">Discipline & Punish</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/cc/about.html#Works">Why These Works?</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" onsubmit="searchFiles(event)">
+      <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0">Go</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+  <div class="row pt-5">
+    <h1>Democracy in America</h1>
+  </div>
+  <div class="row pt-3">
+    <h3>Written by: Alexis de Tocqueville</h3>
+  </div>
+  <div class="row pt-3">
+    <h5>Other Works Read by Tocqueville: Essay on Algeria</h5>
+  </div>
+  <hr>
+  <div class="row pt-3">
+    <h3>Synopsis</h3>
+  </div>
+  <div class="row pt-3">
+    <p>Democracy in America, written by Alexis de Tocqueville and published in two volumes in 1835 and 1840, is a
+      major work involvingthe American political system and society. Tocqueville
+      explores the advantages and disadvantages of democracy in the United States, examining all of its implications.
+    </p>
+  </div>
+
+  <div class="row pt-3">
+    <h3>Big Ideas</h3>
+  </div>
+  <div class="row pt-3">
+    <ul>
+      <li>Tyranny of the Majority</li>
+      <li>Individualism</li>
+      <li>Role of Civil Society</li>
+    </ul>
+  </div>
+
+  <div class="row pt-3">
+    <h5>References Used</h5>
+  </div>
+  <div class="row pt-3">
+    <p>Tocqueville, Alexis de. <i>Democracy in America.</i> 1835-1840.</p>
+  </div>
+
+</div>
 </body>
+
+</html>
