@@ -1,0 +1,362 @@
+.navigation {
+  background-color: #99ccff;
+  padding: 15px;
+}
+
+.nav-item {
+  font-size: 0.75vw;
+  color: black;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+
+
+.nav-item:hover,
+.nav-item:focus, 
+.nav-item:active {
+color: #000; 
+text-decoration: none; 
+}
+
+.nav-item::before,
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  width: 0;
+  height: 3.5px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.nav-item::before {
+  left: 50%;
+  transform: translateX(-50%, 6px);
+}
+
+.nav-item::after {
+  right: 50%;
+  transform: translateX(50%, 6px);
+}
+
+.nav-item:hover::before,
+.nav-item:hover::after {
+  width: 50%;
+}
+
+.page-content {
+  margin-top: 1%;
+}
+
+@media only screen and (max-width: 1026px) { 
+  .profile-container {
+      display: none;
+  }
+
+  .nav-item {
+      font-size: 3vw;
+      color: black;
+      text-decoration: none;
+      position: relative;
+      font-weight: bold;
+      text-align: center;
+      justify-content: center;
+  }
+
+  .page-content {
+      margin-top: 5%;
+  }
+
+  .proj_img {
+      display: none;
+  }
+
+  button.previous-btn {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+  }
+  
+  button.next-btn {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+  }
+}
+
+.nav-item-div {
+  text-align: center;
+}
+
+.profile-picture {
+  border-radius: 45%;
+  width: 70%;
+  margin-left: 12.5%;
+}
+
+.profile-text-header {
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 16%;
+}
+
+.profile-text {
+  text-align: center;
+  font-size: 14px;
+  padding-left: 0;
+}
+
+.footer {
+  background-color: #99ccff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 2px;
+  position: absolute;
+  bottom: -250px;
+}
+
+.content {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.prev-next-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.prev-next-buttons button {
+  background-color: transparent;
+  border: 2px solid #9c9c9c;
+  padding: 10px 20px;
+  font-size: 25px;
+  color: gray;
+  transition: color 0.3s;
+  cursor: pointer;
+  width: 35vw;
+  height: 7vh;
+}
+
+.prev-next-buttons button:hover {
+  color: #99ccff; 
+}
+
+button.previous-btn {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  justify-content: center;
+  text-align: center;
+  height: 60px;
+}
+
+button.next-btn {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  justify-content: center;
+  text-align: center;
+  height: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+a:hover,
+a:focus, 
+a:active {
+color: #000; 
+}
+
+.proj_img {
+  border: 2px solid black;
+}
+
+.footer-text {
+  font-size: 1.0vw;
+  margin-left: 10px;
+}
+
+.class-header {
+  padding-left: 0px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.homework-link {
+  color: white;
+}
+
+.schedule {
+  width: fit-content; 
+  border-collapse: collapse; 
+  margin: auto;
+}
+
+.schedule th {
+  background-color: #333; 
+  color: #fff; 
+  padding: 8px; 
+}
+
+.schedule td {
+  padding: 8px; 
+  border: 1px solid #ddd;
+}
+
+.even {
+  background-color: #f2f2f2; 
+} 
+
+.odd {
+  background-color: #ffffff; 
+}
+
+.holiday {
+  background-color: #cc2936; 
+  color: #ffffff;
+  font-weight: bold; 
+}
+
+.homework {
+  background-color: #6667ab; 
+  color: #ffffff;
+  font-weight: bold; 
+}
+
+.exam {
+  background-color: #ce9e00; 
+  color: #ffffff;
+  font-weight: bold; 
+}
+
+.calendar {
+  padding-top: 30px;
+}
+
+.page-header {
+  padding-left: 0px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.oh-content {
+  padding-left: 18px;
+}
+
+#github-files-list {
+  list-style: none; 
+  padding: 0; 
+  margin-left: 4%;
+  margin-top: 20px;
+  overflow-y: scroll;
+}
+
+#github-files-list li {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 10px;
+}
+
+#github-files-list button {
+  display: inline-block; 
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px; 
+  text-align: center;
+  background-color: #3498db; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  margin-right: 5px; 
+  width: 100%;
+}
+
+#github-files-list a {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px; 
+  text-align: center;
+  background-color: #ddd; 
+  color: #000; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  margin-right: 5px; 
+  width: 100%;
+}
+
+#github-files-list button:hover {
+  background-color: #2980b9; 
+}
+
+#github-files-list a:hover {
+  background-color: #aaa; 
+}
+
+#code-display {
+  margin-left: 25px;
+  overflow-y:scroll;
+  height: 500px;
+}
+
+@media only screen and (max-width: 1026px) { 
+  .schedule {
+    width: 95%;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  h4 {
+    font-size: medium;
+  }
+
+  .class-header {
+    text-align: center;
+  }
+
+  .table {
+    justify-content: center;
+  }
+
+  .calendar-div-top {
+    padding-bottom: 15px;
+  }
+
+  .calendar-div-bottom {
+    padding-top: 15px;
+  }
+
+  .page-header {
+    padding-top: 20px;
+  }
+
+  #github-files-list button {
+    font-size: small;
+  }
+  
+  #github-files-list a {
+    font-size: small;
+  }
+}
