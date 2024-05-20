@@ -360,3 +360,17 @@ color: #000;
     font-size: small;
   }
 }
+
+.button {
+  background-color: #99ccff;
+  padding: 13px;
+  border-radius: 10px;
+  margin-left: 45%;
+  margin-top: 2%;
+}
+
+.button:hover {
+  background-color: #517fae;
+  padding: 13px;
+  border-radius: 10px;
+}
