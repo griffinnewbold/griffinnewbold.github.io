@@ -1,5 +1,5 @@
 let currentTeachingDiv = 1;
-const totalTeachingDivs = 3;
+const totalTeachingDivs = 4;
 const lastDiv = `div${totalTeachingDivs}`
 
 function showNextDivTeach() {
