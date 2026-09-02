@@ -951,10 +951,6 @@ h4 {
     padding-block: 74px 90px;
   }
 
-  .hero h1 {
-    font-size: clamp(3.6rem, 20vw, 6.6rem);
-  }
-
   .hero-note {
     max-width: 420px;
   }

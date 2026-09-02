@@ -211,6 +211,23 @@
             p {
                 text-align: right;
             }
+            .portfolio-return {
+                position: fixed;
+                bottom: 16px;
+                left: 16px;
+                z-index: 1000;
+                padding: 10px 12px;
+                border: 2px solid #111;
+                border-radius: 4px;
+                background: white;
+                color: #111;
+                font: bold 14px sans-serif;
+                text-decoration: none;
+            }
+            .portfolio-return:focus-visible {
+                outline: 3px solid yellow;
+                outline-offset: 3px;
+            }
             #score2 {
                 margin-top: 20px;
                 padding: 2px;
@@ -743,6 +760,7 @@
         </style>
     </head>
     <body class = "classic" id = "body">
+        <a class="portfolio-return" href="/">Back to Griffin Newbold</a>
         <h4 style = "color: #C0C0C0;", class= "color2"> "Created by: Michael/Griffin V.) 3.0.2 "</h4>
         <center>
         <canvas id="pong" class="classic" width = "300" height = "600"></canvas>

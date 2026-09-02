@@ -7,7 +7,7 @@ for page in $pages; do
   file="$root/$page"
   test -f "$file"
   grep -q 'class="site-header"' "$file"
-  grep -q 'id="main-content"' "$file"
+  grep -Eq 'id="main-content"[^>]*tabindex="-1"' "$file"
   grep -q 'class="site-footer"' "$file"
   grep -q 'scripts/theme.js' "$file"
   grep -q 'scripts/navigation.js' "$file"
@@ -21,6 +21,21 @@ test -f "$root/scripts/theme.js"
 test -f "$root/scripts/navigation.js"
 test ! -f "$root/legacy.css"
 grep -q 'griffin-theme' "$root/scripts/theme.js"
+test "$(grep -c '^  \.hero h1 {$' "$root/style.css")" = "1"
+
+for game in memory pong tetris; do
+  game_file="$root/party_games/$game.html"
+  test "$(grep -o 'class="portfolio-return"' "$game_file" | wc -l | tr -d ' ')" = "1"
+  grep -q '<a class="portfolio-return" href="/">Back to Griffin Newbold</a>' "$game_file"
+done
+
+for course_page in \
+  teaching/2024/fall/adv-swe-4156/index.html \
+  teaching/2024/spring/java-1004/index.html \
+  teaching/2024/spring/java-1004/legacy/index.html; do
+  course_file="$root/$course_page"
+  test "$(grep -o 'href="/"[^>]*>Back to Griffin Newbold</a>' "$course_file" | wc -l | tr -d ' ')" = "1"
+done
 
 # Mobile navigation is visible by default and collapses only after JavaScript opts in.
 grep -q "document.documentElement.classList.add('js-enabled')" "$root/scripts/navigation.js"
