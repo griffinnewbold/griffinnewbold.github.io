@@ -7,6 +7,7 @@ const routes = ['/', '/projects.html', '/teaching.html', '/courses.html', '/cont
 const viewports = [
   { width: 1440, height: 900 },
   { width: 390, height: 844 },
+  { width: 320, height: 844 },
 ];
 
 let browser;
@@ -24,7 +25,10 @@ for (const viewport of viewports) {
     const page = await browser.newPage({ viewport });
 
     for (const route of routes) {
-      await page.goto(`${baseURL}${route}`, { waitUntil: 'load' });
+      const response = await page.goto(`${baseURL}${route}`, { waitUntil: 'load' });
+      assert.ok(response, `${route} did not return a navigation response`);
+      assert.equal(response.ok(), true, `${route} returned HTTP ${response.status()}`);
+      assert.equal(new URL(page.url()).pathname, route, `${route} resolved to the wrong route`);
       const overflow = await page.evaluate(
         () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
       );
@@ -49,23 +53,39 @@ test('dark theme persists across reloads', async () => {
   await context.close();
 });
 
-test('mobile navigation opens and closes', async () => {
-  const page = await browser.newPage({ viewport: viewports[1] });
-  await page.goto(`${baseURL}/`, { waitUntil: 'load' });
-  const toggle = page.locator('[data-nav-toggle]');
-  const nav = page.locator('#site-nav');
+for (const controller of [
+  { name: 'primary', route: '/', toggle: '[data-nav-toggle]', nav: '#site-nav' },
+  { name: 'Critical Concepts', route: '/cc/', toggle: '[data-cc-nav-toggle]', nav: '#cc-nav' },
+]) {
+  test(`${controller.name} mobile navigation keeps disclosure state synchronized`, async () => {
+    const page = await browser.newPage({ viewport: viewports[1] });
+    await page.goto(`${baseURL}${controller.route}`, { waitUntil: 'load' });
+    const toggle = page.locator(controller.toggle);
+    const nav = page.locator(controller.nav);
+    const assertState = async (open) => {
+      assert.equal(await toggle.getAttribute('aria-expanded'), String(open));
+      assert.equal(await nav.getAttribute('data-open'), String(open));
+      assert.equal(await nav.isVisible(), open);
+    };
 
-  await toggle.click();
-  assert.equal(await toggle.getAttribute('aria-expanded'), 'true');
-  assert.equal(await nav.getAttribute('data-open'), 'true');
-  assert.equal(await nav.isVisible(), true);
+    await assertState(false);
+    await toggle.click();
+    await assertState(true);
+    await toggle.click();
+    await assertState(false);
 
-  await toggle.click();
-  assert.equal(await toggle.getAttribute('aria-expanded'), 'false');
-  assert.equal(await nav.getAttribute('data-open'), 'false');
-  assert.equal(await nav.isVisible(), false);
-  await page.close();
-});
+    await toggle.click();
+    await page.keyboard.press('Escape');
+    await assertState(false);
+
+    await toggle.click();
+    const link = nav.locator('a').first();
+    await link.evaluate((element) => element.addEventListener('click', (event) => event.preventDefault()));
+    await link.click();
+    await assertState(false);
+    await page.close();
+  });
+}
 
 test('skip link moves keyboard focus to main content', async () => {
   const page = await browser.newPage({ viewport: viewports[0] });
@@ -78,17 +98,36 @@ test('skip link moves keyboard focus to main content', async () => {
   await page.close();
 });
 
-test('every project filter leaves at least one project visible', async () => {
+test('project filters expose exact categories and one synchronized pressed state', async () => {
   const page = await browser.newPage({ viewport: viewports[0] });
   await page.goto(`${baseURL}/projects.html`, { waitUntil: 'load' });
   const filters = page.locator('[data-project-filter]');
+  const expected = [
+    { key: 'all', count: 13 },
+    { key: 'software', count: 2 },
+    { key: 'academic', count: 6 },
+    { key: 'early', count: 5 },
+  ];
 
-  for (let index = 0; index < await filters.count(); index += 1) {
-    const filter = filters.nth(index);
-    const label = (await filter.textContent()).trim();
+  assert.equal(await filters.count(), expected.length);
+  for (const { key, count } of expected) {
+    const filter = page.locator(`[data-project-filter="${key}"]`);
     await filter.click();
-    const visibleProjects = await page.locator('[data-project-card]:visible').count();
-    assert.ok(visibleProjects > 0, `${label} hides every project`);
+    const visibleProjects = page.locator('[data-project-card]:visible');
+    assert.equal(await visibleProjects.count(), count, `${key} exposes the wrong number of projects`);
+    assert.equal(await filter.getAttribute('aria-pressed'), 'true', `${key} is not pressed`);
+    assert.equal(
+      await page.locator('[data-project-filter][aria-pressed="true"]').count(),
+      1,
+      `${key} does not leave exactly one pressed filter`,
+    );
+    if (key !== 'all') {
+      assert.deepEqual(
+        await visibleProjects.evaluateAll((cards) => [...new Set(cards.map((card) => card.dataset.category))]),
+        [key],
+        `${key} exposes a project from another category`,
+      );
+    }
   }
 
   await page.close();

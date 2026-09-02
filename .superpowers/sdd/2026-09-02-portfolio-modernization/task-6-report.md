@@ -114,3 +114,26 @@ tests 6; pass 6; fail 0; duration_ms 5069.781167
 - The committed Playwright artifact intentionally has no repository dependency lockfile. It is runnable in this workspace via the exact bundled-runtime command above, or in another environment where `playwright` and a Chrome channel are already available.
 - Visual QA used the in-app Chromium browser and installed Chrome for the standalone suite; Safari and Firefox were not exercised.
 - No push was performed during the user-requested bounded wrap-up; the commit remains on the current `codex/modernize-personal-site` branch.
+
+## Independent-review fixes
+
+The first independent review found no production defect but identified false-green gaps in the QA harness. The follow-up changes:
+
+- resolve both root-relative and document-relative `href`/`src` values, including `.`/`..`, query strings, fragments, and percent-encoded spaces;
+- add `tests/link_check_test.sh`, which proves valid relative files/directories pass while missing and root-escaping targets fail with source-page diagnostics;
+- correct two authored Critical Concepts citations that omitted `https://` and repair favicon, stylesheet, and script references in six authored legacy Java course pages;
+- expand responsive browser coverage to 320×844;
+- assert HTTP success and route identity;
+- exercise both primary and Critical Concepts navigation through button close, Escape close, and link-activation close paths; and
+- assert exact project-filter counts, category integrity, and a single synchronized pressed state.
+
+Generated JavaDoc was scanned but not edited. After fixing a BSD `awk` portability defect in the new normalizer and a mistaken descendant selector in the strengthened filter assertion, fresh results were:
+
+```text
+$ sh tests/link_check_test.sh && sh tests/link_check.sh
+link checker behavior passed
+internal links passed
+
+$ NODE_PATH=<workspace Playwright modules> <workspace node> --test tests/browser/portfolio.spec.js
+tests 8; pass 8; fail 0
+```
