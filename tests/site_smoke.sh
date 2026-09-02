@@ -83,4 +83,12 @@ review_row=$(grep 'href="/resources/reviews.pdf"' "$root/teaching.html")
 printf '%s\n' "$review_row" | grep -q 'resource-term">2022–2023<'
 ! printf '%s\n' "$review_row" | grep -q '2022–2024'
 
+find "$root/cc" -name '*.html' -type f | while IFS= read -r page; do
+  grep -q 'class="cc-portfolio-link"' "$page"
+  grep -q 'data-theme-toggle' "$page"
+  grep -q '/cc/scripts/navigation.js' "$page"
+  grep -q 'href="/cc/style.css"' "$page"
+  ! grep -q '/cc//' "$page"
+done
+
 echo "primary site structure passed"
