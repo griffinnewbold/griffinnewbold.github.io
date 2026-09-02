@@ -182,10 +182,32 @@ h4 {
 }
 
 .footer-inner {
-  min-height: 80px;
+  min-height: 112px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-meta {
+  display: grid;
+  gap: 5px;
+}
+
+.footer-meta strong {
+  color: var(--ink);
+  font-size: 0.72rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 20px;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
 }
 
 /* Components */
@@ -1070,11 +1092,16 @@ h4 {
   }
 
   .footer-inner {
-    min-height: 100px;
+    min-height: 160px;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 4px;
+    gap: 22px;
+  }
+
+  .footer-nav {
+    justify-content: flex-start;
+    gap: 10px 18px;
   }
 }
 

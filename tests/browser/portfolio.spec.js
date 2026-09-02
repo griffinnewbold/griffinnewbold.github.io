@@ -53,6 +53,16 @@ test('dark theme persists across reloads', async () => {
   await context.close();
 });
 
+test('system theme applies without becoming an explicit stored choice', async () => {
+  const context = await browser.newContext({ viewport: viewports[0], colorScheme: 'dark' });
+  const page = await context.newPage();
+  await page.goto(`${baseURL}/`, { waitUntil: 'load' });
+
+  assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), 'dark');
+  assert.equal(await page.evaluate(() => localStorage.getItem('griffin-theme')), null);
+  await context.close();
+});
+
 for (const controller of [
   { name: 'primary', route: '/', toggle: '[data-nav-toggle]', nav: '#site-nav' },
   { name: 'Critical Concepts', route: '/cc/', toggle: '[data-cc-nav-toggle]', nav: '#cc-nav' },

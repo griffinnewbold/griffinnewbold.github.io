@@ -3,9 +3,8 @@
   const root = document.documentElement;
   const systemTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-  function setTheme(theme) {
+  function applyTheme(theme) {
     root.dataset.theme = theme;
-    localStorage.setItem(storageKey, theme);
     document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
       const dark = theme === 'dark';
       button.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
@@ -15,9 +14,14 @@
     });
   }
 
-  setTheme(localStorage.getItem(storageKey) || systemTheme);
+  function setTheme(theme) {
+    applyTheme(theme);
+    localStorage.setItem(storageKey, theme);
+  }
+
+  applyTheme(localStorage.getItem(storageKey) || systemTheme);
   addEventListener('DOMContentLoaded', () => {
-    setTheme(root.dataset.theme);
+    applyTheme(root.dataset.theme);
     document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
       button.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
     });

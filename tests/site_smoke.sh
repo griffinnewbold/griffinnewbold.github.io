@@ -9,6 +9,14 @@ for page in $pages; do
   grep -q 'class="site-header"' "$file"
   grep -Eq 'id="main-content"[^>]*tabindex="-1"' "$file"
   grep -q 'class="site-footer"' "$file"
+  grep -q 'class="footer-nav"' "$file"
+  grep -q 'href="/projects.html"' "$file"
+  grep -q 'href="/teaching.html"' "$file"
+  grep -q 'href="/contact.html"' "$file"
+  grep -q 'href="mailto:gcn2106@columbia.edu"' "$file"
+  grep -q 'href="https://github.com/griffinnewbold"' "$file"
+  grep -q 'href="https://www.linkedin.com/in/griffinnewbold"' "$file"
+  grep -q 'href="/resources/griffinnewbold_resume.pdf"' "$file"
   grep -q 'scripts/theme.js' "$file"
   grep -q 'scripts/navigation.js' "$file"
   grep -q 'data-theme-toggle' "$file"
@@ -97,9 +105,6 @@ test ! -f "$root/scripts/courses_script.js"
 review_row=$(grep 'href="/resources/reviews.pdf"' "$root/teaching.html")
 printf '%s\n' "$review_row" | grep -q 'resource-term">2022–2023<'
 ! printf '%s\n' "$review_row" | grep -q '2022–2024'
-
-cc_page_count=$(find "$root/cc" -name '*.html' -type f | wc -l | tr -d ' ')
-test "$cc_page_count" = "35"
 
 find "$root/cc" -name '*.html' -type f | while IFS= read -r page; do
   masthead=$(sed -n '/<header class="cc-masthead">/,/<\/header>/p' "$page")

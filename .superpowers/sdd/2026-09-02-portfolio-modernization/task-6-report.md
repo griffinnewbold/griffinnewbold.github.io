@@ -137,3 +137,9 @@ internal links passed
 $ NODE_PATH=<workspace Playwright modules> <workspace node> --test tests/browser/portfolio.spec.js
 tests 8; pass 8; fail 0
 ```
+
+## Whole-branch review fixes
+
+The final review found two remaining requirements gaps. Theme initialization now applies `prefers-color-scheme` without storing it; only an explicit toggle or `GriffinTheme.set()` call persists a choice. A browser regression test covers empty storage with a dark system preference. The five shared footers now include Work, Teaching, About, Email, GitHub, LinkedIn, and Resume links; the stale fixed copyright year was removed. The brittle exact Critical Concepts page-count assertion was also removed while retaining per-page contract validation.
+
+Fresh browser results after these changes: 9 tests passed, including all three viewport widths, explicit and system-derived themes, both navigation controllers, skip-link focus, and exact project filters. A 320×844 rendered footer inspection confirmed all seven destinations are visible with zero horizontal overflow and no console warnings or errors.
