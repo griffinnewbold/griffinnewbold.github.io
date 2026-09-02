@@ -71,4 +71,12 @@ grep -q 'scripts/projects.js' "$root/projects.html"
 test ! -f "$root/scripts/projects_script.js"
 node "$root/tests/projects_filter.test.js"
 
+grep -q 'id="teaching-roles"' "$root/teaching.html"
+grep -q 'id="course-resources"' "$root/teaching.html"
+grep -q 'class="resource-list"' "$root/teaching.html"
+! grep -q 'teaching_script.js' "$root/teaching.html"
+! grep -q 'courses_script.js' "$root/courses.html"
+test ! -f "$root/scripts/teaching_script.js"
+test ! -f "$root/scripts/courses_script.js"
+
 echo "primary site structure passed"

@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="/style.css">
   <script src="/scripts/theme.js"></script>
   <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
-  <script src="/scripts/teaching_script.js"></script>
   <title>Teaching — Griffin Newbold</title>
 </head>
 <body>
@@ -19,105 +18,76 @@
     </nav>
     <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button>
   </header>
-  <main id="main-content" class="content-shell page-content">
-    <h1>Teaching</h1>
-    <div class="legacy-content">
-                <p class = "section-text">
-                    Welcome to my Teaching portfolio, here you can flip through the classes I have TA'ed for in the 
-                    past. It also contains more information about each class from a TA's perspective, if you wish to see 
-                    reviews from my times as a TA please click <a href="/resources/reviews.pdf">Here</a> I also do private tutoring, if you wish to receive tutoring 
-                    please see the contact page in order to learn how to get in contact with me. My rate is 1.5 times the rate which the university pays me as a Teaching Assistant,
-                    this figure currently sits at $22 per hour meaning the rate for tutoring is $33 per hour. It should be noted that any request for tutoring for a person in a subject
-                    I am currently a teaching assistant for will be denied.
-                </p>
-                <div id="div1" class="content active">
-                  <h3>
-                    <a href="/teaching/2024/spring/java-1004">COMS 1004, Introduction to Computer Science and Programming In Java</a>
-                  </h3>
-                  <p class="section-text">
-                    Semesters: Spring 2022, Spring 2023, Spring 2024 <br><br> I first started as a Teaching Assistant
-                    for this course in my second semester of college. After learning the ropes I quickly fell in 
-                    love with the job and decided to put more effort in future iterations, while that didn't mean I 
-                    slacked off Spring 2022, it is was simply nothing compared to my efforts in Spring 2023/2024. While I made 
-                    weekly slide shows to go with my Office Hours in Spring 2022, in Spring 2023/2024, I made weekly lecture notes for the students 
-                    along with extra supplementary resources and even was given the opportunity to give a lecture during one of
-                    the class sessions to help the students review for their upcoming midterm exam. <br><br>
-          
-                    Below is a sample of the extra resources that I provided the students over the Spring 2023 semester
-                    to view any of these samples please click the corresponding text relating to what document you wish to 
-                    view. <br><br>
-                    <a href="/teaching/static_files/1004 Midterm 2 Program Analysis Practice.pdf">1.) Practice Program Analysis</a> <br>
-                    <a href="/teaching/static_files/COMS 1004 Week 13 Lecture Review.pdf">2.) Sample Weekly Lecture Notes</a> <br>
-                    <a href="/teaching/static_files/Lecture Notes from Griffin's Lecture.pdf">3.) Lecture Notes from My Lecture</a> <br><br>
-          
-                    Whenever I get some free time, I have been working on a proper set of supplementary course notes for the students.
-                    Drafts of this document have been presented to the students and it seems the demand is there so I will certainly continue
-                    developing them.
-                  </p>
-                </div>
-                <div id="div2" class="content">
-                  <h3>
-                    COMS 1002, Computing in Context
-                  </h3>
-                  <p class="section-text">
-                    Semesters: Fall 2022 and Fall 2023 <br><br>
-          
-                    This course is an introductory programming course designed for non-majors who will most likely program 
-                    at some point in their college career, whether it is another class or as part of doing research with a professor.
-                    This course is taught in Python as it is deemed an easy enough language for most people, especially non-majors, to pick up 
-                    over the course of the semester. <br><br>
-          
-                    One of the interesting components of this course was that the second half of the course was context specific, when
-                    students enroll in the course they select one of the following contexts: Economics, Social Science, Biology, Art, and Linguistics.
-                    The homework assignments for the second half focused heavily on these contexts, I was a TA for the Economics context and students were
-                    exposed to basic rules of probability and learned the basics of monte-carlo method of approximation as well as the law of large numbers. 
-                    <br><br>
-          
-                    Students also had to attend weekly lab sessions held by a TA which briefly reviewed material from lecture and then allowed 
-                    the students to get more ungraded practice with the concepts in order to help them succeed on their homework assignments.
-                    <br><br>
-          
-                    Below are a set of course notes that I developed during the summer prior to Fall 2023 that cover all of the general Python 
-                    students are expected to know and some more. <br><br>
-          
-                    <a href="/teaching/static_files/COMS 1002 Computing in Context.pdf">1.) Computing in Context Course Notes</a> <br>
-                  </p>
-                </div>
-                <div id="div3" class="content">
-                  <h3>
-                    <a href="/teaching/2024/fall/adv-swe-4156">COMS 4156, Advanced Software Engineering</a> 
-                  </h3>
-                  <p class="section-text">
-                    Semester: Fall 2024 <br><br>
-          
-                    After completing the course myself the previous Fall, I decided that as a senior I should expand out and try new classes 
-                    to TA for that were more in line with my talents and skill set. This is an core-elective course that juniors, seniors and even 
-                    graduate students can take to fulfill some of their degree requirements. <br><br>
-          
-                    Central to the course is a large technical project completed in groups of 4 to 5 students, with each TA acting as a mentor for
-                    around 3 to 4 groups. The TA is responsible for making sure the students understand the requirements of each project iteration as well 
-                    as demoing the students projects at the appropriate time throughout the semester. TAs are also responsible for grading the 
-                    individual assessments of their mentees as the assessments are strongly connected to the team projects. <br><br>
-          
-                    I was also given the opportunity to develop a series of individual assignments to act as a mini project for the first month of 
-                    the course, more information about this will become available in the projects section as I develop it over the coming months.
-                    
-                  </p>
-                </div>
-                <div id="div4" class="content">
-                  <h3>COMS 4170, User Interface Design</h3>
-                  <p class="section-text">
-                    Semester: Spring 2025 <br><br>
-          
-                    I was hired for this role after completing this course during the Spring 2024 semester as well as Professor Chilton's second course
-                    COMS 6998 Design for Generative AI in the Fall 2024 semester. <br><br>
+  <main id="main-content" class="content-shell page-content teaching-page">
+    <header class="teaching-intro">
+      <p class="kicker">Columbia University · 2022–2025</p>
+      <h1>Teaching</h1>
+      <p>I supported introductory programming, software engineering, and interface design courses through office hours, labs, project mentorship, and original course materials.</p>
+    </header>
 
-                    The first half of the course is a standard large lecture course where I will be holding just regular office hours but for the second half
-                    I act as a mentor for a select group of students as they complete their final projects for the semester. 
-                    
-                  </p>
-                </div>
-    </div>
+    <section id="teaching-roles" class="teaching-section" aria-labelledby="teaching-roles-title">
+      <div class="section-heading">
+        <p class="section-index">01</p>
+        <h2 id="teaching-roles-title">Teaching roles</h2>
+      </div>
+      <div class="role-list">
+        <article class="role-entry">
+          <div><p class="role-course">COMS 1004</p><p class="role-term">Spring 2022 · Spring 2023 · Spring 2024</p></div>
+          <div><h3>Introduction to Computer Science and Programming in Java</h3><p>Teaching assistant for an introductory Java course, producing weekly lecture notes, supplementary practice, office hours, and a midterm review lecture.</p></div>
+        </article>
+        <article class="role-entry">
+          <div><p class="role-course">COMS 1002</p><p class="role-term">Fall 2022 · Fall 2023</p></div>
+          <div><h3>Computing in Context</h3><p>Teaching assistant for an introductory Python course for non-majors, including weekly labs and the economics context covering probability and Monte Carlo methods.</p></div>
+        </article>
+        <article class="role-entry">
+          <div><p class="role-course">COMS 4156</p><p class="role-term">Fall 2024</p></div>
+          <div><h3>Advanced Software Engineering</h3><p>Mentored student teams through a semester-long technical project, evaluated project iterations, and developed a series of individual assignments.</p></div>
+        </article>
+        <article class="role-entry">
+          <div><p class="role-course">COMS 4170</p><p class="role-term">Spring 2025</p></div>
+          <div><h3>User Interface Design</h3><p>Held office hours during the lecture portion of the course and mentored a student team through its final interface-design project.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="course-resources" class="teaching-section" aria-labelledby="course-resources-title">
+      <div class="section-heading">
+        <p class="section-index">02</p>
+        <h2 id="course-resources-title">Course resources</h2>
+      </div>
+      <div class="course-resource-groups">
+        <section aria-labelledby="coms-1004-resources">
+          <div class="resource-group-heading"><h3 id="coms-1004-resources">COMS 1004</h3><p>Java course site, practice, and lecture material.</p></div>
+          <ul class="resource-list">
+            <li><a href="/teaching/2024/spring/java-1004"><span class="resource-title">Spring 2024 course site</span><span class="resource-type">Course site</span><span class="resource-term">Spring 2024</span><span class="resource-action">Open ↗</span></a></li>
+            <li><a href="/teaching/static_files/1004 Midterm 2 Program Analysis Practice.pdf"><span class="resource-title">Midterm 2 program analysis practice</span><span class="resource-type">Practice PDF</span><span class="resource-term">Spring 2023</span><span class="resource-action">View ↗</span></a></li>
+            <li><a href="/teaching/static_files/COMS 1004 Week 13 Lecture Review.pdf"><span class="resource-title">Week 13 lecture review</span><span class="resource-type">Lecture notes PDF</span><span class="resource-term">Spring 2023</span><span class="resource-action">View ↗</span></a></li>
+            <li><a href="/teaching/static_files/Lecture Notes from Griffin's Lecture.pdf"><span class="resource-title">Guest lecture notes</span><span class="resource-type">Lecture notes PDF</span><span class="resource-term">Spring 2023</span><span class="resource-action">View ↗</span></a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="coms-1002-resources">
+          <div class="resource-group-heading"><h3 id="coms-1002-resources">COMS 1002</h3><p>Python notes developed for Computing in Context.</p></div>
+          <ul class="resource-list">
+            <li><a href="/teaching/static_files/COMS 1002 Computing in Context.pdf"><span class="resource-title">Computing in Context course notes</span><span class="resource-type">Course notes PDF</span><span class="resource-term">Fall 2023</span><span class="resource-action">View ↗</span></a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="coms-4156-resources">
+          <div class="resource-group-heading"><h3 id="coms-4156-resources">COMS 4156</h3><p>Assignment, assessment, project, and office-hour material.</p></div>
+          <ul class="resource-list">
+            <li><a href="/teaching/2024/fall/adv-swe-4156"><span class="resource-title">Advanced Software Engineering course site</span><span class="resource-type">Course site</span><span class="resource-term">Fall 2024</span><span class="resource-action">Open ↗</span></a></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="teaching-records">
+          <div class="resource-group-heading"><h3 id="teaching-records">Teaching record</h3><p>Student feedback from teaching-assistant appointments.</p></div>
+          <ul class="resource-list">
+            <li><a href="/resources/reviews.pdf"><span class="resource-title">Teaching reviews</span><span class="resource-type">Reviews PDF</span><span class="resource-term">2022–2024</span><span class="resource-action">View ↗</span></a></li>
+          </ul>
+        </section>
+      </div>
+    </section>
   </main>
   <footer class="site-footer"><div class="content-shell footer-inner"><span>© 2025 Griffin Newbold</span><span>Designed &amp; maintained by me</span></div></footer>
   <script src="/scripts/navigation.js"></script>

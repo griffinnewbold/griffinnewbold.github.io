@@ -265,6 +265,189 @@ h4 {
   border-radius: 3px;
 }
 
+.teaching-page,
+.courses-page {
+  max-width: 1000px;
+}
+
+.teaching-intro,
+.courses-intro {
+  max-width: 700px;
+  margin-bottom: 78px;
+}
+
+.teaching-intro h1,
+.courses-intro h1 {
+  margin-bottom: 24px;
+}
+
+.teaching-intro > p:last-child,
+.courses-intro > p:last-child {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.courses-intro .text-link {
+  color: var(--ink);
+  border-bottom: 1px solid currentColor;
+}
+
+.teaching-section,
+.course-sites,
+.coursework-index {
+  padding-block: 58px 76px;
+  display: grid;
+  grid-template-columns: minmax(160px, 0.42fr) minmax(0, 1.58fr);
+  gap: 8%;
+  border-top: 1px solid var(--line);
+}
+
+.teaching-section .section-heading h2,
+.course-sites .section-heading h2,
+.coursework-index .section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.role-list,
+.course-resource-groups,
+.course-year-groups {
+  min-width: 0;
+}
+
+.role-list,
+.course-year-groups {
+  border-top: 1px solid var(--line);
+}
+
+.role-entry {
+  padding-block: 28px 34px;
+  display: grid;
+  grid-template-columns: minmax(150px, 0.55fr) minmax(0, 1.45fr);
+  gap: 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.role-course,
+.role-term {
+  margin: 0;
+  font: 500 0.68rem var(--mono);
+}
+
+.role-course {
+  color: var(--accent);
+}
+
+.role-term {
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.role-entry h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.role-entry > div:last-child p,
+.resource-group-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.course-resource-groups > section + section {
+  margin-top: 54px;
+}
+
+.resource-group-heading {
+  margin-bottom: 20px;
+}
+
+.resource-group-heading h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.resource-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.resource-list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.resource-list a {
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px 92px 54px;
+  align-items: center;
+  gap: 20px;
+  transition: color 0.2s, padding 0.2s;
+}
+
+.resource-list a:hover,
+.resource-list a:focus-visible {
+  padding-left: 10px;
+  color: var(--accent);
+}
+
+.resource-title {
+  font-weight: 700;
+}
+
+.resource-type,
+.resource-term,
+.resource-action {
+  color: var(--muted);
+  font: 500 0.66rem var(--mono);
+}
+
+.resource-action {
+  color: var(--accent);
+  text-align: right;
+}
+
+.course-year-groups > section {
+  padding-block: 28px 36px;
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.course-year-groups h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.course-year-groups ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-year-groups li {
+  padding-block: 8px;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.course-year-groups strong {
+  color: var(--accent);
+  font: 500 0.68rem var(--mono);
+}
+
+.course-year-groups span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
 .projects-page {
   max-width: 1000px;
 }
@@ -826,6 +1009,46 @@ h4 {
 
   .projects-intro {
     margin-bottom: 44px;
+  }
+
+  .teaching-intro,
+  .courses-intro {
+    margin-bottom: 52px;
+  }
+
+  .teaching-section,
+  .course-sites,
+  .coursework-index,
+  .role-entry,
+  .course-year-groups > section {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-section,
+  .course-sites,
+  .coursework-index {
+    gap: 36px;
+    padding-block: 48px 62px;
+  }
+
+  .role-entry,
+  .course-year-groups > section {
+    gap: 18px;
+  }
+
+  .resource-list a {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding-block: 20px;
+  }
+
+  .resource-action {
+    margin-top: 6px;
+    text-align: left;
+  }
+
+  .course-year-groups li {
+    grid-template-columns: 82px minmax(0, 1fr);
   }
 
   .project-entry {
