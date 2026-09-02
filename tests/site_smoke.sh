@@ -60,6 +60,8 @@ grep -A2 '<article id="div10" class="project-entry" data-project-card data-categ
 project_targets=$(grep -o 'href="/projects.html#div[0-9][0-9]*"' "$root/index.html" | sed 's/.*#\(div[0-9][0-9]*\)"/\1/')
 test "$(printf '%s\n' "$project_targets" | wc -l | tr -d ' ')" = "3"
 test "$(printf '%s\n' "$project_targets" | sort -u | wc -l | tr -d ' ')" = "3"
+expected_project_targets=$(printf '%s\n' div6 div10 div12 | sort)
+test "$(printf '%s\n' "$project_targets" | sort -u)" = "$expected_project_targets"
 for target in $project_targets; do
   test "$(grep -o "id=\"$target\"" "$project_file" | wc -l | tr -d ' ')" = "1"
 done
