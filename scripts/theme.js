@@ -1,1 +1,31 @@
-(function(){var saved=localStorage.getItem('griffin-theme');var theme=saved||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=theme;document.addEventListener('DOMContentLoaded',function(){var toggle=document.querySelector('[data-theme-toggle]');if(!toggle){toggle=document.createElement('button');toggle.className='theme-toggle legacy-theme-toggle';toggle.type='button';toggle.setAttribute('data-theme-toggle','');toggle.innerHTML='<span aria-hidden="true">☼</span><span data-theme-label>Light</span>';document.body.appendChild(toggle)}var label=toggle.querySelector('[data-theme-label]');function update(){var dark=document.documentElement.dataset.theme==='dark';label.textContent=dark?'Dark':'Light';toggle.setAttribute('aria-label',dark?'Switch to light mode':'Switch to dark mode')}update();toggle.addEventListener('click',function(){var next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('griffin-theme',next);update()})})}());
+(function () {
+  const storageKey = 'griffin-theme';
+  const root = document.documentElement;
+  const systemTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+  function applyTheme(theme) {
+    root.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+      const dark = theme === 'dark';
+      button.setAttribute('aria-label', dark ? 'Use light theme' : 'Use dark theme');
+      button.setAttribute('aria-pressed', String(dark));
+      const label = button.querySelector('[data-theme-label]');
+      if (label) label.textContent = dark ? 'Dark' : 'Light';
+    });
+  }
+
+  function setTheme(theme) {
+    applyTheme(theme);
+    localStorage.setItem(storageKey, theme);
+  }
+
+  applyTheme(localStorage.getItem(storageKey) || systemTheme);
+  addEventListener('DOMContentLoaded', () => {
+    applyTheme(root.dataset.theme);
+    document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+      button.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+    });
+  });
+
+  window.GriffinTheme = { set: setTheme };
+}());

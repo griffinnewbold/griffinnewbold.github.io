@@ -1,237 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="legacy.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
   <script src="/scripts/theme.js"></script>
   <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
-  <script src="/scripts/courses_script.js"></script>
-  <title>Courses</title>
+  <title>Courses — Griffin Newbold</title>
 </head>
 <body>
-  <button class="theme-toggle legacy-theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle><span aria-hidden="true">☼</span><span data-theme-label>Light</span></button>
-  <div class="container-fluid">
-    <div class="navigation row justify-content-center">
-        <div class="col-4 col-sm-6 col-md-1 nav-item-div">
-            <a class="nav-item" href="/">Home</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/projects.html">Projects</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/teaching.html">Teaching</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/courses.html">Courses</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/contact.html">Contact</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/resources/griffinnewbold_resume.pdf">Resume</a>
-        </div>
-    </div>
-</div>
-    <div class="container-fluid">
-        <div class="row page-content">
-            <div class="col-md-2 profile-container">
-                <img src="../resources/profile-picture.jpg" alt="Profile Picture" class="profile-picture img-fluid">
-                <p class="profile-text-header">Griffin Newbold</p>
-                <p class="profile-text">Columbia Alumni<br><br>
-                  Software Engineer @ Capital One <br><br>
-                  Former Head Teaching Assistant and Projects Student for Professor Lydia Chilton<br><br>
-                  Former Head Teaching Assistant and Projects Student for Professor Gail Kaiser<br><br>
-                  Former Teaching Assistant for Professor Adam Cannon <br><br>
-                  Located in DC Metro Area
-                </p>
-            </div>
-            <div class="col-md-10 project-content">
-                <p class="section-text">This page will describe the relevant courses I have taken during my time
-                    at Columbia. This is will effectively be the course descriptions in my own words, plus some may be unfamiliar
-                    with the courses Columbia offers so this makes it better, any course denoted with a single asterisk 
-                    represents those I will be taking in the upcoming semester (Fall 2024), any course denoted with two asterisks represent courses
-                    for which I am heavily considering taking in future semesters. The selections will be sorted by course-id per academic year.
-                  </p>
-                  <div class = "prev-next-buttons">
-                    <button class="previous-btn" onclick="showPrevDivCourse()">Previous</button>
-                    <button class="next-btn" onclick="showNextDivCourse()">Next</button>
-                  </div>
-                  <div id="div1" class="content active">
-                    <h2>Freshman Year at Columbia</h2>
-                    <h4>COMS 1004, Introduction to Computer Science and Programming in Java</h4>
-                    <p class = "section-text">This course taught the basics of programming in Java, starting
-                      from the description of elementary searching and sorting algorithms in pseudocode to defining
-                      basic variables in Java, then following along the same route as most introductory courses
-                      loops, conditionals, file i/o exceptions etc. I had the opportunity to skip this course and jump
-                      straight into 3134 but I decided to take this course just in case there was any extra information 
-                      that I hadn't been taught previously and to give myself a smooth introduction to how CS@CU was all about.
-                    </p>
-              
-                    <h4>ENGL 1006, Introduction to Computing for Engineers and Applied Scientists</h4>
-                    <p class = "section-text">
-                      This course was effectively just the same as 1004 but in Python, a course required for all students of the Engineering school
-                      no matter what their major. While doing basically everything described above in COMS 1004, it also introduced students to essential Python libraries
-                      such as Numpy and gave us a brief introduction to different applications of computation such as cryptography and machine learning. 
-                    </p>
-              
-                    <h4>ENGL 1102, The Art of Engineering</h4>
-                    <p class = "section-text">
-                      This course is described as "gateway lab" connecting the math and science we learned in high school to what we would be doing in college. This was effectively a course designed
-                      to teach about the different fields of engineering in a way that provided a nice introduction to each field that allowed undecided students to get exposure and help aid their decision. 
-                      This course featured a semester long project in each team of 4-5 people had to design a physical game within a given budget and present it at the end of semester expo. A more in depth description
-                      of this project can be found in the projects tab. Along with this course project we did a half semester long engineering-field specific seminar held every other week that explored the field in depth more
-                      and built up to another project, I participated in the Computer Engineering group and our project was designing a CPU digitally using Logisim.
-                    </p>
-              
-                    <h4>COMS 3134, Data Structures and Algorithms in Java</h4>
-                    <p class = "section-text">
-                      This course is the effective standard for a Computer Science education, every Computer Science student has to take this course at every accredited institution in the country. We started by learning about 
-                      generics in Java along with elementary algorithm analysis (Big-O) then quickly progressed to learn about the standard data structures, LinkedLists, Stacks, Queues, Heaps, Trees, and HashMaps. We then ended the 
-                      course by describing useful algorithms for completing certain tasks. Like Dijkstra's algorithm, Kruscal's algorithm, Merge Sort, Quick Sort, Topological Sorting, Breadth First Search and Depth First Search.
-                    </p>
-                  </div>
-                  <div id="div2" class="content">
-                    <h2>Sophomore Year at Columbia</h2>
-                    <h4>COMS 3157, Advanced Programming</h4>
-                    <p class = "section-text">
-                      This course introduced us to the C programming language and taught the basics of low level 
-                      programming. Each assignment effectively built on the previous one and the course culminated with us 
-                      creating a multi-process three-tier architecture message lookup service. This course took a deep dive into 
-                      File I/O and HTTP protocols along with learning the C programming langugage. 
-                    </p>
-              
-                    <h4>COMS 3203, Discrete Mathematics</h4>
-                    <p class = "section-text">
-                      This course was the standard introduction to the math needed to succeed in the CS major at Columbia. Focused 
-                      on formal logic along with writing proofs, whether it is proof by contradiction or induction. The course then went
-                      into different fields of Discrete Math, Discrete Probability, Combinatorics, Number Theory, Cryptography, Functions and Relations and 
-                      ended with an introduction to Graph Theory.
-                    </p>
-              
-                    <h4>COMS 3251, Computational Linear Algebra</h4>
-                    <p class = "section-text">
-                      This course was an introductory course into Linear Algebra starting with the definition of a vector and finishing off with
-                      SVD and PCA. This course was made interesting by its emphasis on the computation aspect of linear algebra, effectively saying 
-                      "yes it is important to know how to do this by hand, but it is more time effective to use these python libraries to help us" A 
-                      more in depth discussion of Numpy along with learning Python libraries such as Scipy and Sympy gave an 
-                      extra dimension to the course. 
-                    </p>
-              
-                    <h4>COMS 3261, Computer Science Theory</h4>
-                    <p class = "section-text">
-                      This course essentially worked from the ground up when it comes to the theoretical aspect of 
-                      Computer Science. Starting with Regular Languages and Deterministic and Non-Deterministic finite
-                      automata, the pumping lemma etc in the first half of the semester, transitioning to a discussion of Turing Machines
-                      and an introduction to complexity theory and NP-Completeness in the second half of the semester. 
-                    </p>
-            
-                    <h4>IEOR 3658, Probability for Engineers</h4>
-                    <p class = "section-text">
-                      A standard introduction to Probability Theory designed for engineers. Starting with the basic axioms of 
-                      probability we worked our way up to Discrete and Continous Random Variables. Along with basic probabiliy 
-                      distributions. Finishing off the semester with Moment Generating Functions along with the Central Limit Theorem
-                      and the Law of Large Numbers. 
-                    </p>
-            
-                    <h4>CSEE 3827, Fundamentals of Computer Systems</h4>
-                    <p class = "section-text">
-                      A quick detour from the theoretical and software heavy courses we are introduced to the basic elements that make computers 
-                      possible in the first place. Starting with the elementary logic gates and working our way up to combinational and sequential 
-                      circuitry. Along with a brief introduction to MIPS Assembly and then wrapping up the course with a look at how a CPU is constructed
-                      along with an introduction to the memory hierarchy and cacheing. 
-                    </p>
-            
-                    <h4>COMS 4111, Introduction to Databases</h4>
-                    <p class = "section-text">
-                      This course introduced the fundamentals of database design and application development using databases. 
-                      While in the past the storing of data was handled for us now we have to construct our own databases and perform 
-                      the necessary queries needed to retrieve the proper data. Beginning with Entity-Relationship Diagrams to Transactions
-                      and Database Normalization.
-                    </p>
-                  </div>
-                  <div id="div3" class="content">
-                    <h2>Junior Year at Columbia</h2>
-                    <h4>COMS 3107, Clean Object-Oriented Design</h4>
-                    <p class = "section-text">
-                      This course is all about designing, documenting, coding and testing robust computer software 
-                      in line with object oriented design patterns and clean coding practices. More emphasis on Java generics
-                      along with discussion of topics like Javadocs, Anonymous classes, threads and graphical widgets. 
-                    </p>
-              
-                    <h4>COMS 4156, Advanced Software Engineering</h4>
-                    <p class = "section-text">
-                      This course focuses on the software lifecycle using frameworks, libraries and other services. There is a major emphasis
-                      on software testing to make sure the code we write is free of bugs. 
-                    </p>
-            
-                    <h4>COMS 4170, User Interface Design</h4>
-                    <p class = "section-text">
-                      This course serves as an introduction to the theory and practice of computer user interface design.
-                      An emphasis is places on the software design of graphical user interfaces. Topics include Basic
-                      interaction devices and techniques, human factors, interaction styles, dialogue design and software infrastructure.
-                    </p>
-            
-                    <h4>COMS 4901, Projects in Computer Science</h4>
-                    <p class = "section-text">
-                      Anytime a student desires to work with a professor either in a research capacity or any other way and payment is not 
-                      an option the student is given credit as compensation. I am completing this course under Professor Gail Kaiser as I am 
-                      designing assignments for a future iteration of her main course COMS 4156: Advanced Software Engineering.
-                    </p>
-            
-                    <h4>COMS 4995, Parallel Functional Programming</h4>
-                    <p class = "section-text">
-                      This course is an introduction into the functional programming paradigm in the haskell language. The first half
-                      of the course covers basics of haskell while the second half extends that knowledge to cover parallel programming.
-                    </p>
-            
-                  </div>
-                  <div id="div4" class="content">
-                    <h2>Senior Year at Columbia</h2>
-            
-                    <h4>COMS 3998, Undergraduate Projects in Computer Science (Summer)</h4>
-                    <p class = "section-text">
-                      A continuation of my project for Professor Gail Kaiser, after completion of my primary project I was assigned several mini
-                      projects to aid in the transition to assisting her and other TAs in Fall 2024's iteration of COMS 4156: Advanced Software Engineering.
-                      This was completed over the summer in conjunction with my internship at Capital One. 
-                    </p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Griffin Newbold home">GN<span>.</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+    <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primary navigation">
+      <a href="/">Home</a><a href="/projects.html">Work</a><a href="/teaching.html" aria-current="page">Teaching</a><a href="/contact.html">About</a><a href="/resources/griffinnewbold_resume.pdf">Resume</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button>
+  </header>
+  <main id="main-content" class="content-shell page-content courses-page" tabindex="-1">
+    <header class="courses-intro">
+      <p class="kicker">Compatibility index</p>
+      <h1>Courses</h1>
+      <p>This compact index preserves the course catalog formerly published here. Teaching roles, notes, reviews, and downloadable materials now live on the <a class="text-link" href="/teaching.html">Teaching page</a>.</p>
+    </header>
 
-                    <h4>COMS 3998, Undergraduate Projects in Computer Science (Spring)</h4>
-                    <p class = "section-text">
-                      After completing my iOS development course, a professor in the CS department who I have taken two previous courses with, 1 in my junior spring and another
-                      in my senior fall, requested that I join her research group that was working on making Artificial Intelligence funny, in an effort to disprove Google and 
-                      well known comedians who said it wouldn't be possible. As a result we launched TheHumorProject and our product 'Crack'd' more can be found in the projects 
-                      section.
-                    </p>
-            
-            
-                    <h4>COMS 4701, Artifical Intelligence</h4>
-                    <p class = "section-text">
-                      To be Updated at a Later Date
-                    </p>
+    <section class="course-sites" aria-labelledby="course-sites-title">
+      <div class="section-heading">
+        <p class="section-index">01</p>
+        <h2 id="course-sites-title">Course sites</h2>
+      </div>
+      <ul class="resource-list">
+        <li><a href="/teaching/2024/spring/java-1004"><span class="resource-title">COMS 1004 · Introduction to Computer Science and Programming in Java</span><span class="resource-type">Teaching microsite</span><span class="resource-term">Spring 2024</span><span class="resource-action">Open ↗</span></a></li>
+        <li><a href="/teaching/2024/fall/adv-swe-4156"><span class="resource-title">COMS 4156 · Advanced Software Engineering</span><span class="resource-type">Teaching microsite</span><span class="resource-term">Fall 2024</span><span class="resource-action">Open ↗</span></a></li>
+      </ul>
+    </section>
 
-                    <h4>COMS 4995, Mobile App Development for IOS</h4>
-                    <p class = "section-text">
-                      Introduces Swift and XCode to students and enables them to build iOS applications.
-                    </p>
-
-                    <h4>COMS 4995, Applied Machine Learning*</h4>
-                    <p class = "section-text">
-                      To be Updated at a Later Date
-                    </p>
-
-                    <h4>COMS 6998, Design for Generative AI</h4>
-                    <p class = "section-text">
-                      Discusses emerging technologies dealing with Generative AI and requires students to build projects using such technologies.
-                    </p>
-                  </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <section class="coursework-index" aria-labelledby="coursework-title">
+      <div class="section-heading">
+        <p class="section-index">02</p>
+        <h2 id="coursework-title">Coursework index</h2>
+      </div>
+      <div class="course-year-groups">
+        <section><h3>First year</h3><ul><li><strong>COMS 1004</strong><span>Java programming fundamentals, searching, sorting, and file I/O</span></li><li><strong>ENGL 1006</strong><span>Python, NumPy, cryptography, and machine-learning applications</span></li><li><strong>ENGL 1102</strong><span>Engineering gateway lab with physical-game and Logisim CPU projects</span></li><li><strong>COMS 3134</strong><span>Java data structures, algorithm analysis, graphs, and sorting</span></li></ul></section>
+        <section><h3>Second year</h3><ul><li><strong>COMS 3157</strong><span>C, low-level programming, file I/O, HTTP, and multiprocess systems</span></li><li><strong>COMS 3203</strong><span>Logic, proofs, probability, combinatorics, number theory, and graphs</span></li><li><strong>COMS 3251</strong><span>Computational linear algebra with NumPy, SciPy, SymPy, SVD, and PCA</span></li><li><strong>COMS 3261</strong><span>Automata, formal languages, Turing machines, and complexity theory</span></li><li><strong>IEOR 3658</strong><span>Random variables, distributions, limit theorems, and probability theory</span></li><li><strong>CSEE 3827</strong><span>Digital logic, MIPS assembly, CPU construction, and memory hierarchy</span></li><li><strong>COMS 4111</strong><span>Database design, entity-relationship models, transactions, and normalization</span></li></ul></section>
+        <section><h3>Third year</h3><ul><li><strong>COMS 3107</strong><span>Object-oriented design, Java generics, documentation, testing, and threads</span></li><li><strong>COMS 4156</strong><span>Software lifecycle, frameworks, services, and software testing</span></li><li><strong>COMS 4170</strong><span>Interaction design, human factors, dialogue design, and GUI infrastructure</span></li><li><strong>COMS 4901</strong><span>Assignment design for a future Advanced Software Engineering course</span></li><li><strong>COMS 4995</strong><span>Functional and parallel programming in Haskell</span></li></ul></section>
+        <section><h3>Fourth year</h3><ul><li><strong>COMS 3998</strong><span>Summer continuation of Advanced Software Engineering course projects</span></li><li><strong>COMS 3998</strong><span>Spring research on computational humor and the Crack'd project</span></li><li><strong>COMS 4701</strong><span>Artificial Intelligence</span></li><li><strong>COMS 4995</strong><span>Mobile app development with Swift and Xcode</span></li><li><strong>COMS 4995</strong><span>Applied Machine Learning</span></li><li><strong>COMS 6998</strong><span>Generative AI technologies and project development</span></li></ul></section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="content-shell footer-inner"><div class="footer-meta"><strong>Griffin Newbold</strong><span>Designed &amp; maintained by me</span></div><nav class="footer-nav" aria-label="Footer navigation"><a href="/projects.html">Work</a><a href="/teaching.html">Teaching</a><a href="/contact.html">About</a><a href="mailto:gcn2106@columbia.edu">Email</a><a href="https://github.com/griffinnewbold">GitHub</a><a href="https://www.linkedin.com/in/griffinnewbold">LinkedIn</a><a href="/resources/griffinnewbold_resume.pdf">Resume</a></nav></div></footer>
+  <script src="/scripts/navigation.js"></script>
 </body>
 </html>

@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
       tag.innerHTML = `<div class="card">
                           <div class="card-body">
                             <h5 class="card-title">${obj.name}</h5>
-                            <img class="img-fluid"src="${obj.image}">
+                            <img class="img-fluid" src="${obj.image}" alt="${obj.name}" onerror="this.hidden = true">
                           </div>
                           <a href="${uri}" class="ref-link btn btn-primary">Learn More About ${obj.surname}</a>
                         </div>`;

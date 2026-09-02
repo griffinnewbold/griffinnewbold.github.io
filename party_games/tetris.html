@@ -22,6 +22,23 @@
         height: 690px;
         background: linear-gradient(purple, black); 
       }
+      .portfolio-return {
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        z-index: 1000;
+        padding: 10px 12px;
+        border: 2px solid #111;
+        border-radius: 4px;
+        background: white;
+        color: #111;
+        font: bold 14px sans-serif;
+        text-decoration: none;
+      }
+      .portfolio-return:focus-visible {
+        outline: 3px solid yellow;
+        outline-offset: 3px;
+      }
       canvas {
         border: solid .3em #fff;
         height: 90vh;
@@ -466,6 +483,7 @@ ul{
     </style>
 </head>
 <body>
+<a class="portfolio-return" href="/">Back to Griffin Newbold</a>
 <button id="menu" onclick="openpopmenu3()">Main Menu</button>
 
 <div class="dropdown">

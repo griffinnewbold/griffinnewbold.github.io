@@ -86,6 +86,25 @@ body {
     background: linear-gradient(red, black); 
 }
 
+.portfolio-return {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1000;
+    padding: 10px 12px;
+    border: 2px solid #111;
+    border-radius: 4px;
+    background: white;
+    color: #111;
+    font: bold 14px sans-serif;
+    text-decoration: none;
+}
+
+.portfolio-return:focus-visible {
+    outline: 3px solid yellow;
+    outline-offset: 3px;
+}
+
 img{
     position: absolute;
     left:125px;
@@ -595,6 +614,8 @@ function memoryFlipTile(tile,val){
 </head>
 <body>
 
+<a class="portfolio-return" href="/">Back to Griffin Newbold</a>
+
 <h1 id="score">Cards Flipped: 0</h1>
 <h1 id="boardscore">Boards Completed: 0</h1>
 <h1 id="timer">Timer: 0</h1>
@@ -604,7 +625,7 @@ function memoryFlipTile(tile,val){
   <div class="dropdown-content">
     <a href="">More Games</a>
     <a href="">Report Bugs/Suggestions</a>
-    <a href="/>Go Home!</a>
+    <a href="/">Go Home!</a>
   </div>
 </div>
 <div id="memory_board"></div>

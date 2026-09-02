@@ -5,89 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/cc/style.css">
   <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
   <title>Hannah Arendt & Frantz Fanon On Violence</title>
 </head>
 <script src="/scripts/theme.js"></script>
+<script src="/cc/scripts/navigation.js"></script>
 
 <body style="background-color:#fdfdfd;">
   <script src="../scripts/search-query.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #99ccff;">
-    <a class="navbar-brand">CC Final Project</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/about.html">About</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/debates.html">Debates</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/cc/opinions.html">Op Eds</a>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Meet the Authors
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/cc/authors/smith.html">Adam Smith</a>
-            <a class="dropdown-item" href="/cc//authors/kant.html">Immanuel Kant</a>
-            <a class="dropdown-item" href="/cc/authors/wollstonecraft.html">Mary Wollstonecraft</a>
-            <a class="dropdown-item" href="/cc/authors/tocqueville.html">Alexis de Tocqueville</a>
-            <a class="dropdown-item" href="/cc/authors/mill.html">John Stuart Mill</a>
-            <a class="dropdown-item" href="/cc/authors/marx.html">Karl Marx</a>
-            <a class="dropdown-item" href="/cc/authors/nietzsche.html">Friedrich Nietzsche</a>
-            <a class="dropdown-item" href="/cc/authors/dubois.html">W. E. B. Du Bois</a>
-            <a class="dropdown-item" href="/cc/authors/ambedkar.html">B. R. Ambedkar</a>
-            <a class="dropdown-item" href="/cc/authors/fanon.html">Frantz Fanon</a>
-            <a class="dropdown-item" href="/cc/authors/arendt.html">Hannah Arendt</a>
-            <a class="dropdown-item" href="/cc/authors/foucault.html">Michel Foucault</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/cc/about.html#Authors">Why These Authors?</a>
-          </div>
-        </li>
-        <li class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Explore the Works
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/cc/works/works-by-smith.html">The Wealth of Nations</a>
-            <a class="dropdown-item" href="/cc/works/works-by-kant.html">Groundwork of the Metaphysics of Morals</a>
-            <a class="dropdown-item" href="/cc/works/works-by-wollstonecraft.html">A Vindication of the Rights of
-              Woman</a>
-            <a class="dropdown-item" href="/cc/works/works-by-tocqueville.html">Democracy in America</a>
-            <a class="dropdown-item" href="/cc/works/works-by-mill.html">On Liberty, Utilitarianism & Other Essays</a>
-            <a class="dropdown-item" href="/cc/works/works-by-marx.html">The Marx-Engels Reader</a>
-            <a class="dropdown-item" href="/cc/works/works-by-nietzsche.html">On the Genealogy of Morals & Ecce Homo</a>
-            <a class="dropdown-item" href="/cc/works/works-by-dubois.html">The Souls of Black Folk</a>
-            <a class="dropdown-item" href="/cc/works/works-by-ambedkar.html">Annihilation of Caste</a>
-            <a class="dropdown-item" href="/cc/works/works-by-fanon.html">The Wretched of the Earth</a>
-            <a class="dropdown-item" href="/cc/works/works-by-arendt.html">Crises of the Republic</a>
-            <a class="dropdown-item" href="/cc/works/works-by-foucault.html">Discipline & Punish</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/cc/about.html#Works">Why These Works?</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0" onsubmit="searchFiles(event)">
-        <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0">Go</button>
-      </form>
+  <header class="cc-masthead">
+  <div class="cc-masthead-inner">
+    <div class="cc-brand-lockup">
+      <a class="cc-portfolio-link" href="/">Griffin Newbold</a>
+      <span class="cc-brand-separator" aria-hidden="true">/</span>
+      <a class="cc-site-title" href="/cc/">Critical Concepts</a>
     </div>
-  </nav>
+    <button class="cc-nav-toggle" type="button" data-cc-nav-toggle aria-controls="cc-nav"
+      aria-expanded="false">Menu</button>
+    <nav class="cc-nav" id="cc-nav" aria-label="Critical Concepts" data-open="false">
+      <a href="/cc/">Home</a>
+      <a href="/cc/about.html">About</a>
+      <a href="/cc/about.html#Authors">Authors</a>
+      <a href="/cc/about.html#Works">Works</a>
+      <a href="/cc/debates.html">Debates</a>
+      <a href="/cc/opinions.html">Op Eds</a>
+      <form class="cc-search" onsubmit="searchFiles(event)">
+        <label class="cc-visually-hidden" for="searchInput">Search Critical Concepts</label>
+        <input id="searchInput" type="search" placeholder="Search" autocomplete="off">
+        <button type="submit">Go</button>
+      </form>
+      <button class="cc-theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"
+        aria-pressed="false">Theme: <span data-theme-label>Light</span></button>
+    </nav>
+  </div>
+</header>
   <div class="container">
     <div class="row">
       <h2 class="mt-5">Hannah Arendt & Frantz Fanon On Violence</h2>
@@ -184,7 +136,7 @@
       <p>Arendt, Hannah. <cite>On Violence</cite>. Penguin Books, 2023.</p>
       <p>Fanon, Frantz, et al. <cite>The Wretched of the Earth</cite>. Grove Press, 2022.</p>
       <p>“Violence Definition & Meaning.” Merriam-Webster, Merriam-Webster, <a
-          href="www.merriam-webster.com/dictionary/violence">www.merriam-webster.com/dictionary/violence</a>. Accessed 1
+          href="https://www.merriam-webster.com/dictionary/violence">www.merriam-webster.com/dictionary/violence</a>. Accessed 1
         May 2024.</p>
     </div>
 
