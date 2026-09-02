@@ -79,4 +79,8 @@ grep -q 'class="resource-list"' "$root/teaching.html"
 test ! -f "$root/scripts/teaching_script.js"
 test ! -f "$root/scripts/courses_script.js"
 
+review_row=$(grep 'href="/resources/reviews.pdf"' "$root/teaching.html")
+printf '%s\n' "$review_row" | grep -q 'resource-term">2022–2023<'
+! printf '%s\n' "$review_row" | grep -q '2022–2024'
+
 echo "primary site structure passed"
