@@ -87,15 +87,36 @@ cc_page_count=$(find "$root/cc" -name '*.html' -type f | wc -l | tr -d ' ')
 test "$cc_page_count" = "35"
 
 find "$root/cc" -name '*.html' -type f | while IFS= read -r page; do
+  masthead=$(sed -n '/<header class="cc-masthead">/,/<\/header>/p' "$page")
+  cc_nav=$(printf '%s\n' "$masthead" | sed -n '/<nav class="cc-nav"/,/<\/nav>/p')
+  search_form=$(printf '%s\n' "$cc_nav" | sed -n '/<form class="cc-search"/,/<\/form>/p')
+
   test "$(grep -o 'class="cc-masthead"' "$page" | wc -l | tr -d ' ')" = "1"
   test "$(grep -o 'class="cc-portfolio-link"' "$page" | wc -l | tr -d ' ')" = "1"
   test "$(grep -o 'data-theme-toggle' "$page" | wc -l | tr -d ' ')" = "1"
   test "$(grep -o 'data-cc-nav-toggle' "$page" | wc -l | tr -d ' ')" = "1"
   test "$(grep -o 'id="cc-nav"' "$page" | wc -l | tr -d ' ')" = "1"
-  grep -q '/cc/scripts/navigation.js' "$page"
-  grep -q 'search-query.js' "$page"
-  grep -q 'onsubmit="searchFiles(event)"' "$page"
-  grep -q 'href="/cc/style.css"' "$page"
+  test "$(grep -o 'src="/cc/scripts/navigation.js"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -Eo 'src="(\.\./)?scripts/search-query\.js"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'href="/cc/style.css"' "$page" | wc -l | tr -d ' ')" = "1"
+
+  test "$(grep -o 'class="cc-search"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'onsubmit="searchFiles(event)"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(printf '%s\n' "$masthead" | grep -o 'class="cc-search"' | wc -l | tr -d ' ')" = "1"
+  test "$(printf '%s\n' "$cc_nav" | grep -o 'class="cc-search"' | wc -l | tr -d ' ')" = "1"
+  test "$(printf '%s\n' "$search_form" | grep -o 'onsubmit="searchFiles(event)"' | wc -l | tr -d ' ')" = "1"
+
+  test "$(grep -o 'href="/"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(printf '%s\n' "$masthead" | grep -o 'href="/"' | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'href="/cc/"' "$page" | wc -l | tr -d ' ')" = "2"
+  test "$(printf '%s\n' "$masthead" | grep -o 'href="/cc/"' | wc -l | tr -d ' ')" = "2"
+  test "$(printf '%s\n' "$cc_nav" | grep -o 'href="/cc/"' | wc -l | tr -d ' ')" = "1"
+  for destination in /cc/about.html /cc/about.html#Authors /cc/about.html#Works /cc/debates.html /cc/opinions.html; do
+    test "$(grep -Fo "href=\"$destination\"" "$page" | wc -l | tr -d ' ')" = "1"
+    test "$(printf '%s\n' "$masthead" | grep -Fo "href=\"$destination\"" | wc -l | tr -d ' ')" = "1"
+    test "$(printf '%s\n' "$cc_nav" | grep -Fo "href=\"$destination\"" | wc -l | tr -d ' ')" = "1"
+  done
+
   ! grep -q '/cc//' "$page"
 done
 

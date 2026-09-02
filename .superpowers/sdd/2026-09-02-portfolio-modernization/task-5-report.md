@@ -138,3 +138,42 @@ Interaction proof:
 ### Concerns
 
 - None specific to this fix round.
+
+---
+
+## Fix Round 2/5
+
+### Finding Addressed
+
+Strengthened the Critical Concepts smoke contract so each of the 35 pages must contain exactly one navigation script, normalized search-query script reference, masthead search form/handler, and shared stylesheet. The test now extracts each page's `.cc-masthead`, `#cc-nav`, and `.cc-search` form regions and verifies all required destination links are in their intended region rather than merely present somewhere in the document.
+
+### Exact Contracts
+
+- Exactly one `src="/cc/scripts/navigation.js"` per page.
+- Exactly one normalized `src="scripts/search-query.js"` or `src="../scripts/search-query.js"` per page.
+- Exactly one `href="/cc/style.css"` per page.
+- Exactly one `.cc-search` and `onsubmit="searchFiles(event)"` per page, with the form inside both `.cc-masthead` and `#cc-nav` and the handler inside that form.
+- Exactly one portfolio `/` destination inside `.cc-masthead`.
+- Exactly two `/cc/` destinations inside `.cc-masthead`—the Critical Concepts brand and Home—with exactly one Home destination inside `#cc-nav`.
+- Exactly one `/cc/about.html`, `/cc/about.html#Authors`, `/cc/about.html#Works`, `/cc/debates.html`, and `/cc/opinions.html` destination per page, each inside both `.cc-masthead` and `#cc-nav`.
+
+Whole-page counts reject duplicates outside the masthead; scoped counts reject moving a required form or destination outside its intended masthead/nav region.
+
+### Focused Mutation RED Evidence
+
+1. Duplicated `src="/cc/scripts/navigation.js"` temporarily in `cc/index.html`. The observed contract count was 2 and `sh tests/site_smoke.sh` exited 1.
+2. Restored the script, then temporarily moved the only `/cc/debates.html` link below `</header>`. The whole-page count remained 1 while the extracted masthead count became 0; `sh tests/site_smoke.sh` exited 1.
+3. Restored the destination. `sh tests/site_smoke.sh` returned GREEN with exit 0.
+
+Both mutations were fully restored. Production files have no fix-round diff.
+
+### Verification
+
+- `sh tests/site_smoke.sh`: pass after restoration.
+- `sh -n tests/site_smoke.sh`: pass.
+- `git diff --check`: pass.
+- Changed files: `tests/site_smoke.sh` and this report only.
+
+### Concerns
+
+- None specific to this fix round.
