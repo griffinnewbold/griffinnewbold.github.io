@@ -414,6 +414,7 @@ h4 {
   .site-header {
     min-height: 72px;
     position: relative;
+    flex-wrap: wrap;
     gap: 10px;
     padding-block: 14px;
   }
@@ -422,28 +423,37 @@ h4 {
     margin-right: auto;
   }
 
-  .nav-toggle {
+  .site-nav {
+    order: 3;
+    width: 100%;
+    padding-block: 14px;
+    flex-direction: column;
+    gap: 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  .js-enabled .nav-toggle {
     display: block;
   }
 
-  .site-nav {
+  .js-enabled .site-nav {
     position: absolute;
     top: calc(100% + 1px);
     right: 0;
     left: 0;
     z-index: 10;
+    width: auto;
     padding: 18px 20px;
-    flex-direction: column;
-    gap: 14px;
+    border-top: 0;
     border-bottom: 1px solid var(--line);
     background: var(--bg);
   }
 
-  .site-nav[data-open='false'] {
+  .js-enabled .site-nav[data-open='false'] {
     display: none;
   }
 
-  .site-nav[data-open='true'] {
+  .js-enabled .site-nav[data-open='true'] {
     display: flex;
   }
 

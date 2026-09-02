@@ -21,4 +21,12 @@ test -f "$root/scripts/theme.js"
 test -f "$root/scripts/navigation.js"
 test ! -f "$root/legacy.css"
 grep -q 'griffin-theme' "$root/scripts/theme.js"
+
+# Mobile navigation is visible by default and collapses only after JavaScript opts in.
+grep -q "document.documentElement.classList.add('js-enabled')" "$root/scripts/navigation.js"
+grep -A4 '^\.nav-toggle {' "$root/style.css" | grep -q 'display: none;'
+grep -q "^  \.js-enabled \.nav-toggle {" "$root/style.css"
+grep -q "^  \.js-enabled \.site-nav\[data-open='false'\] {" "$root/style.css"
+! grep -q "^  \.site-nav\[data-open='false'\] {" "$root/style.css"
+
 echo "primary site structure passed"

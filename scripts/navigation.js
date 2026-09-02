@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js-enabled');
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-nav-toggle]').forEach((toggle) => {
     const nav = document.getElementById(toggle.getAttribute('aria-controls'));
