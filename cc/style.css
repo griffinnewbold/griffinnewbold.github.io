@@ -272,6 +272,38 @@ h3,
   font: 400 1.3rem Georgia, serif;
 }
 
+.cc-index-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  margin: 20px 0 12px;
+  padding: 0;
+  gap: 1px;
+  border: 1px solid var(--cc-line);
+  background: var(--cc-line);
+  list-style: none;
+}
+
+.cc-index-list li {
+  min-width: 0;
+  background: var(--cc-surface);
+}
+
+.cc-index-list a {
+  display: block;
+  min-height: 100%;
+  padding: 14px 16px;
+  color: var(--cc-ink);
+  font-family: Georgia, serif;
+  text-decoration: none;
+}
+
+.cc-index-list a:hover,
+.cc-index-list a:focus-visible {
+  background: var(--cc-accent);
+  color: var(--cc-accent-ink);
+}
+
 #searchResults {
   color: var(--cc-ink);
 }
@@ -348,6 +380,10 @@ h3,
 
   .cc-theme-toggle {
     align-self: flex-start;
+  }
+
+  .cc-index-list {
+    grid-template-columns: 1fr;
   }
 
   .page-heading {

@@ -79,3 +79,62 @@ Representative authored pages checked:
 
 - Several authored pages rely on third-party remote images. The Hannah Arendt Wikimedia image returned zero natural width in this browser environment. This is pre-existing remote asset behavior and was not changed in Task 5; the page content and masthead still render correctly.
 - Browser QA sampled one page from each authored content family rather than opening all 35 pages. Structural smoke and route audits cover all 35 pages.
+
+---
+
+## Fix Round 1/5
+
+### Findings Addressed
+
+1. Added directly discoverable, no-JavaScript indexes beneath the existing `#Authors` and `#Works` headings in `cc/about.html`. The author index contains all 12 original author destinations, and the work index contains all 12 original work destinations, using their exact public routes.
+2. Strengthened `tests/site_smoke.sh` to assert an exact authored page count of 35; exact-one `.cc-masthead`, `.cc-portfolio-link`, `[data-theme-toggle]`, `[data-cc-nav-toggle]`, and `#cc-nav` per page; required navigation, search, form-handler, and stylesheet contracts; rejection of `/cc//`; and the exact complete 12+12 About index destination sets.
+
+### TDD Evidence
+
+- Baseline: `sh tests/site_smoke.sh` exited 0 before the fix-round test changes.
+- RED: after strengthening the smoke test, `sh -x tests/site_smoke.sh` exited 1 at `test 0 = 12` because `cc/about.html` contained no author-index destination links.
+- GREEN: after adding the two semantic indexes and their styles, `sh tests/site_smoke.sh` exited 0.
+- Mutation coverage: removing or duplicating any required shared interface now changes its exact-one count; removing, duplicating, or substituting an index destination breaks either the literal-route assertion or the exact count of 12.
+
+### Index Implementation
+
+- `#author-index`: 12 visible links in a semantic unordered list labeled “Author index.”
+- `#work-index`: 12 visible links in a semantic unordered list labeled “Work index.”
+- `.cc-index-list`: two-column editorial grid on larger viewports and one column at 600px and below.
+- List surfaces, text, hover, and keyboard-focus states use the existing Critical Concepts theme variables.
+- Both indexes are ordinary HTML links and remain discoverable without JavaScript.
+
+### Browser QA
+
+Environment: Codex in-app browser at `http://127.0.0.1:4173/cc/about.html`, default desktop 1280×720 and exact mobile width 320px.
+
+| Check | Desktop | 320px |
+| --- | --- | --- |
+| Author links | 12 visible | 12 visible |
+| Work links | 12 visible | 12 visible |
+| Layout | Two columns (`588.5px 588.5px`) | One column (`318px`) |
+| Theme | Dark surface `rgb(26, 29, 26)` and text `rgb(242, 243, 237)` | Dark theme retained |
+| Horizontal overflow | None | None (`scrollWidth` equals 320px viewport) |
+| Framework overlay | None | None |
+| Console warnings/errors | None | None |
+
+Interaction proof:
+
+- Hannah Arendt index link navigated to `/cc/authors/arendt.html`, page title `Arendt`, heading `Hannah Arendt`.
+- The Wealth of Nations index link navigated to `/cc/works/works-by-smith.html`, with matching page title and heading.
+
+### Content Integrity
+
+- The aggregate SHA-256 for all 34 Critical Concepts HTML pages outside `cc/about.html` remained `a37a726a534ab903ef8848444b7d14b8e6f6325f6eb15e9655950e15e677eeae` before and after implementation.
+- The implementation diff is limited to `cc/about.html`, `cc/style.css`, `tests/site_smoke.sh`, and this appended report.
+
+### Verification
+
+- `sh tests/site_smoke.sh`: pass.
+- `sh -n tests/site_smoke.sh`: pass.
+- `node --check cc/scripts/navigation.js`: pass.
+- `git diff --check`: pass.
+
+### Concerns
+
+- None specific to this fix round.

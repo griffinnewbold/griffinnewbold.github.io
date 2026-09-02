@@ -83,12 +83,34 @@ review_row=$(grep 'href="/resources/reviews.pdf"' "$root/teaching.html")
 printf '%s\n' "$review_row" | grep -q 'resource-term">2022–2023<'
 ! printf '%s\n' "$review_row" | grep -q '2022–2024'
 
+cc_page_count=$(find "$root/cc" -name '*.html' -type f | wc -l | tr -d ' ')
+test "$cc_page_count" = "35"
+
 find "$root/cc" -name '*.html' -type f | while IFS= read -r page; do
-  grep -q 'class="cc-portfolio-link"' "$page"
-  grep -q 'data-theme-toggle' "$page"
+  test "$(grep -o 'class="cc-masthead"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'class="cc-portfolio-link"' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'data-theme-toggle' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'data-cc-nav-toggle' "$page" | wc -l | tr -d ' ')" = "1"
+  test "$(grep -o 'id="cc-nav"' "$page" | wc -l | tr -d ' ')" = "1"
   grep -q '/cc/scripts/navigation.js' "$page"
+  grep -q 'search-query.js' "$page"
+  grep -q 'onsubmit="searchFiles(event)"' "$page"
   grep -q 'href="/cc/style.css"' "$page"
   ! grep -q '/cc//' "$page"
+done
+
+about_file="$root/cc/about.html"
+author_index=$(sed -n '/<ul id="author-index"/,/<\/ul>/p' "$about_file")
+work_index=$(sed -n '/<ul id="work-index"/,/<\/ul>/p' "$about_file")
+
+test "$(printf '%s\n' "$author_index" | grep -o 'href="/cc/authors/[^"]*"' | wc -l | tr -d ' ')" = "12"
+for author in smith kant wollstonecraft tocqueville mill marx nietzsche dubois ambedkar fanon arendt foucault; do
+  printf '%s\n' "$author_index" | grep -q "href=\"/cc/authors/$author.html\""
+done
+
+test "$(printf '%s\n' "$work_index" | grep -o 'href="/cc/works/[^"]*"' | wc -l | tr -d ' ')" = "12"
+for author in smith kant wollstonecraft tocqueville mill marx nietzsche dubois ambedkar fanon arendt foucault; do
+  printf '%s\n' "$work_index" | grep -q "href=\"/cc/works/works-by-$author.html\""
 done
 
 echo "primary site structure passed"
