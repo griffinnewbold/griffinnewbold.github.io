@@ -1,54 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="legacy.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
   <script src="/scripts/theme.js"></script>
   <link rel="shortcut icon" href="/resources/favicon.ico" type="image/ico">
   <script src="/scripts/teaching_script.js"></script>
-  <title>Teaching</title>
+  <title>Teaching — Griffin Newbold</title>
 </head>
 <body>
-  <button class="theme-toggle legacy-theme-toggle" type="button" aria-label="Switch to dark mode" data-theme-toggle><span aria-hidden="true">☼</span><span data-theme-label>Light</span></button>
-  <div class="container-fluid">
-    <div class="navigation row justify-content-center">
-        <div class="col-4 col-sm-6 col-md-1 nav-item-div">
-            <a class="nav-item" href="/">Home</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/projects.html">Projects</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/teaching.html">Teaching</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/courses.html">Courses</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/contact.html">Contact</a>
-        </div>
-        <div class="col-4 col-sm-1 col-md-1 nav-item-div">
-            <a class="nav-item" href="/resources/griffinnewbold_resume.pdf">Resume</a>
-        </div>
-    </div>
-</div>
-    <div class="container-fluid">
-        <div class="row page-content">
-            <div class="col-md-2 profile-container">
-                <img src="../resources/profile-picture.jpg" alt="Profile Picture" class="profile-picture img-fluid">
-                <p class="profile-text-header">Griffin Newbold</p>
-                <p class="profile-text">Columbia Alumni<br><br>
-                  Software Engineer @ Capital One <br><br>
-                  Former Head Teaching Assistant and Projects Student for Professor Lydia Chilton<br><br>
-                  Former Head Teaching Assistant and Projects Student for Professor Gail Kaiser<br><br>
-                  Former Teaching Assistant for Professor Adam Cannon <br><br>
-                  Located in DC Metro Area
-                </p>
-            </div>
-            <div class="col-md-10 teaching-content">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Griffin Newbold home">GN<span>.</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+    <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primary navigation">
+      <a href="/">Home</a><a href="/projects.html">Work</a><a href="/teaching.html" aria-current="page">Teaching</a><a href="/contact.html">About</a><a href="/resources/griffinnewbold_resume.pdf">Resume</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle><span aria-hidden="true">◐</span><span data-theme-label>Light</span></button>
+  </header>
+  <main id="main-content" class="content-shell page-content">
+    <h1>Teaching</h1>
+    <div class="legacy-content">
                 <p class = "section-text">
                     Welcome to my Teaching portfolio, here you can flip through the classes I have TA'ed for in the 
                     past. It also contains more information about each class from a TA's perspective, if you wish to see 
@@ -57,10 +30,6 @@
                     this figure currently sits at $22 per hour meaning the rate for tutoring is $33 per hour. It should be noted that any request for tutoring for a person in a subject
                     I am currently a teaching assistant for will be denied.
                 </p>
-                <div class = "prev-next-buttons">
-                    <button class="previous-btn" onclick="showPrevDivTeach()">Previous</button>
-                    <button class="next-btn" onclick="showNextDivTeach()">Next</button>
-                  </div>
                 <div id="div1" class="content active">
                   <h3>
                     <a href="/teaching/2024/spring/java-1004">COMS 1004, Introduction to Computer Science and Programming In Java</a>
@@ -148,11 +117,9 @@
                     
                   </p>
                 </div>
-            </div>
-        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </main>
+  <footer class="site-footer"><div class="content-shell footer-inner"><span>© 2025 Griffin Newbold</span><span>Designed &amp; maintained by me</span></div></footer>
+  <script src="/scripts/navigation.js"></script>
 </body>
 </html>
