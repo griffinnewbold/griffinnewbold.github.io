@@ -29,4 +29,10 @@ grep -q "^  \.js-enabled \.nav-toggle {" "$root/style.css"
 grep -q "^  \.js-enabled \.site-nav\[data-open='false'\] {" "$root/style.css"
 ! grep -q "^  \.site-nav\[data-open='false'\] {" "$root/style.css"
 
+grep -q 'id="selected-work"' "$root/index.html"
+grep -q 'id="teaching-preview"' "$root/index.html"
+grep -q 'class="bio-summary"' "$root/index.html"
+grep -q 'class="profile-portrait"' "$root/contact.html"
+! grep -qi 'recent graduate\|this past semester\|throughout the summer' "$root/index.html" "$root/contact.html"
+
 echo "primary site structure passed"

@@ -327,7 +327,8 @@ h4 {
   font-weight: 500;
 }
 
-.pathways {
+.selected-work,
+.teaching-preview {
   padding-block: 88px 110px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -336,18 +337,24 @@ h4 {
 }
 
 .section-heading h2,
-.about-strip h2 {
+.bio-summary h2 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.7rem);
   line-height: 1.1;
   letter-spacing: -0.07em;
 }
 
-.pathway-list {
+.section-heading em,
+.bio-summary em {
+  font-family: var(--serif);
+  font-weight: 400;
+}
+
+.work-list {
   border-top: 1px solid var(--line);
 }
 
-.pathway {
+.work-entry {
   padding: 22px 0;
   display: grid;
   grid-template-columns: 54px 1fr 28px;
@@ -357,51 +364,175 @@ h4 {
   transition: padding 0.2s, color 0.2s;
 }
 
-.pathway:hover {
+.work-entry:hover {
   padding-left: 10px;
   color: var(--accent);
 }
 
-.pathway-number {
+.entry-number,
+.section-index {
   color: var(--accent);
   font: 500 0.68rem var(--mono);
 }
 
-.pathway strong,
-.pathway small {
+.work-entry strong,
+.work-entry small {
   display: block;
 }
 
-.pathway strong {
+.work-entry strong {
   font-size: 1.1rem;
 }
 
-.pathway small {
+.work-entry small {
   color: var(--muted);
   font-size: 0.76rem;
 }
 
-.pathway-arrow {
+.work-entry > span:last-child {
   font-size: 1.25rem;
   text-align: right;
 }
 
-.about-strip {
+.preview-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+.preview-links a {
+  min-height: 250px;
+  padding: 28px 32px 24px 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--line);
+}
+
+.preview-links a + a {
+  padding-left: 32px;
+  border-left: 1px solid var(--line);
+}
+
+.preview-links strong {
+  margin-bottom: 20px;
+  font-size: 1.15rem;
+}
+
+.preview-links span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.preview-links small {
+  margin-top: auto;
+  color: var(--ink);
+  font: 500 0.68rem var(--mono);
+}
+
+.bio-summary {
+  border-top: 1px solid var(--line);
+}
+
+.bio-grid {
   padding-block: 90px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 12%;
-  border-top: 1px solid var(--line);
 }
 
-.about-strip div {
+.bio-grid > div {
   max-width: 620px;
 }
 
-.about-strip p:not(.kicker) {
+.bio-summary p:not(.kicker) {
   max-width: 480px;
   margin: 28px 0;
   color: var(--muted);
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, 0.75fr);
+  align-items: end;
+  gap: 12%;
+  padding-bottom: 88px;
+}
+
+.about-intro h1 {
+  margin-bottom: 24px;
+}
+
+.about-lede {
+  max-width: 600px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.profile-portrait {
+  width: min(100%, 340px);
+  justify-self: end;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%);
+}
+
+.about-sections {
+  border-top: 1px solid var(--line);
+}
+
+.about-section {
+  padding-block: 38px 48px;
+  display: grid;
+  grid-template-columns: 56px minmax(160px, 0.65fr) 1.35fr;
+  gap: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-section h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.about-section p {
+  max-width: 650px;
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+.contact-links {
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.contact-links li {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-links li:nth-child(odd) {
+  padding-right: 24px;
+}
+
+.contact-links li:nth-child(even) {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+
+.contact-links a {
+  padding-block: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.contact-links a span {
+  color: var(--accent);
 }
 
 /* Responsive states */
@@ -472,11 +603,52 @@ h4 {
     max-width: 420px;
   }
 
-  .pathways,
-  .about-strip {
+  .selected-work,
+  .teaching-preview,
+  .bio-grid {
     grid-template-columns: 1fr;
     gap: 44px;
     padding-block: 70px 80px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(3.2rem, 19vw, 6.6rem);
+  }
+
+  .preview-links,
+  .about-intro,
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-links a {
+    min-height: 210px;
+    padding: 26px 0;
+  }
+
+  .preview-links a + a {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .about-intro {
+    align-items: start;
+    gap: 44px;
+    padding-bottom: 70px;
+  }
+
+  .profile-portrait {
+    width: min(100%, 420px);
+    justify-self: start;
+  }
+
+  .about-section {
+    gap: 10px;
+  }
+
+  .about-section h2 {
+    margin-bottom: 18px;
   }
 
   .footer-inner {
